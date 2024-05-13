@@ -52,7 +52,7 @@
                 {
                     "name": "Left",
                     "id": "fed671b4-4043-4d7a-a478-9ab8f83b1165",
-                    "path": "<XRController>{LeftHand}/devicePosition/y",
+                    "path": "<OculusTouchController>/thumbstick/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -74,7 +74,7 @@
                 {
                     "name": "Forward",
                     "id": "8b3a863d-fd80-4949-8655-99440f37e28b",
-                    "path": "<XRController>{LeftHand}/devicePosition/x",
+                    "path": "<OculusTouchController>/thumbstick/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
