@@ -5,6 +5,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     private float moveSpeed;
+    [SerializeField]
+    private float gravity;
     private PlayerInput input;
     private InputAction playerControl;
     // private Vector2 moveVec;
@@ -22,16 +24,22 @@ public class PlayerMovement : MonoBehaviour
         // playerControl.performed += CharacterMovementStart;
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Debug.Log(playerControl.ReadValue<Vector3>());
-        rb.velocity = playerControl.ReadValue<Vector3>() * moveSpeed;
+        CharacterMovement();
+        GravityEffect();
     }
-    private void CharacterMovementStart(InputAction.CallbackContext value)
+    private void GravityEffect()
     {
+        Vector3 gravityForce = gravity * Physics.gravity * rb.mass;
 
-
-
+        // Apply the force to the Rigidbody
+        rb.AddForce(gravityForce, ForceMode.Force);
+    }
+    private void CharacterMovement()
+    {
+        rb.velocity = playerControl.ReadValue<Vector3>() * moveSpeed;
 
     }
 }
