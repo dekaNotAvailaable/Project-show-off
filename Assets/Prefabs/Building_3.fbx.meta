@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d0b59624cbd8cb841b12a3d528de9eee
+guid: 7f4ed29429ad6c540a9784eff1c666d7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_Main
-    second: {fileID: 2100000, guid: d9421619b0add054a8cc5c7645164387, type: 2}
+      name: standardSurface11
+    second: {fileID: 2100000, guid: 2435785099addeb439a6310b1c6d70f5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
+    globalScale: 1.5
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -93,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 2
+    globalScale: 1.5
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
