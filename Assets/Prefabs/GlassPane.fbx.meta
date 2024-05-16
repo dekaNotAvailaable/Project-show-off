@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 10592719fcc366c44a82200bcde3e423
+guid: 28edf8b992dfb7245b55574fe1d90b18
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_GlassPane
+    second: {fileID: 2100000, guid: cfc92806c0f5c8d458f8c7c952cfa165, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
