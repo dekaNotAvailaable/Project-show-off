@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Left Hand
   - Right Hand
-  - Ground
-  - Nest
   layers:
   - Default
   - TransparentFX
