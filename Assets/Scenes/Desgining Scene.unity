@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5438,7 +5438,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &478010107
+--- !u!4 &478010110 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e59ced13276a25e4899c4ae278097be0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1131407067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &478010113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5447,18 +5453,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 478010099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef5e666dd1c29a4aa1c7385e7e91115, type: 3}
+  m_Script: {fileID: 11500000, guid: d9aa968702c6a1d4696cb8848a3ecd2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  spawnPoint: {fileID: 0}
-  fireSpeed: 20
---- !u!4 &478010110 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e59ced13276a25e4899c4ae278097be0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1131407067}
-  m_PrefabAsset: {fileID: 0}
+  firePoint: {fileID: 1844348281}
+  maxDistance: 10
+  waterForce: 10
+  lineStartWidth: 0.1
+  lineEndWidth: 0.1
 --- !u!1001 &489190166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13471,8 +13473,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2123227616}
-  m_RootOrder: 6
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1758195919 stripped
 GameObject:
@@ -15570,7 +15572,6 @@ Transform:
   - {fileID: 1065343705}
   - {fileID: 967250372}
   - {fileID: 478010110}
-  - {fileID: 1754738845}
   - {fileID: 1294343550}
   m_Father: {fileID: 0}
   m_RootOrder: 8
