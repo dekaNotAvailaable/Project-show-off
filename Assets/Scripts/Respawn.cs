@@ -29,6 +29,7 @@ public class Respawn : MonoBehaviour
         {
             DieScreen.enabled = true;
             RespawnAfterDelay();
+            Debug.Log("dead");
         }
     }
 }

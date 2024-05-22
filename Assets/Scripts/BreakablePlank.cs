@@ -9,7 +9,7 @@ public class BreakablePlank : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject, breakSec);
-
+            Debug.Log("Breaking Plank");
         }
     }
 }
