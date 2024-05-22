@@ -3,28 +3,26 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class FireBulletOnValidate : MonoBehaviour
 {
-    public GameObject particleSystemPrefab; // Reference to the particle system prefab
-    public Transform firePoint;
+    public GameObject bullet;
+    public Transform spawnPoint;
     public float fireSpeed = 20;
-
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
-        grabbable.activated.AddListener(FireParticles);
+        grabbable.activated.AddListener(FireBullet);
     }
-    public void FireParticles(ActivateEventArgs arg)
+
+    // Update is called once per frame
+    void Update()
     {
-        GameObject spawnedParticles = Instantiate(particleSystemPrefab);
-        spawnedParticles.transform.position = firePoint.position;
-        spawnedParticles.transform.rotation = firePoint.rotation;
 
-        ParticleSystem ps = spawnedParticles.GetComponent<ParticleSystem>();
-        if (ps != null)
-        {
-            ps.Play();
-        }
+    }
 
-        // Optional: Destroy the particle system after it has finished playing
-        Destroy(spawnedParticles, ps.main.duration);
+    public void FireBullet(ActivateEventArgs arg)
+    {
+        GameObject spawnedBullet = Instantiate(bullet);
+        spawnedBullet.transform.position = spawnPoint.position;
+        spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+        Destroy(spawnedBullet, 5);
     }
 }
