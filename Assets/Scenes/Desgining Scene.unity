@@ -5445,8 +5445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef5e666dd1c29a4aa1c7385e7e91115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystemPrefab: {fileID: 0}
-  firePoint: {fileID: 0}
+  bullet: {fileID: 0}
+  spawnPoint: {fileID: 0}
   fireSpeed: 20
 --- !u!4 &478010110 stripped
 Transform:
@@ -8391,8 +8391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef5e666dd1c29a4aa1c7385e7e91115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystemPrefab: {fileID: 0}
-  firePoint: {fileID: 0}
+  bullet: {fileID: 0}
+  spawnPoint: {fileID: 0}
   fireSpeed: 20
 --- !u!1001 &998042964
 PrefabInstance:
@@ -12205,6 +12205,7 @@ GameObject:
   - component: {fileID: 1660633594}
   - component: {fileID: 1660633595}
   - component: {fileID: 1660633596}
+  - component: {fileID: 1660633598}
   m_Layer: 6
   m_Name: XR Origin (XR Rig)
   m_TagString: Player
@@ -12502,6 +12503,19 @@ MonoBehaviour:
   SpawnPoint: {fileID: 1376465382}
   DieScreen: {fileID: 0}
   RespawnSec: 0
+--- !u!114 &1660633598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660633584}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48591b26ac514154bbe80b9d88e8e74c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
 --- !u!1001 &1666817547
 PrefabInstance:
   m_ObjectHideFlags: 0

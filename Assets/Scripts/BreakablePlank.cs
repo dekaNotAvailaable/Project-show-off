@@ -8,6 +8,7 @@ public class BreakablePlank : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("break");
             Destroy(gameObject, breakSec);
 
         }
