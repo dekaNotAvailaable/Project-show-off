@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 99da5bbd12a430d46ad03549e64bc08b
+guid: 6604a875c2472c04892b218ea62352b2
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_Egg
-    second: {fileID: 2100000, guid: 9563e1be68506a742af2c31b2124bc96, type: 2}
+      name: M_Bucket UwU
+    second: {fileID: 2100000, guid: 4538f36dbd2ee3244aef2ca025cc42f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Scraper
+    second: {fileID: 2100000, guid: 2a28a0f9ffba0fc4584877b55b7ea0b9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -93,7 +98,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.25
+    globalScale: 0.0025
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
