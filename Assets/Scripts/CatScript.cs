@@ -7,7 +7,7 @@ public class CatScript : MonoBehaviour
     [SerializeField]
     private float stopDistance = 3.0f;
     private GameObject nearestNest;
-
+    private bool isCatDead;
     void Start()
     {
         FindNearestNest();
@@ -61,6 +61,13 @@ public class CatScript : MonoBehaviour
         {
             Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
             transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * catMoveSpeed);
+        }
+    }
+    public void CatDie(bool value)
+    {
+        if (gameObject != null)
+        {
+            value = isCatDead;
         }
     }
 }
