@@ -6667,7 +6667,7 @@ PrefabInstance:
     - target: {fileID: 1353578350507528215, guid: fce4703f9a80d2c4295b2332b05723a1,
         type: 3}
       propertyPath: breakSec
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1458556403303994557, guid: fce4703f9a80d2c4295b2332b05723a1,
         type: 3}
@@ -12902,7 +12902,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670815319}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
