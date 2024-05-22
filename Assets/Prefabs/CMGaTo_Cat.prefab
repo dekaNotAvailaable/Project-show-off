@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 6245388166475437678}
   - component: {fileID: 6245388166475437664}
   m_Layer: 0
-  m_Name: CMGaTo_Cat_with_script
+  m_Name: CMGaTo_Cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
