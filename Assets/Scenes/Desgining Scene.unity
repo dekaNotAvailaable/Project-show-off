@@ -5445,8 +5445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef5e666dd1c29a4aa1c7385e7e91115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystemPrefab: {fileID: 0}
-  firePoint: {fileID: 0}
+  bullet: {fileID: 0}
+  spawnPoint: {fileID: 0}
   fireSpeed: 20
 --- !u!4 &478010110 stripped
 Transform:
@@ -8396,8 +8396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef5e666dd1c29a4aa1c7385e7e91115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystemPrefab: {fileID: 0}
-  firePoint: {fileID: 0}
+  bullet: {fileID: 0}
+  spawnPoint: {fileID: 0}
   fireSpeed: 20
 --- !u!1001 &998042964
 PrefabInstance:
@@ -12471,7 +12471,7 @@ MonoBehaviour:
   m_Camera: {fileID: 961081758}
   m_OriginBaseGameObject: {fileID: 1660633584}
   m_CameraFloorOffsetObject: {fileID: 580598409}
-  m_RequestedTrackingOriginMode: 1
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 1.1176
 --- !u!4 &1660633587
 Transform:
