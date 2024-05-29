@@ -9,6 +9,7 @@ public class CatScript : MonoBehaviour
     private GameObject nearestNest;
     private bool isCatDead;
     private bool isDying;
+    private bool isNestFound;
 
     void Start()
     {
@@ -45,7 +46,11 @@ public class CatScript : MonoBehaviour
 
         if (nearestNest == null)
         {
-            Debug.LogError("No nests found in the scene.");
+            if (isNestFound)
+            {
+                Debug.LogError("No nests found in the scene.");
+            }
+            isNestFound = false;
         }
     }
 
@@ -64,6 +69,7 @@ public class CatScript : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
             transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * catMoveSpeed);
         }
+        isNestFound = true;
     }
 
     public void CatDie()

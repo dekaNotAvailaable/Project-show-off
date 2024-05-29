@@ -85,7 +85,26 @@ PrefabInstance:
     - target: {fileID: 2154191844845530941, guid: 33be0dd60280848b6924b832eae889e3,
         type: 3}
       propertyPath: m_Name
-      value: CatSpawnPlank
+      value: CatSpawnPlank Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33be0dd60280848b6924b832eae889e3, type: 3}
+--- !u!1 &8099984585190274878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2154191844845530941, guid: 33be0dd60280848b6924b832eae889e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7894202122292975619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &382700224453678959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8099984585190274878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4866aec1ab31f41ad04af9c9c68ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAngle: 0
