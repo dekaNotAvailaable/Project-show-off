@@ -35,17 +35,17 @@ PrefabInstance:
     - target: {fileID: 1634501813606544775, guid: 33be0dd60280848b6924b832eae889e3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.18
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1634501813606544775, guid: 33be0dd60280848b6924b832eae889e3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.562
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1634501813606544775, guid: 33be0dd60280848b6924b832eae889e3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.41
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1634501813606544775, guid: 33be0dd60280848b6924b832eae889e3,
         type: 3}
@@ -85,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 2154191844845530941, guid: 33be0dd60280848b6924b832eae889e3,
         type: 3}
       propertyPath: m_Name
-      value: Breakable Plank
+      value: Breakable Plank Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33be0dd60280848b6924b832eae889e3, type: 3}
