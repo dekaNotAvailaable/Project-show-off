@@ -108,3 +108,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAngle: 0
+  blackScreenCanvas: {fileID: 0}
+  blackScreenTime: 2
