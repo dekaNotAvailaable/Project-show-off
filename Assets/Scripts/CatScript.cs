@@ -8,6 +8,8 @@ public class CatScript : MonoBehaviour
     private float stopDistance = 3.0f;
     private GameObject nearestNest;
     private bool isCatDead;
+    private bool isDying;
+
     void Start()
     {
         FindNearestNest();
@@ -15,7 +17,7 @@ public class CatScript : MonoBehaviour
 
     void Update()
     {
-        if (nearestNest != null)
+        if (!isCatDead && nearestNest != null)
         {
             MoveTowardsNest();
         }
@@ -63,11 +65,22 @@ public class CatScript : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * catMoveSpeed);
         }
     }
-    public void CatDie(bool value)
+
+    public void CatDie()
     {
-        if (gameObject != null)
+        if (!isDying)
         {
-            value = isCatDead;
+            isCatDead = true;
+            isDying = true;
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("WaterLine"))
+        {
+            CatDie();
         }
     }
 }
