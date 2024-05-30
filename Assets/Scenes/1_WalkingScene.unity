@@ -13035,6 +13035,16 @@ PrefabInstance:
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 1376465382}
+    - target: {fileID: 7310628966888370037, guid: e85a777394a37e34eade8a5fc7c2c970,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310628966888370038, guid: e85a777394a37e34eade8a5fc7c2c970,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 7310628966888370040, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_Name
@@ -33861,6 +33871,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4500060790538980634, guid: 82845e28796fff84880ff13eb806c9c1, type: 3}
+--- !u!1 &2089101313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7310628966888370040, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 847779771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2089101327 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7310628966888370043, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 847779771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089101328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089101313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08afbfe50295cf48b3efbfdbf862159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vrCamera: {fileID: 2089101327}
+  speed: 1
 --- !u!1 &2091986695 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f4ed29429ad6c540a9784eff1c666d7,
