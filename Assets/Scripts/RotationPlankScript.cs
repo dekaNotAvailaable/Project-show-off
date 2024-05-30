@@ -22,6 +22,7 @@ public class RotationPlankScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && !hasRotated)
         {
             StartCoroutine(RotatePlayer(collision.gameObject));
+            Debug.Log("the player has stepped on the rotate plank");
         }
     }
 
