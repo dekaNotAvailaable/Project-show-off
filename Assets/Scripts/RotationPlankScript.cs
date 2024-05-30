@@ -12,7 +12,10 @@ public class RotationPlankScript : MonoBehaviour
 
     private void Start()
     {
-        blackScreenCanvas.enabled = false;
+        if (blackScreenCanvas != null)
+        {
+            blackScreenCanvas.enabled = false;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
