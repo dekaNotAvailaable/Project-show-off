@@ -2548,8 +2548,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 0.05
+      minMaxState: 2
+      scalar: 0.03
       minScalar: 0.01
       maxCurve:
         serializedVersion: 2
@@ -2564,8 +2564,8 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
-          value: 1
+          time: 0.98709106
+          value: 0.7027035
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2580,7 +2580,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.7162154
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2588,20 +2588,20 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          time: 0.977417
+          value: 0.78378296
+          inSlope: -1.544351
+          outSlope: -1.544351
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.47350675
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 2
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -2654,7 +2654,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 2
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -2872,7 +2872,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -12904,6 +12904,18 @@ MonoBehaviour:
   waterParticles: {fileID: 124069198}
   maxDistance: 10
   waterForce: 10
+--- !u!114 &478010115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478010099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b3762dbda335742a8d5404855210af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &480799555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7f4ed29429ad6c540a9784eff1c666d7,
@@ -23139,17 +23151,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e59ced13276a25e4899c4ae278097be0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.021
+      value: -16.526
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e59ced13276a25e4899c4ae278097be0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.69
+      value: 31.088
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e59ced13276a25e4899c4ae278097be0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.097
+      value: -2.62
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e59ced13276a25e4899c4ae278097be0,
         type: 3}
