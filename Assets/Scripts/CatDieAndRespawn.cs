@@ -33,4 +33,13 @@ public class CatDieAndRespawn : MonoBehaviour
             Debug.Log("cat died");
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision != null)
+        {
+            CatDie();
+            Debug.Log("cat died");
+
+        }
+    }
 }
