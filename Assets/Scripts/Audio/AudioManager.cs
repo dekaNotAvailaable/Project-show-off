@@ -1,4 +1,4 @@
-using FMODUnity;
+
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,7 +16,5 @@ public class AudioManager : MonoBehaviour
         instance = this;
     }
 
-    public void PLayOneShot(EventReference sound, Vector3 worldPos) { 
-    RuntimeManager.PlayOneShot(sound, worldPos);
-    }
+
 }
