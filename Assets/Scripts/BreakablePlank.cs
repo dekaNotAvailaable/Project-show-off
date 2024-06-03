@@ -11,5 +11,10 @@ public class BreakablePlank : MonoBehaviour
             Destroy(gameObject, breakSec);
             Debug.Log("Breaking Plank");
         }
+        if (collision.gameObject.CompareTag("Marble"))
+        {
+            Destroy(gameObject, breakSec);
+            Debug.Log("Breaking Plank");
+        }
     }
 }
