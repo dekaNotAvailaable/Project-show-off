@@ -16,6 +16,5 @@ public class AudioManager : MonoBehaviour
         instance = this;
     }
 
-   
-    
+
 }
