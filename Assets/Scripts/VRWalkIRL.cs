@@ -1,23 +1,53 @@
 using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.XR.Management;
 
 public class VRWalkIRL : MonoBehaviour
 {
-    public Transform vrCamera; // Reference to the VR camera
-    public float speed = 1.0f; // Movement speed multiplier
+    public float speed = 5f;
+    public float amplitude = 2f;
+    public float frequency = 0.3f;
+    public Vector3 direction = Vector3.forward;
+    private Vector3 startPosition;
+    private Vector3 lastHeadsetPosition;
+    private Vector3 currentHeadsetPosition;
+    private XRDisplaySubsystem displaySubsystem;
+    private InputDevice headsetDevice;
 
-    private Vector3 previousPosition;
+    public float movementThreshold = 0.01f;
 
     void Start()
     {
-        previousPosition = vrCamera.position;
+        startPosition = transform.position;
+        direction = direction.normalized;
+        displaySubsystem = XRGeneralSettings.Instance.Manager.activeLoader.GetLoadedSubsystem<XRDisplaySubsystem>();
+        if (displaySubsystem != null && displaySubsystem.running)
+        {
+            headsetDevice = InputDevices.GetDeviceAtXRNode(XRNode.Head);
+            if (headsetDevice.isValid)
+            {
+                headsetDevice.TryGetFeatureValue(CommonUsages.devicePosition, out lastHeadsetPosition);
+            }
+        }
+        else
+        {
+            Debug.LogError("No XR device detected.");
+        }
     }
 
     void Update()
     {
-        Vector3 deltaPosition = vrCamera.position - previousPosition;
-        deltaPosition.y = 0; // Ignore vertical movement for walking
-
-        transform.position += deltaPosition * speed;
-        previousPosition = vrCamera.position;
+        if (displaySubsystem != null && displaySubsystem.running && headsetDevice.isValid)
+        {
+            if (headsetDevice.TryGetFeatureValue(CommonUsages.devicePosition, out currentHeadsetPosition))
+            {
+                Vector3 deltaPosition = currentHeadsetPosition - lastHeadsetPosition;
+                if (deltaPosition.magnitude > movementThreshold)
+                {
+                    transform.position += deltaPosition;
+                }
+                lastHeadsetPosition = currentHeadsetPosition;
+            }
+        }
     }
 }
