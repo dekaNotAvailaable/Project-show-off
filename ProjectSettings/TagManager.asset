@@ -8,6 +8,7 @@ TagManager:
   - Right Hand
   - Ground
   - Nest
+  - Water
   layers:
   - Default
   - TransparentFX
