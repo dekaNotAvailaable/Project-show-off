@@ -42,4 +42,9 @@ public class CatDieAndRespawn : MonoBehaviour
 
         }
     }
+    private void OnParticleCollision(GameObject other)
+    {
+        CatDie();
+        Debug.Log("cat died");
+    }
 }
