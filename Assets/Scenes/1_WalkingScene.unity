@@ -26122,6 +26122,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path
       objectReference: {fileID: 0}
+    - target: {fileID: 4610106668978397202, guid: d58a0320628a4564e849b0b328ba1448,
+        type: 3}
+      propertyPath: breakSec
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6631739843107706427, guid: d58a0320628a4564e849b0b328ba1448,
         type: 3}
       propertyPath: m_RootOrder
