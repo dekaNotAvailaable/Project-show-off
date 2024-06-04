@@ -26,7 +26,6 @@ public class UIHoverOver : MonoBehaviour
     void CheckController(Transform controllerTransform)
     {
         RaycastHit hit;
-        //    Debug.Log("checking controller");
         // Cast a ray from the controller forward
         if (Physics.Raycast(controllerTransform.position, controllerTransform.forward, out hit, Mathf.Infinity, targetCanvas))
         {
@@ -35,13 +34,14 @@ public class UIHoverOver : MonoBehaviour
             if (hit.collider != null && hit.collider.gameObject.CompareTag("Canvas"))
             {
                 Debug.Log("raycast is hitting canvas");
-                // Perform your action here
                 OnHoverCanvas();
             }
         }
         else
         {
             Debug.Log("failed to cast a ray");
+            // Draw a red ray in the Scene view to visualize when the raycast fails
+            Debug.DrawRay(controllerTransform.position, controllerTransform.forward * 10, Color.red, 1.0f);
         }
     }
     private void OnHoverCanvas()
