@@ -27,7 +27,7 @@ public class UIHoverOver : MonoBehaviour
     {
         RaycastHit hit;
         // Cast a ray from the controller forward
-        if (Physics.Raycast(controllerTransform.position, controllerTransform.forward, out hit, Mathf.Infinity, targetCanvas))
+        if (Physics.Raycast(controllerTransform.position, controllerTransform.forward, out hit, Mathf.Infinity))
         {
             Debug.Log("casting a ray");
             // Check if the raycast hit the canvas
