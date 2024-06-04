@@ -15,6 +15,7 @@ public class UIHoverOver : MonoBehaviour
     private void Start()
     {
         texts.enabled = false;
+        Debug.Log("UIHoverOver script");
     }
     private void Update()
     {
@@ -25,6 +26,7 @@ public class UIHoverOver : MonoBehaviour
     void CheckController(Transform controllerTransform)
     {
         RaycastHit hit;
+        //    Debug.Log("checking controller");
         // Cast a ray from the controller forward
         if (Physics.Raycast(controllerTransform.position, controllerTransform.forward, out hit, Mathf.Infinity, targetCanvas))
         {
@@ -36,6 +38,10 @@ public class UIHoverOver : MonoBehaviour
                 // Perform your action here
                 OnHoverCanvas();
             }
+        }
+        else
+        {
+            Debug.Log("failed to cast a ray");
         }
     }
     private void OnHoverCanvas()
