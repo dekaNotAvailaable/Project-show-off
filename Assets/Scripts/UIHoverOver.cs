@@ -28,9 +28,11 @@ public class UIHoverOver : MonoBehaviour
         // Cast a ray from the controller forward
         if (Physics.Raycast(controllerTransform.position, controllerTransform.forward, out hit, Mathf.Infinity, targetCanvas))
         {
+            Debug.Log("casting a ray");
             // Check if the raycast hit the canvas
             if (hit.collider != null && hit.collider.gameObject.CompareTag("Canvas"))
             {
+                Debug.Log("raycast is hitting canvas");
                 // Perform your action here
                 OnHoverCanvas();
             }
