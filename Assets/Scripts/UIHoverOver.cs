@@ -1,14 +1,13 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR.Interaction.Toolkit;
 
 // Make sure your class derives from the correct base class
 public class UIHoverOver : MonoBehaviour
 {
-    public XRRayInteractor leftRayInteractor;
-    public XRRayInteractor rightRayInteractor;
-    public Canvas targetCanvas;
+    public Transform leftControllerTransform;
+    public Transform rightControllerTransform;
+    public LayerMask targetCanvas;
     public TMP_Text texts;
     public Image gunImage;
     [SerializeField]
@@ -19,21 +18,21 @@ public class UIHoverOver : MonoBehaviour
     }
     private void Update()
     {
-        CheckRaycast(leftRayInteractor);
-        CheckRaycast(rightRayInteractor);
+        CheckController(leftControllerTransform);
+        CheckController(rightControllerTransform);
     }
 
-    private void CheckRaycast(XRRayInteractor rayInteractor)
+    void CheckController(Transform controllerTransform)
     {
-        if (rayInteractor && rayInteractor.isActiveAndEnabled)
+        RaycastHit hit;
+        // Cast a ray from the controller forward
+        if (Physics.Raycast(controllerTransform.position, controllerTransform.forward, out hit, Mathf.Infinity, targetCanvas))
         {
-            if (rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
+            // Check if the raycast hit the canvas
+            if (hit.collider != null && hit.collider.gameObject.CompareTag("Canvas"))
             {
-                if (hit.collider.gameObject == targetCanvas.gameObject)
-                {
-                    Debug.Log(rayInteractor.name + " is hovering over the canvas area");
-                    OnHoverCanvas();
-                }
+                // Perform your action here
+                OnHoverCanvas();
             }
         }
     }

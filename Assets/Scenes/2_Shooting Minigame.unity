@@ -56456,6 +56456,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33be0dd60280848b6924b832eae889e3, type: 3}
+--- !u!4 &2048571566 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7310628965613181385, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 2065637479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2050412149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57095,30 +57101,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85a777394a37e34eade8a5fc7c2c970, type: 3}
---- !u!114 &2065637480 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7310628965616896003, guid: e85a777394a37e34eade8a5fc7c2c970,
-    type: 3}
-  m_PrefabInstance: {fileID: 2065637479}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2065637481 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7310628965716327453, guid: e85a777394a37e34eade8a5fc7c2c970,
-    type: 3}
-  m_PrefabInstance: {fileID: 2065637479}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2065637482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7310628966278913810, guid: e85a777394a37e34eade8a5fc7c2c970,
@@ -57701,7 +57683,7 @@ GameObject:
   - component: {fileID: 2085586493}
   m_Layer: 5
   m_Name: Canvas (1)
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57802,9 +57784,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04938dddeb4fbec47a374652bcd468a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftRayInteractor: {fileID: 2065637481}
-  rightRayInteractor: {fileID: 2065637480}
-  targetCanvas: {fileID: 2085586492}
+  leftControllerTransform: {fileID: 2103098183}
+  rightControllerTransform: {fileID: 2048571566}
+  targetCanvas:
+    serializedVersion: 2
+    m_Bits: 32
   texts: {fileID: 1848700742}
   gunImage: {fileID: 383322252}
   imageRaiseCap: {x: 0, y: 10, z: 0}
@@ -58402,6 +58386,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakSec: 0
+--- !u!4 &2103098183 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7310628965334415889, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 2065637479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2108338568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 28edf8b992dfb7245b55574fe1d90b18,
