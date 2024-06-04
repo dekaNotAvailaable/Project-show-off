@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -31314,7 +31314,7 @@ GameObject:
   - component: {fileID: 1145101131}
   m_Layer: 5
   m_Name: Panel
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57687,7 +57687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2085586489
 RectTransform:
   m_ObjectHideFlags: 0
@@ -57791,7 +57791,7 @@ MonoBehaviour:
     m_Bits: 32
   texts: {fileID: 1848700742}
   gunImage: {fileID: 383322252}
-  imageRaiseCap: {x: 0, y: 10, z: 0}
+  imageRaiseCap: {x: 0, y: 0, z: 0}
 --- !u!1001 &2086205805
 PrefabInstance:
   m_ObjectHideFlags: 0

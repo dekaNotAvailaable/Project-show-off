@@ -31,15 +31,21 @@ public class UIHoverOver : MonoBehaviour
         {
             Debug.Log("casting a ray");
             // Check if the raycast hit the canvas
-            if (hit.collider != null && hit.collider.gameObject.CompareTag("Canvas"))
+            if (hit.collider != null)
             {
-                Debug.Log("raycast is hitting canvas");
-                OnHoverCanvas();
+              //  if (hit.collider.gameObject.CompareTag("Canvas"))
+              //  {
+                    Debug.Log("raycast is hitting canvas");
+                    OnHoverCanvas();
+              //  }
+              //  else { Debug.Log("failed to hit canvas collider"); }
             }
+            else { Debug.Log("collider null"); }
+
         }
         else
         {
-            Debug.Log("failed to cast a ray");
+            //Debug.Log("failed to cast a ray");
             // Draw a red ray in the Scene view to visualize when the raycast fails
             Debug.DrawRay(controllerTransform.position, controllerTransform.forward * 10, Color.red, 1.0f);
         }
