@@ -14,6 +14,7 @@ public class UIHoverOver : MonoBehaviour
     private Vector3 imageRaiseCap = new Vector3(0, 10f, 0);
 
     private Vector3 initialPosition;
+    [SerializeField]
     private const float hoverSpeed = 0.4f;
 
     private void Start()
