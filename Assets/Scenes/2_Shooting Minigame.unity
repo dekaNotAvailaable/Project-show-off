@@ -20869,7 +20869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &710460568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25013,8 +25013,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eafd5b7c8edb48c46a90a06d8f0ad6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 710460566}
-  head: {fileID: 0}
+  menu: {fileID: 2085586488}
+  head: {fileID: 2065637482}
   spawnDistance: 2
   showButton:
     m_UseReference: 1
@@ -57119,6 +57119,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2065637482 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7310628966278913810, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 2065637479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2069809271
 PrefabInstance:
   m_ObjectHideFlags: 0
