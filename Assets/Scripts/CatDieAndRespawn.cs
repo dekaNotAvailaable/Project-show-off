@@ -1,9 +1,9 @@
+using System.Collections;
 using UnityEngine;
-
 public class CatDieAndRespawn : MonoBehaviour
 {
-    private bool isCatDead;
-    private bool isDying;
+    [HideInInspector]
+    public bool isDead;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +15,17 @@ public class CatDieAndRespawn : MonoBehaviour
     {
 
     }
-    public void CatDie()
+    private void CatDead()
     {
-        if (!isDying)
+        if (!isDead)
         {
-            isCatDead = true;
-            isDying = true;
-            Destroy(gameObject);
+            //isCatDead = true;
+            isDead = true;
+            //Destroy(gameObject);
+        }
+        else
+        {
+            this.enabled = false;
         }
     }
 
@@ -29,22 +33,30 @@ public class CatDieAndRespawn : MonoBehaviour
     {
         if (other.CompareTag("Water"))
         {
-            CatDie();
+            CatDead();
             Debug.Log("cat died");
         }
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        //if (collision != null)
-        //{
-        //    CatDie();
-        //    Debug.Log("cat died");
-
-        //}
-    }
     private void OnParticleCollision(GameObject other)
     {
-        CatDie();
+        CatDead();
         Debug.Log("cat died");
     }
+    public void Respawn(GameObject nest, float delay)
+    {
+        if (isDead && nest != null)
+        {
+            StartCoroutine(RespawnWithDelay(nest, delay));
+
+        }
+    }
+
+    private IEnumerator RespawnWithDelay(GameObject nearestNest, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        this.transform.position = nearestNest.transform.position;
+        isDead = false;
+        this.enabled = true;
+    }
+
 }
