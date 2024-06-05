@@ -14,6 +14,7 @@ public class WaterGun : MonoBehaviour
     private float lineEndWidth = 0.1f;
     private LineRenderer lineRenderer;
     private XRGrabInteractable grabbable;
+    private Vector3 lastFirePointPosition;
 
     private void Start()
     {
@@ -28,11 +29,27 @@ public class WaterGun : MonoBehaviour
         lineRenderer.startColor = Color.blue;
         lineRenderer.endColor = Color.cyan;
         lineRenderer.enabled = false;
+
+        lastFirePointPosition = firePoint.position;
+    }
+
+    private void Update()
+    {
+        if (firePoint.position != lastFirePointPosition)
+        {
+            UpdateLineRendererPosition();
+            lastFirePointPosition = firePoint.position;
+        }
     }
 
     private void ShootWater(ActivateEventArgs arg)
     {
         lineRenderer.enabled = true;
+        UpdateLineRendererPosition();
+    }
+
+    private void UpdateLineRendererPosition()
+    {
         lineRenderer.SetPosition(0, firePoint.position);
         RaycastHit hit;
         if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, maxDistance))
