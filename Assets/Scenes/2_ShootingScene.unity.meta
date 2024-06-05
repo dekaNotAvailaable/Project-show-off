@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 8ca80f57f86d19c448031bfaaff5af14
+<<<<<<<< HEAD:Assets/Scenes/2_ShootingScene.unity.meta
+guid: 987c1fdfc8229a441a5f57aab62e484f
+========
+guid: 99c9720ab356a0642a771bea13969a05
+>>>>>>>> parent of e1dd342 (okkkk):Assets/Scenes/Scripting Scene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
