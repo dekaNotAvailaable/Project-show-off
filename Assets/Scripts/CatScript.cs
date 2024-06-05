@@ -7,14 +7,9 @@ public class CatScript : MonoBehaviour
     [SerializeField]
     private float stopDistance = 3.0f;
     private GameObject nearestNest;
-    [SerializeField]
-    private int catRespawnDelay = 1;
-    private bool isNestFound;
-    private CatDieAndRespawn catDie;
-
+    private bool isCatDead;
     void Start()
     {
-        catDie = GetComponent<CatDieAndRespawn>();
         FindNearestNest();
     }
 
@@ -27,11 +22,6 @@ public class CatScript : MonoBehaviour
         else
         {
             FindNearestNest();
-        }
-        if (catDie.isDead)
-        {
-            catDie.Respawn(nearestNest, catRespawnDelay);
-
         }
     }
 
@@ -53,11 +43,7 @@ public class CatScript : MonoBehaviour
 
         if (nearestNest == null)
         {
-            if (isNestFound)
-            {
-                Debug.LogError("No nests found in the scene.");
-            }
-            isNestFound = false;
+            Debug.LogError("No nests found in the scene.");
         }
     }
 
@@ -76,6 +62,12 @@ public class CatScript : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
             transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * catMoveSpeed);
         }
-        isNestFound = true;
+    }
+    public void CatDie(bool value)
+    {
+        if (gameObject != null)
+        {
+            value = isCatDead;
+        }
     }
 }
