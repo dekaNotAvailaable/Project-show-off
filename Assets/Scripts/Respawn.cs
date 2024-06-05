@@ -2,34 +2,44 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Respawn : MonoBehaviour {
+public class Respawn : MonoBehaviour
+{
     public GameObject SpawnPoint;
     public Image DieScreen;
     [SerializeField]
     private float RespawnSec;
-    void Start() {
+    Score score;
+    void Start()
+    {
+        score = FindAnyObjectByType<Score>();
         if (DieScreen != null)
             DieScreen.enabled = false;
         if (SpawnPoint != null) { Debug.Log("spawnpoint detected"); }
     }
-    private IEnumerator RespawnAfterDelay() {
+    private IEnumerator RespawnAfterDelay()
+    {
         yield return new WaitForSeconds(RespawnSec);
-        if (DieScreen != null) {
+        if (DieScreen != null)
+        {
             DieScreen.enabled = false;
         }
-        if (SpawnPoint != null) 
+        if (SpawnPoint != null)
         {
             Debug.Log("spwanpoint postition");
             this.transform.position = SpawnPoint.transform.position;
         }
     }
-    private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("Ground")) {
-            if (DieScreen != null) {
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            score.scoreInt--;
+            if (DieScreen != null)
+            {
                 DieScreen.enabled = true;
             }
             StartCoroutine(RespawnAfterDelay());
-            
+
             Debug.Log("dead");
         }
     }

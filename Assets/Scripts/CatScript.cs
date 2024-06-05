@@ -7,11 +7,14 @@ public class CatScript : MonoBehaviour
     [SerializeField]
     private float stopDistance = 3.0f;
     private GameObject nearestNest;
-
+    [SerializeField]
+    private int catRespawnDelay = 1;
     private bool isNestFound;
+    private CatDieAndRespawn catDie;
 
     void Start()
     {
+        catDie = GetComponent<CatDieAndRespawn>();
         FindNearestNest();
     }
 
@@ -24,6 +27,11 @@ public class CatScript : MonoBehaviour
         else
         {
             FindNearestNest();
+        }
+        if (catDie.isDead)
+        {
+            catDie.Respawn(nearestNest, catRespawnDelay);
+
         }
     }
 
