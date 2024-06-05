@@ -23,7 +23,7 @@ public class Respawn : MonoBehaviour {
             this.transform.position = SpawnPoint.transform.position;
         }
     }
-    private void OnCollisionEnter(Collision collision) {
+    private void OnTriggerEnter(Collider collision) {
         if (collision.gameObject.CompareTag("Ground")) {
             if (DieScreen != null) {
                 DieScreen.enabled = true;

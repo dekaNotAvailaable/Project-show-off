@@ -27854,7 +27854,7 @@ PrefabInstance:
     - target: {fileID: 6631739843107706427, guid: d58a0320628a4564e849b0b328ba1448,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.67
+      value: 28.77
       objectReference: {fileID: 0}
     - target: {fileID: 6631739843107706427, guid: d58a0320628a4564e849b0b328ba1448,
         type: 3}
@@ -34193,7 +34193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 1660633590}
-  m_MoveSpeed: 3
+  m_MoveSpeed: 4
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 1
@@ -34463,8 +34463,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670815319}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.403, z: 0}
-  m_LocalScale: {x: 0.1228, y: 0.08665659, z: 0.1228}
+  m_LocalPosition: {x: 0, y: 0.379, z: 0}
+  m_LocalScale: {x: 0.0653603, y: 1.8086023, z: 0.0653603}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1660633587}
@@ -34478,7 +34478,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670815319}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
