@@ -17,9 +17,9 @@ public class RotationPlankScript : MonoBehaviour
             blackScreenCanvas.enabled = false;
         }
     }
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player") && !hasRotated)
+        if (collision.gameObject.CompareTag("Player"))// && //!hasRotated)
         {
             StartCoroutine(RotatePlayer(collision.gameObject));
             Debug.Log("the player has stepped on the rotate plank");
