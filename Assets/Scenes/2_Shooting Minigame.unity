@@ -58328,6 +58328,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 944701257003690651, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_Name
+      value: Canvas_Plank_game
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576139952638798843, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_text
+      value: Walking
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913464372660663436, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.33882165
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913464372660663436, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.8867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913464372660663436, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.38380426
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469709534639115914, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469709534639115914, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 368
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469709534639115914, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469709534639115914, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469709534639115914, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5281295488830706833, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5281295488830706833, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.797
+      objectReference: {fileID: 0}
     - target: {fileID: 6443936114151613322, guid: 494a832f015224d6e8ecb4d448ad9f02,
         type: 3}
       propertyPath: m_Name
@@ -58387,6 +58447,71 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443936115000531114, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_text
+      value: In this game mode. The CMGT mascot, CMGaTo, will try to destroy the
+        nests scattered around in this level. You will see a water gun on the table
+        next to you. Using the water gun, you will be able to spray the cat and keep
+        the nests from getting destroyed. Good luck!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443936115001554141, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.823
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443936115146623685, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443936115644801779, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967710980684649100, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c1198fd3aa7ee4b48bd8a29f297f7c1b,
+        type: 3}
+    - target: {fileID: 6967710980684649100, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.70980394
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967710980684649100, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.8113208
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967710980684649100, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.8113208
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967710980684649100, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.8113208
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242501151485205864, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 88bdc033325654bd8940e048330dc13c,
+        type: 3}
+    - target: {fileID: 7280045083958694605, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_Name
+      value: Button_Walking
+      objectReference: {fileID: 0}
+    - target: {fileID: 8185914099828752772, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_Name
+      value: Button_Path
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 494a832f015224d6e8ecb4d448ad9f02, type: 3}
