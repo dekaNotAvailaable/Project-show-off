@@ -29,17 +29,16 @@ public class Respawn : MonoBehaviour
             this.transform.position = SpawnPoint.transform.position;
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            score.scoreInt--;
+            //score.scoreInt--;
             if (DieScreen != null)
             {
                 DieScreen.enabled = true;
             }
             StartCoroutine(RespawnAfterDelay());
-
             Debug.Log("dead");
         }
     }
