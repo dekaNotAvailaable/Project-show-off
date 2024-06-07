@@ -1,23 +1,26 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class RotationPlankScript : MonoBehaviour
 {
     public float rotationAngle = 0f;
-    public Image blackScreenCanvas;
+    public GameObject blackScreen;
     private bool hasRotated = false;
     [SerializeField]
     private float blackScreenTime;
+    public CharacterController CC;
 
     private void Start()
     {
-        if (blackScreenCanvas != null)
+
+        //blackScreen = GameObject.Find("BlackScreen");
+        if (blackScreen != null)
         {
-            blackScreenCanvas.enabled = false;
+            blackScreen.SetActive(false);
+            Debug.Log("balckscreen Found");
         }
     }
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player") && !hasRotated)
         {
@@ -28,9 +31,11 @@ public class RotationPlankScript : MonoBehaviour
 
     private IEnumerator RotatePlayer(GameObject player)
     {
-        if (blackScreenCanvas != null)
+
+        if (blackScreen != null)
         {
-            blackScreenCanvas.enabled = true;
+            blackScreen.SetActive(true);
+            Debug.Log("balckscreen Found v2");
         }
         else
         {
@@ -40,10 +45,17 @@ public class RotationPlankScript : MonoBehaviour
         player.transform.Rotate(Vector3.up, rotationAngle);
         hasRotated = true;
         yield return new WaitForSeconds(blackScreenTime);
-        if (blackScreenCanvas != null)
+        if (blackScreen != null)
         {
-            blackScreenCanvas.enabled = false;
+            blackScreen.SetActive(false);
         }
+        yield return new WaitForSeconds(blackScreenTime + 4f);
+        if (hasRotated)
+        {
+            hasRotated = !hasRotated;
+        }
+
+
 
     }
 }

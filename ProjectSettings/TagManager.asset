@@ -10,6 +10,8 @@ TagManager:
   - Nest
   - Water
   - Canvas
+  - Marble
+  - BlackScreen
   layers:
   - Default
   - TransparentFX

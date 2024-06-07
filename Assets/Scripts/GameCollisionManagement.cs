@@ -3,10 +3,10 @@ using UnityEngine.UI;
 
 public class GameCollisionManager : MonoBehaviour
 {
-    public Image finishScreen;
+   // public Image finishScreen;
     void Start()
     {
-        finishScreen.enabled = false;
+      //  finishScreen.enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -15,7 +15,7 @@ public class GameCollisionManager : MonoBehaviour
         {
             if (other.CompareTag("Finish"))
             {
-                finishScreen.enabled = true;
+               //s finishScreen.enabled = true;
                 SceneChange.Instance.ChangeSceneToNext();
             }
 
