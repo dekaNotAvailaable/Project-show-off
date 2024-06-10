@@ -42,7 +42,7 @@ public class RotationPlankScript : MonoBehaviour
             Debug.LogWarning("Black screen canvas not assigned.");
         }
         yield return new WaitForSeconds(0.1f);
-        player.transform.Rotate(Vector3.up, rotationAngle);
+        player.transform.parent.Rotate(Vector3.up, rotationAngle);
         hasRotated = true;
         yield return new WaitForSeconds(blackScreenTime);
         if (blackScreen != null)
