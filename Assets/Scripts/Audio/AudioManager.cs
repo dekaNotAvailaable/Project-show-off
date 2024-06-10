@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-
-using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
-=======
->>>>>>> Sound-Design
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance { get; private set; }
     public AudioSource BGM;
-<<<<<<< HEAD
-=======
     public AudioSource Anvil;
     public AudioSource BirdAmbience;
     public AudioSource ButtonSound;
@@ -38,7 +29,6 @@ public class AudioManager : MonoBehaviour
     public AudioSource TeleportSound;
     public AudioSource WindAmbience;
     public AudioSource TrafficNoise;
->>>>>>> Sound-Design
 
     private void Awake()
     {
@@ -54,10 +44,6 @@ public class AudioManager : MonoBehaviour
         PlayBGM();
     }
     private void PlayBGM() { BGM.Play(); BGM.loop = true; }
-<<<<<<< HEAD
-
-}
-=======
     public void AnvilPlay() { Anvil.Play(); }
     public void BirdSoundPlay() { BirdAmbience.Play(); }
     public void ButtonSoundPlay() { ButtonSound.Play(); }
@@ -84,4 +70,3 @@ public class AudioManager : MonoBehaviour
     public void WindAmbiencePlay() { WindAmbience.Play(); }
     public void TrafficNoisePlay() { TrafficNoise.Play(); }
 }
->>>>>>> Sound-Design
