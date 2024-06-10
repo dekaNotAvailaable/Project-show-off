@@ -53108,22 +53108,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4357730966221782800}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7267869872750173969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473174561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9994500b8970c3740b505e485008f12f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetPos1: {x: 1.2, y: -0.1, z: 8.4}
-  targetPos2: {x: 1.2, y: 0.1, z: 8.4}
-  speed: 0.1
-  canMove: 0
 --- !u!65 &7407030815398718524
 BoxCollider:
   m_ObjectHideFlags: 0
