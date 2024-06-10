@@ -4,12 +4,13 @@ public class ItemRespawn : MonoBehaviour
 {
     private Vector3 initialSpawnPoint;
     private Rigidbody rb;
+    private Quaternion initialRotation;
     // Start is called before the first frame update
     void Start()
     {
         initialSpawnPoint = this.transform.position;
-        if (rb != null)
-            rb = GetComponent<Rigidbody>();
+        initialRotation = this.transform.rotation;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class ItemRespawn : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             this.transform.position = initialSpawnPoint;
-            this.transform.rotation = Quaternion.identity;
+            this.transform.rotation = initialRotation;
             if (rb != null)
             {
                 this.rb.velocity = Vector3.zero;
