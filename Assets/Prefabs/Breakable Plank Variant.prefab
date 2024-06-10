@@ -87,6 +87,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Breakable Plank Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2154191844845530941, guid: 33be0dd60280848b6924b832eae889e3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33be0dd60280848b6924b832eae889e3, type: 3}
 --- !u!1 &8323245994863903103 stripped
@@ -108,3 +113,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakSec: 0
+  myAudio: {fileID: 0}

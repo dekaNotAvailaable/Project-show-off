@@ -30,7 +30,6 @@ public class AudioManager : MonoBehaviour
     public AudioSource WindAmbience;
     public AudioSource TrafficNoise;
 
-
     private void Awake()
     {
         if (instance != null)
@@ -45,10 +44,6 @@ public class AudioManager : MonoBehaviour
         PlayBGM();
     }
     private void PlayBGM() { BGM.Play(); BGM.loop = true; }
-
-
-
-
     public void AnvilPlay() { Anvil.Play(); }
     public void BirdSoundPlay() { BirdAmbience.Play(); }
     public void ButtonSoundPlay() { ButtonSound.Play(); }
@@ -75,4 +70,3 @@ public class AudioManager : MonoBehaviour
     public void WindAmbiencePlay() { WindAmbience.Play(); }
     public void TrafficNoisePlay() { TrafficNoise.Play(); }
 }
-

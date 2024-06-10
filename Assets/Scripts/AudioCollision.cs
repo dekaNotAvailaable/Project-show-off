@@ -1,20 +1,13 @@
 using UnityEngine;
-
-public class AudioCollision : MonoBehaviour
-{
-
+using System.Collections;
+ 
+public class AudioCollision : MonoBehaviour {
     public float magnitude = 20.0f;
-    void OnCollisionEnter(Collision collision)
-    {
-
+    void OnCollisionEnter(Collision collision) {
+ 
         if (collision.relativeVelocity.magnitude > magnitude)
-        {
-
-            if (collision.relativeVelocity.magnitude > 20)
-
-                GetComponent<AudioSource>().Play();
-
-            Debug.Log(collision.collider.name);
-        }
+            GetComponent<AudioSource>().Play();
+       
+        Debug.Log(collision.collider.name);
     }
 }
