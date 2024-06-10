@@ -12,6 +12,7 @@ public class WaterGunWithParticles : MonoBehaviour
     private XRGrabInteractable grabbable;
     private Vector3 lastFirePointPosition;
 
+
     private void Start()
     {
         grabbable = GetComponent<XRGrabInteractable>();
@@ -25,8 +26,8 @@ public class WaterGunWithParticles : MonoBehaviour
         }
 
         var main = waterParticles.main;
-        main.startSpeed = maxDistance;  // Adjust this value to control the distance
-        main.startLifetime = maxDistance / main.startSpeed.constant; // Calculate the lifetime based on speed and distance
+        main.startSpeed = maxDistance;
+        main.startLifetime = maxDistance / main.startSpeed.constant;
         waterParticles.Stop();
     }
 
