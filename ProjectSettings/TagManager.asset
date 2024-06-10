@@ -8,6 +8,10 @@ TagManager:
   - Right Hand
   - Ground
   - Nest
+  - Water
+  - Canvas
+  - Marble
+  - BlackScreen
   layers:
   - Default
   - TransparentFX

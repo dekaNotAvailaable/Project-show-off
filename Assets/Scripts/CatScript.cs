@@ -7,24 +7,31 @@ public class CatScript : MonoBehaviour
     [SerializeField]
     private float stopDistance = 3.0f;
     private GameObject nearestNest;
-    private bool isCatDead;
-    private bool isDying;
+    [SerializeField]
+    private int catRespawnDelay = 1;
     private bool isNestFound;
+    private CatDieAndRespawn catDie;
 
     void Start()
     {
+        catDie = GetComponent<CatDieAndRespawn>();
         FindNearestNest();
     }
 
     void Update()
     {
-        if (!isCatDead && nearestNest != null)
+        if (nearestNest != null)
         {
             MoveTowardsNest();
         }
         else
         {
             FindNearestNest();
+        }
+        if (catDie.isDead)
+        {
+            catDie.Respawn(nearestNest, catRespawnDelay);
+
         }
     }
 
@@ -70,23 +77,5 @@ public class CatScript : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * catMoveSpeed);
         }
         isNestFound = true;
-    }
-
-    public void CatDie()
-    {
-        if (!isDying)
-        {
-            isCatDead = true;
-            isDying = true;
-            Destroy(gameObject);
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("WaterLine"))
-        {
-            CatDie();
-        }
     }
 }
