@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/CatDieAndRespawn.cs.meta
+guid: 7fa5962dcef6ca7479103019452d8351
+========
+guid: c7f33151ec729494a8b98c8005a67480
+>>>>>>>> Sound-Design:Assets/Scripts/AudioWalking.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
