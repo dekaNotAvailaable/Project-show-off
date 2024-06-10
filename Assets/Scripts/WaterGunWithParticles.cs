@@ -11,7 +11,7 @@ public class WaterGunWithParticles : MonoBehaviour
     private float waterForce = 10f;
     private XRGrabInteractable grabbable;
     private Vector3 lastFirePointPosition;
-    private bool isAlreadyShot;
+
 
     private void Start()
     {
@@ -26,14 +26,14 @@ public class WaterGunWithParticles : MonoBehaviour
         }
 
         var main = waterParticles.main;
-        main.startSpeed = maxDistance;  // Adjust this value to control the distance
-        main.startLifetime = maxDistance / main.startSpeed.constant; // Calculate the lifetime based on speed and distance
+        main.startSpeed = maxDistance;
+        main.startLifetime = maxDistance / main.startSpeed.constant;
         waterParticles.Stop();
     }
 
     private void Update()
     {
-        if (firePoint.position != lastFirePointPosition && !isAlreadyShot)
+        if (firePoint.position != lastFirePointPosition)
         {
             UpdateParticleSystemPosition();
             lastFirePointPosition = firePoint.position;
@@ -44,7 +44,6 @@ public class WaterGunWithParticles : MonoBehaviour
     {
         waterParticles.Play();
         UpdateParticleSystemPosition();
-        isAlreadyShot = true;
     }
 
     private void UpdateParticleSystemPosition()
