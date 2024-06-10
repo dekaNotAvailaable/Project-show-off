@@ -7,6 +7,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance { get; private set; }
+    public AudioSource BGM;
 
     private void Awake() {
         if (instance != null) {
@@ -15,6 +16,10 @@ public class AudioManager : MonoBehaviour
         }
         instance = this;
     }
-
+    private void Start()
+    {
+        PlayBGM();
+    }
+    private void PlayBGM() { BGM.Play(); BGM.loop = true; }
 
 }
