@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 752d30d06eaf9eb40bfd9ae2402bd2d5
+=======
+<<<<<<<< HEAD:Assets/Materials/Building 3/Blue.meta
+guid: 5b16fb77c91dc1843a083f80e703505f
+========
+guid: 20f4676397ab24b4a924df870b01db5e
+>>>>>>>> Sound-Design:Assets/SFX.meta
+>>>>>>> Sound-Design
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

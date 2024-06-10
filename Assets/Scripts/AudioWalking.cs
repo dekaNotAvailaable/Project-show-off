@@ -9,7 +9,7 @@ public class AudioWalking : MonoBehaviour {
     
     void OnCollisionStay(Collision collision) {
  
-        if (collision.relativeVelocity.magnitude > 0)
+        if (collision.relativeVelocity.magnitude > 1)
         
             if (Input.GetKey("up"))
         {
