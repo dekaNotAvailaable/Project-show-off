@@ -11,6 +11,7 @@ public class WaterGunWithParticles : MonoBehaviour
     private float waterForce = 10f;
     private XRGrabInteractable grabbable;
     private Vector3 lastFirePointPosition;
+    private bool isAlreadyShot;
 
     private void Start()
     {
@@ -32,7 +33,7 @@ public class WaterGunWithParticles : MonoBehaviour
 
     private void Update()
     {
-        if (firePoint.position != lastFirePointPosition)
+        if (firePoint.position != lastFirePointPosition && !isAlreadyShot)
         {
             UpdateParticleSystemPosition();
             lastFirePointPosition = firePoint.position;
@@ -43,6 +44,7 @@ public class WaterGunWithParticles : MonoBehaviour
     {
         waterParticles.Play();
         UpdateParticleSystemPosition();
+        isAlreadyShot = true;
     }
 
     private void UpdateParticleSystemPosition()

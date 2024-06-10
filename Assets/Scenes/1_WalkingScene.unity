@@ -27263,7 +27263,7 @@ PrefabInstance:
         type: 3}
       propertyPath: blackScreenCanvas
       value: 
-      objectReference: {fileID: 1928795870}
+      objectReference: {fileID: 0}
     - target: {fileID: 3772924538400592589, guid: d58a0320628a4564e849b0b328ba1448,
         type: 3}
       propertyPath: m_Name
@@ -27278,7 +27278,7 @@ PrefabInstance:
         type: 3}
       propertyPath: blackScreenCanvas
       value: 
-      objectReference: {fileID: 1928795870}
+      objectReference: {fileID: 0}
     - target: {fileID: 4610106668978397202, guid: d58a0320628a4564e849b0b328ba1448,
         type: 3}
       propertyPath: breakSec
@@ -27368,7 +27368,7 @@ PrefabInstance:
         type: 3}
       propertyPath: blackScreenCanvas
       value: 
-      objectReference: {fileID: 1928795870}
+      objectReference: {fileID: 0}
     - target: {fileID: 7434977466992489245, guid: d58a0320628a4564e849b0b328ba1448,
         type: 3}
       propertyPath: rotationAngle
@@ -27378,9 +27378,30 @@ PrefabInstance:
         type: 3}
       propertyPath: blackScreenCanvas
       value: 
-      objectReference: {fileID: 1928795870}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d58a0320628a4564e849b0b328ba1448, type: 3}
+--- !u!1 &1313658167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5763438861159820121, guid: d58a0320628a4564e849b0b328ba1448,
+    type: 3}
+  m_PrefabInstance: {fileID: 1313658166}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1313658168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313658167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c2df6c90baf674fa02e0de5f860ae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.5
+  frequency: 1
+  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &1315054064
 PrefabInstance:
   m_ObjectHideFlags: 0
