@@ -1,53 +1,48 @@
 using UnityEngine;
-using UnityEngine.XR;
-using UnityEngine.XR.Management;
 
 public class VRWalkIRL : MonoBehaviour
 {
-    public float speed = 5f;
-    public float amplitude = 2f;
-    public float frequency = 0.3f;
-    public Vector3 direction = Vector3.forward;
-    private Vector3 startPosition;
-    private Vector3 lastHeadsetPosition;
-    private Vector3 currentHeadsetPosition;
-    private XRDisplaySubsystem displaySubsystem;
-    private InputDevice headsetDevice;
+    public float scalingFactor = 2f; // Adjust this value to change the scaling factor
 
-    public float movementThreshold = 0.01f;
-
-    void Start()
-    {
-        startPosition = transform.position;
-        direction = direction.normalized;
-        displaySubsystem = XRGeneralSettings.Instance.Manager.activeLoader.GetLoadedSubsystem<XRDisplaySubsystem>();
-        if (displaySubsystem != null && displaySubsystem.running)
-        {
-            headsetDevice = InputDevices.GetDeviceAtXRNode(XRNode.Head);
-            if (headsetDevice.isValid)
-            {
-                headsetDevice.TryGetFeatureValue(CommonUsages.devicePosition, out lastHeadsetPosition);
-            }
-        }
-        else
-        {
-            Debug.LogError("No XR device detected.");
-        }
-    }
-
+    // Update is called once per frame
     void Update()
     {
-        if (displaySubsystem != null && displaySubsystem.running && headsetDevice.isValid)
-        {
-            if (headsetDevice.TryGetFeatureValue(CommonUsages.devicePosition, out currentHeadsetPosition))
-            {
-                Vector3 deltaPosition = currentHeadsetPosition - lastHeadsetPosition;
-                if (deltaPosition.magnitude > movementThreshold)
-                {
-                    transform.position += deltaPosition;
-                }
-                lastHeadsetPosition = currentHeadsetPosition;
-            }
-        }
+        // Example: Get real-world movement from VR headset position
+        Vector3 realWorldMovement = GetRealWorldMovement();
+
+        // Apply scaling factor
+        Vector3 scaledMovement = realWorldMovement * scalingFactor;
+
+        // Update player position in Unity
+        transform.position += scaledMovement;
+    }
+
+    // Example method to get real-world movement (you need to implement this according to your VR system)
+    Vector3 GetRealWorldMovement()
+    {
+        // Example: Get movement from VR headset position
+        Vector3 headsetPosition = GetHeadsetPosition();
+        Vector3 previousHeadsetPosition = GetPreviousHeadsetPosition();
+
+        // Calculate movement vector
+        Vector3 movement = headsetPosition - previousHeadsetPosition;
+
+        // Return movement vector
+        return movement;
+    }
+
+    // Example methods to get VR headset position (you need to implement these according to your VR system)
+    Vector3 GetHeadsetPosition()
+    {
+        // Example: Get headset position from VR headset tracking system
+        return Camera.main.transform.position;
+    }
+
+    Vector3 GetPreviousHeadsetPosition()
+    {
+        // Example: Get previous headset position from a variable
+        // You might want to use a variable to store the previous position for calculating movement
+        // For simplicity, we'll return zero vector as previous position
+        return Vector3.zero;
     }
 }
