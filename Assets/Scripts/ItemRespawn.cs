@@ -3,10 +3,13 @@ using UnityEngine;
 public class ItemRespawn : MonoBehaviour
 {
     private Vector3 initialSpawnPoint;
+    private Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
         initialSpawnPoint = this.transform.position;
+        if (rb != null)
+            rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -20,6 +23,10 @@ public class ItemRespawn : MonoBehaviour
         {
             this.transform.position = initialSpawnPoint;
             this.transform.rotation = Quaternion.identity;
+            if (rb != null)
+            {
+                this.rb.velocity = Vector3.zero;
+            }
         }
     }
 }
