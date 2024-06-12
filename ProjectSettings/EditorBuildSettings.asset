@@ -7,9 +7,6 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/1_WalkingScene.unity
-    guid: a8fc5901c1b5a244e8e0c4b19327bcbc
-  - enabled: 0
-    path: Assets/Scenes/1_WalkingScene.unity
     guid: d7fb756e83dd3384bb736a7637a401a2
   - enabled: 1
     path: Assets/Scenes/2_ShootingScene.unity

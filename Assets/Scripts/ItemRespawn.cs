@@ -31,6 +31,10 @@ public class ItemRespawn : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+            if (rb != null)
+            {
+                this.rb.velocity = Vector3.zero;
+            }
             if (GunSpawnPoint == null)
             {
                 this.transform.position = initialSpawnPoint;
@@ -40,10 +44,6 @@ public class ItemRespawn : MonoBehaviour
             {
                 this.transform.position = GunSpawnPoint.transform.position;
                 this.transform.rotation = initialRotation;
-            }
-            if (rb != null)
-            {
-                this.rb.velocity = Vector3.zero;
             }
         }
     }

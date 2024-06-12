@@ -3691,103 +3691,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150641629}
   m_Mesh: {fileID: 3623834706885369118, guid: 23b4c2eea550bda46b933bdb64507be5, type: 3}
---- !u!1 &150988441
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 150988442}
-  - component: {fileID: 150988445}
-  - component: {fileID: 150988444}
-  - component: {fileID: 150988443}
-  m_Layer: 6
-  m_Name: feet2
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &150988442
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150988441}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.035999298, z: 0}
-  m_LocalScale: {x: 0.33321, y: 0.022669364, z: 0.33321}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 794954930}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &150988443
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150988441}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &150988444
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150988441}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &150988445
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150988441}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &152780400 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 82845e28796fff84880ff13eb806c9c1,
@@ -14730,18 +14633,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1440411159}
   m_PrefabAsset: {fileID: 0}
---- !u!143 &794954925 stripped
-CharacterController:
-  m_CorrespondingSourceObject: {fileID: 8681176109490740467, guid: e85a777394a37e34eade8a5fc7c2c970,
-    type: 3}
-  m_PrefabInstance: {fileID: 1440411159}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &794954930 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8681176109490740468, guid: e85a777394a37e34eade8a5fc7c2c970,
-    type: 3}
-  m_PrefabInstance: {fileID: 1440411159}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &794954931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14749,7 +14640,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794954915}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d08afbfe50295cf48b3efbfdbf862159, type: 3}
   m_Name: 
@@ -24213,12 +24104,6 @@ Transform:
   m_Father: {fileID: 1531203678}
   m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1283405624 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8810594781847651238, guid: e85a777394a37e34eade8a5fc7c2c970,
-    type: 3}
-  m_PrefabInstance: {fileID: 1440411159}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1285625535 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8323245994863903103, guid: 3f309a8a39500cb45af6852e0e2f48b4,
@@ -27265,7 +27150,7 @@ PrefabInstance:
     - target: {fileID: 8681176109490740468, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.072
+      value: 31.282
       objectReference: {fileID: 0}
     - target: {fileID: 8681176109490740468, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
@@ -27366,6 +27251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8810594781847651238, guid: e85a777394a37e34eade8a5fc7c2c970,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85a777394a37e34eade8a5fc7c2c970, type: 3}
@@ -41363,7 +41253,6 @@ GameObject:
   - component: {fileID: 1820293120953392320}
   - component: {fileID: 3381395624637010789}
   - component: {fileID: 651287115557791663}
-  - component: {fileID: 7434977468304467499}
   - component: {fileID: 4369849188457155559}
   m_Layer: 0
   m_Name: CatSpawnPlank Variant (1)
@@ -41902,22 +41791,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6315918289429116959}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1706595916379761300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7100058071200910021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef4866aec1ab31f41ad04af9c9c68ec4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationAngle: 0
-  blackScreen: {fileID: 1283405624}
-  blackScreenTime: 2
-  CC: {fileID: 794954925}
 --- !u!65 &1720199328219975428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45102,7 +44975,6 @@ GameObject:
   - component: {fileID: 2425660766732538303}
   - component: {fileID: 1587085699129990682}
   - component: {fileID: 3594577569685318352}
-  - component: {fileID: 6900939536480627540}
   - component: {fileID: 1052901479182112155}
   m_Layer: 0
   m_Name: CatSpawnPlank Variant (2)
@@ -46330,22 +46202,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 9206465781581678795}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4061024370975084030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5583578315791101359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef4866aec1ab31f41ad04af9c9c68ec4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationAngle: 180
-  blackScreen: {fileID: 1283405624}
-  blackScreenTime: 2
-  CC: {fileID: 794954925}
 --- !u!65 &4062685141353788217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50462,7 +50318,6 @@ GameObject:
   - component: {fileID: 5059524018025871125}
   - component: {fileID: 8185523069678401712}
   - component: {fileID: 6231898406284086394}
-  - component: {fileID: 4061024370975084030}
   - component: {fileID: 3108658273993461407}
   m_Layer: 0
   m_Name: CatSpawnPlank Variant
@@ -52730,22 +52585,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 625716617706052193}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6900939536480627540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3090169943736552197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef4866aec1ab31f41ad04af9c9c68ec4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationAngle: 180
-  blackScreen: {fileID: 1283405624}
-  blackScreenTime: 2
-  CC: {fileID: 794954925}
 --- !u!1001 &6913564186525680632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53053,7 +52892,6 @@ GameObject:
   - component: {fileID: 7621121491184324735}
   - component: {fileID: 6803938530468569050}
   - component: {fileID: 8757395996154850064}
-  - component: {fileID: 1706595916379761300}
   - component: {fileID: 5640003328588113372}
   m_Layer: 0
   m_Name: CatSpawnPlank Variant (3)
@@ -53174,22 +53012,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 535488486676502074}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7434977468304467499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299616552419837562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef4866aec1ab31f41ad04af9c9c68ec4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationAngle: -90
-  blackScreen: {fileID: 1283405624}
-  blackScreenTime: 2
-  CC: {fileID: 794954925}
 --- !u!65 &7513449619353466898
 BoxCollider:
   m_ObjectHideFlags: 0
