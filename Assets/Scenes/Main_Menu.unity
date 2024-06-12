@@ -15696,8 +15696,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eafd5b7c8edb48c46a90a06d8f0ad6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 710460566}
-  levelselect: {fileID: 660171272}
+  gameObjects:
+  - {fileID: 710460566}
+  - {fileID: 660171272}
   head: {fileID: 1713879552}
   spawnDistance: 2
   showButton:
