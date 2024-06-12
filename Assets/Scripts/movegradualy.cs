@@ -6,7 +6,7 @@ public class movegradualy : MonoBehaviour
     [SerializeField] private float accelerationRate = 2f; // Rate at which speed increases per second.
 
     private float currentSpeed = 0f; // Current speed of the character.
-    private Vector3 moveDirection = Vector3.zero; // Movement direction.
+    private Vector3 moveDirection = Vector3.forward; // Movement direction.
 
     private void Update()
     {
