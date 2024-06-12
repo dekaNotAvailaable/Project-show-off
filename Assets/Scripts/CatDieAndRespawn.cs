@@ -19,22 +19,12 @@ public class CatDieAndRespawn : MonoBehaviour
     {
         if (!isDead)
         {
-            //isCatDead = true;
             isDead = true;
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
         else
         {
             this.enabled = false;
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Water"))
-        {
-            CatDead();
-            Debug.Log("cat died");
         }
     }
     private void OnParticleCollision(GameObject other)

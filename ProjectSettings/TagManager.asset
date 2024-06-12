@@ -12,11 +12,12 @@ TagManager:
   - Canvas
   - Marble
   - BlackScreen
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Particles
   - Water
   - UI
   - Player
