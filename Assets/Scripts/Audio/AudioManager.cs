@@ -6,32 +6,58 @@ public class AudioManager : MonoBehaviour
     [Header("Audios")]
     [SerializeField]
     private AudioSource PickUpSound;
-    public AudioSource BGM;
-    public AudioSource Anvil;
-    public AudioSource BirdAmbience;
-    public AudioSource ButtonSound;
-    public AudioSource CatAttacked1;
-    public AudioSource CatAttacked2;
-    public AudioSource CatCalling1;
-    public AudioSource CatCalling2;
-    public AudioSource CatScream1;
-    public AudioSource CatScream2;
-    public AudioSource ConcreteStep1;
-    public AudioSource ConcreteStep2;
-    public AudioSource ConcreteStep3;
-    public AudioSource ConcreteStep4;
-    public AudioSource Death;
-    public AudioSource DuckQuack;
-    public AudioSource GlassBreak;
-    public AudioSource GlassFoot1;
-    public AudioSource GlassFoot2;
-    public AudioSource GlassFoot3;
-    public AudioSource NestBreaking;
-    public AudioSource PaperPlane;
-    public AudioSource RespawnSound;
-    public AudioSource TeleportSound;
-    public AudioSource WindAmbience;
-    public AudioSource TrafficNoise;
+    [SerializeField]
+    private AudioSource BGM;
+    [SerializeField]
+    private AudioSource Anvil;
+    [SerializeField]
+    private AudioSource BirdAmbience;
+    [SerializeField]
+    private AudioSource ButtonSound;
+    [SerializeField]
+    private AudioSource CatAttacked1;
+    [SerializeField]
+    private AudioSource CatAttacked2;
+    [SerializeField]
+    private AudioSource CatCalling1;
+    [SerializeField]
+    private AudioSource CatCalling2;
+    [SerializeField]
+    private AudioSource CatScream1;
+    [SerializeField]
+    private AudioSource CatScream2;
+    [SerializeField]
+    private AudioSource ConcreteStep1;
+    [SerializeField]
+    private AudioSource ConcreteStep2;
+    [SerializeField]
+    private AudioSource ConcreteStep3;
+    [SerializeField]
+    private AudioSource ConcreteStep4;
+    [SerializeField]
+    private AudioSource Death;
+    [SerializeField]
+    private AudioSource DuckQuack;
+    [SerializeField]
+    private AudioSource GlassBreak;
+    [SerializeField]
+    private AudioSource GlassFoot1;
+    [SerializeField]
+    private AudioSource GlassFoot2;
+    [SerializeField]
+    private AudioSource GlassFoot3;
+    [SerializeField]
+    private AudioSource NestBreaking;
+    [SerializeField]
+    private AudioSource PaperPlane;
+    [SerializeField]
+    private AudioSource RespawnSound;
+    [SerializeField]
+    private AudioSource TeleportSound;
+    [SerializeField]
+    private AudioSource WindAmbience;
+    [SerializeField]
+    private AudioSource TrafficNoise;
 
     private void Awake()
     {
