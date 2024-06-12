@@ -9,8 +9,10 @@ public class Respawn : MonoBehaviour
     [SerializeField]
     private float RespawnSec;
     Score score;
+    private VRWalkIRL VRWalkIRl;
     void Start()
     {
+        VRWalkIRl = GetComponent<VRWalkIRL>();
         score = FindAnyObjectByType<Score>();
         if (DieScreen != null)
             DieScreen.enabled = false;
@@ -27,6 +29,10 @@ public class Respawn : MonoBehaviour
         {
             Debug.Log("spwanpoint postition");
             this.transform.position = SpawnPoint.transform.position;
+            if (VRWalkIRl != null)
+            {
+                VRWalkIRl.ResetHeadsetPosition();
+            }
         }
     }
     private void OnTriggerEnter(Collider collision)
