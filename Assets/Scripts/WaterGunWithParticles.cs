@@ -56,7 +56,7 @@ public class WaterGunWithParticles : MonoBehaviour
         {
             if (hit.rigidbody != null)
             {
-                hit.rigidbody.AddForceAtPosition(firePoint.forward, hit.point);
+                hit.rigidbody.AddForceAtPosition(firePoint.forward * 0f, hit.point);
             }
         }
     }
