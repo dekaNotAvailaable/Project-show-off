@@ -19020,7 +19020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &853840239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19034,6 +19034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 710460566}
+  levelselect: {fileID: 0}
   head: {fileID: 961081754}
   spawnDistance: 2
   showButton:
@@ -25517,7 +25518,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 183
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -46393,12 +46394,12 @@ PrefabInstance:
     - target: {fileID: 8681176109490740468, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.941
+      value: 29.975
       objectReference: {fileID: 0}
     - target: {fileID: 8681176109490740468, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.175
+      value: -2.317
       objectReference: {fileID: 0}
     - target: {fileID: 8681176109490740468, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
