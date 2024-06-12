@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16921562, g: 0.49040985, b: 0.70454466, a: 1}
+  m_IndirectSpecularColor: {r: 0.16922298, g: 0.49039847, b: 0.7045378, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -29118,8 +29118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 515014231}
   waterParticles: {fileID: 1037038420}
-  maxDistance: 10
-  waterForce: 0
+  LifeTime: 10
+  StartSpeed: 5
 --- !u!114 &1151603749
 MonoBehaviour:
   m_ObjectHideFlags: 0
