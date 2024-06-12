@@ -5364,7 +5364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   direction: {x: 0, y: 0, z: -1}
-  Tolencerance: 5
+  Tolencerance: 2
   StopPoint: {fileID: 839992231}
 --- !u!1001 &311122271
 PrefabInstance:
