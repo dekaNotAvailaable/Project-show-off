@@ -9,6 +9,7 @@ public class ItemRespawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         if (GunSpawnPoint == null)
         {
             initialSpawnPoint = this.transform.position;
@@ -18,7 +19,7 @@ public class ItemRespawn : MonoBehaviour
         {
             GunSpawnPoint.gameObject.transform.position = this.transform.position;
         }
-        rb = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
