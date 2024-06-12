@@ -17114,7 +17114,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 8681176109984177416}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -19020,7 +19020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &853840239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19033,8 +19033,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eafd5b7c8edb48c46a90a06d8f0ad6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 710460566}
-  levelselect: {fileID: 0}
+  gameObjects:
+  - {fileID: 710460566}
   head: {fileID: 961081754}
   spawnDistance: 2
   showButton:
@@ -46468,3 +46468,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85a777394a37e34eade8a5fc7c2c970, type: 3}
+--- !u!20 &8681176109984177416 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8681176110139845785, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 8681176109984177415}
+  m_PrefabAsset: {fileID: 0}

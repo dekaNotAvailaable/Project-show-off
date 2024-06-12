@@ -1,5 +1,7 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameMenuManager : MonoBehaviour
 {
@@ -29,9 +31,12 @@ public class GameMenuManager : MonoBehaviour
             gameObjects[i].transform.LookAt(new Vector3(head.position.x, gameObjects[i].transform.position.y, head.position.z));
             gameObjects[i].transform.forward *= -1;
         }
-        //if (showButton.action.WasPressedThisFrame())
-        //{
-        //    menu.SetActive(!menu.activeSelf);
-        //}
+        if(SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            if (showButton.action.WasPressedThisFrame())
+            {
+                gameObjects[0].SetActive(!gameObjects[0].activeSelf);
+            }
+        }
     }
 }

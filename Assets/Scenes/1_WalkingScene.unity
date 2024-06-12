@@ -13455,7 +13455,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1440411161}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -13487,7 +13487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.017780827, y: 0.047446012}
+  m_AnchoredPosition: {x: 0.443, y: 0.047446012}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710460571
@@ -15759,8 +15759,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eafd5b7c8edb48c46a90a06d8f0ad6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 710460566}
-  head: {fileID: 0}
+  gameObjects:
+  - {fileID: 710460566}
+  head: {fileID: 1440411160}
   spawnDistance: 2
   showButton:
     m_UseReference: 1
@@ -27259,6 +27260,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85a777394a37e34eade8a5fc7c2c970, type: 3}
+--- !u!4 &1440411160 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8681176110139845789, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 1440411159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1440411161 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8681176110139845785, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 1440411159}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1449794666
 PrefabInstance:
   m_ObjectHideFlags: 0
