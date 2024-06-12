@@ -3,6 +3,9 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance { get; private set; }
+    [Header("Audios")]
+    [SerializeField]
+    private AudioSource PickUpSound;
     public AudioSource BGM;
     public AudioSource Anvil;
     public AudioSource BirdAmbience;

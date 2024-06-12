@@ -114,3 +114,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakSec: 0
   myAudio: {fileID: 0}
+--- !u!114 &8982380088203489512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8323245994863903103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3177a04c8bf6182459e34f156c13853a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.5
+  frequency: 1
