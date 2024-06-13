@@ -13,7 +13,6 @@ TagManager:
   - Marble
   - BlackScreen
   - MovingPlatform
-  - CatRespawnPoint
   layers:
   - Default
   - TransparentFX
