@@ -58378,6 +58378,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4955772181259200885, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5281295488830706833, guid: 494a832f015224d6e8ecb4d448ad9f02,
         type: 3}
       propertyPath: m_RootOrder
@@ -58508,10 +58513,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_Walking
       objectReference: {fileID: 0}
+    - target: {fileID: 7530505206589883824, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8185914099828752772, guid: 494a832f015224d6e8ecb4d448ad9f02,
         type: 3}
       propertyPath: m_Name
       value: Button_Path
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888113573154428396, guid: 494a832f015224d6e8ecb4d448ad9f02,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 494a832f015224d6e8ecb4d448ad9f02, type: 3}
