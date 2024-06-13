@@ -49,6 +49,10 @@ public class CatDieAndRespawn : MonoBehaviour
             StartCoroutine(RespawnWithDelay(nest, delay));
 
         }
+        else if (nest == null)
+        {
+            Debug.Log("nest is null");
+        }
     }
 
     private IEnumerator RespawnWithDelay(GameObject nearestNest, float delay)
