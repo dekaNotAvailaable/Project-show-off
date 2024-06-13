@@ -31,7 +31,7 @@ public class CatScript : MonoBehaviour
         if (catDie.isDead)
         {
             catDie.Respawn(nearestNest, catRespawnDelay);
-            FindNearestNest();
+
         }
     }
 
