@@ -20,7 +20,7 @@ public class CatDieAndRespawn : MonoBehaviour
         if (!isDead)
         {
             isDead = true;
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
         else
         {
