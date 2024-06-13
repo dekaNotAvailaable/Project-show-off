@@ -7,6 +7,7 @@ public class CatScript : MonoBehaviour
     [SerializeField]
     private float stopDistance = 3.0f;
     private GameObject nearestNest;
+    private GameObject nearestCatPoint;
     [SerializeField]
     private int catRespawnDelay = 1;
     private bool isNestFound;
@@ -30,16 +31,26 @@ public class CatScript : MonoBehaviour
         }
         if (catDie.isDead)
         {
-            catDie.Respawn(nearestNest, catRespawnDelay);
+            catDie.Respawn(nearestCatPoint, catRespawnDelay);
         }
     }
 
     private void FindNearestNest()
     {
         GameObject[] nests = GameObject.FindGameObjectsWithTag("Nest");
+        GameObject[] catRespawnPoint = GameObject.FindGameObjectsWithTag("CatRespawnPoint");
         float minDistance = float.MaxValue;
         nearestNest = null;
-
+        catRespawnPoint = null;
+        foreach (GameObject catRespawnPoin in catRespawnPoint)
+        {
+            float distance = Vector3.Distance(transform.position, catRespawnPoin.transform.position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                nearestCatPoint = catRespawnPoin;
+            }
+        }
         foreach (GameObject nest in nests)
         {
             float distance = Vector3.Distance(transform.position, nest.transform.position);

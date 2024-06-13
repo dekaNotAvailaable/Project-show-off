@@ -4,6 +4,7 @@ public class CatDieAndRespawn : MonoBehaviour
 {
     [HideInInspector]
     public bool isDead;
+    private bool isUsed;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +60,7 @@ public class CatDieAndRespawn : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         this.transform.position = nearestNest.transform.position;
+        // nearestNest.
         isDead = false;
         this.enabled = true;
     }
