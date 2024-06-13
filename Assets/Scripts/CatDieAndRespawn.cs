@@ -47,6 +47,7 @@ public class CatDieAndRespawn : MonoBehaviour
         this.transform.position = nearestNest.transform.position;
         isDead = false;
         this.enabled = true;
+        Debug.Log("cat respawn");
     }
 
 }

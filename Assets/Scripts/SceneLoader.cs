@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextLevel : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
     //private void OnTriggerEnter(Collider collision)
     //{
@@ -19,6 +19,10 @@ public class NextLevel : MonoBehaviour
     //        }
     //    }
     //}
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void WalkingLevel()
     {
         SceneManager.LoadScene(1);
@@ -27,8 +31,8 @@ public class NextLevel : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
-    public void MainMenu()
+    public void Quit()
     {
-        SceneManager.LoadScene(0);
+        Application.Quit();
     }
 }
