@@ -49,6 +49,7 @@ public class CatDieAndRespawn : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         this.transform.position = nearestNest.transform.position;
+        this.transform.rotation = nearestNest.transform.rotation;
         respawnPoints[nearestNest] = true;
         isDead = false;
         this.enabled = true;
