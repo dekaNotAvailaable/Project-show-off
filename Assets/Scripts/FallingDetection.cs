@@ -11,12 +11,14 @@ public class FallingDetection : MonoBehaviour
     [SerializeField]
     private float shakeIncreaseRate = 0.5f;
     [SerializeField]
+    private float intensityIncreaseRate = 0.1f;
+    [SerializeField]
     private float maxShakeIntensity = 5.0f;
     [SerializeField]
     private float shakeDuration = 0.1f;
     [SerializeField]
     private float fallThreshold = -0.1f;
-    [SerializeField]
+    private float intensityValue = 0.0f;
     private float shakeStrength = 0.0f;
     private bool isFalling = false;
     private Vector3 previousPosition;
@@ -45,19 +47,23 @@ public class FallingDetection : MonoBehaviour
             {
                 isFalling = true;
                 shakeStrength = 0.0f;
+                intensityValue = 0.0f;
             }
+            intensityValue += intensityIncreaseRate * Time.deltaTime;
+            intensityValue = Mathf.Clamp(intensityValue, 0, 1f);
             shakeStrength += shakeIncreaseRate * Time.deltaTime;
             shakeStrength = Mathf.Clamp(shakeStrength, 0.0f, maxShakeIntensity);
             cameraShake.StartShake(shakeDuration, shakeStrength);
             if (vignette != null)
             {
-                vignette.intensity.value = Mathf.Clamp(shakeStrength, 0.0f, 1.0f);
-                Debug.Log("viggnete tweaking");
+                vignette.intensity.value = intensityValue;
+                Debug.Log("viggnete tweaking:" + vignette.intensity.value);
+
             }
             if (chromaticAberration != null)
             {
-                chromaticAberration.intensity.value = Mathf.Clamp(shakeStrength, 0.0f, 1.0f);
-                Debug.Log("chiromistcabertion tweaking");
+                chromaticAberration.intensity.value = intensityValue;
+                Debug.Log("chiromistcabertion tweaking:" + chromaticAberration.intensity.value);
             }
         }
         else
