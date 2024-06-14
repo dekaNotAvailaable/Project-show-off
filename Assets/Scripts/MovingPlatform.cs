@@ -13,6 +13,7 @@ public class MovingPlatform : MonoBehaviour
 
     private bool shouldMove = true;
     public GameObject StopPoint;
+    public GameObject EndMenu;
 
     // Update is called once per frame
     void Update()
@@ -32,6 +33,7 @@ public class MovingPlatform : MonoBehaviour
         {
             // Stop the platform if a collision is detected
             shouldMove = false;
+            EndMenu.SetActive(true);
             Debug.Log("Platform hit: ");
         }
         else
