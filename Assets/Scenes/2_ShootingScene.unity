@@ -32806,10 +32806,10 @@ MonoBehaviour:
   cameraShake: {fileID: 1290477648}
   postProcessVolume: {fileID: 832575518}
   shakeIncreaseRate: 10
+  intensityIncreaseRate: 0.6
   maxShakeIntensity: 100
   shakeDuration: 10
   fallThreshold: -0.1
-  shakeStrength: 0
 --- !u!114 &1290477648
 MonoBehaviour:
   m_ObjectHideFlags: 0

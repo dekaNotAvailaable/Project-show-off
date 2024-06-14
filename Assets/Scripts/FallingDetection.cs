@@ -11,7 +11,7 @@ public class FallingDetection : MonoBehaviour
     [SerializeField]
     private float shakeIncreaseRate = 0.5f;
     [SerializeField]
-    private float intensityIncreaseRate = 0.1f;
+    private float intensityIncreaseRate;
     [SerializeField]
     private float maxShakeIntensity = 5.0f;
     [SerializeField]
