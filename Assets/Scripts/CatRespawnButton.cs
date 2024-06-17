@@ -8,7 +8,7 @@ public class CatRespawnButton : MonoBehaviour
     void Start()
     {
         catDieAndRespawns = FindObjectsOfType<CatDieAndRespawn>();
-        movingPlatform = GetComponentInParent<MovingPlatform>();
+        movingPlatform = FindAnyObjectByType<MovingPlatform>();
 
         if (movingPlatform != null)
         {
