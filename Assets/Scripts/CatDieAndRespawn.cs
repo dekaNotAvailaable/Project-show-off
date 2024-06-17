@@ -25,13 +25,8 @@ public class CatDieAndRespawn : MonoBehaviour
         if (!isDead)
         {
             isDead = true;
-            Debug.Log("Cat died for the first time.");
-        }
-        else
-        {
-            Debug.Log("Cat is already dead, respawning...");
-            Respawn(CatSpawnPoint, catRespawnDelay, respawnPoints);
-            this.enabled = false;
+            Debug.Log("Cat died.");
+            StartCoroutine(RespawnWithDelay(CatSpawnPoint, catRespawnDelay, respawnPoints));
         }
     }
 
@@ -50,18 +45,6 @@ public class CatDieAndRespawn : MonoBehaviour
         Debug.Log("cat died due to particle collision.");
     }
 
-    private void Respawn(GameObject[] nest, float delay, Dictionary<GameObject, bool> respawnPoints)
-    {
-        if (isDead && nest != null)
-        {
-            StartCoroutine(RespawnWithDelay(nest, delay, respawnPoints));
-        }
-        else if (nest == null)
-        {
-            Debug.Log("nest is null");
-        }
-    }
-
     private IEnumerator RespawnWithDelay(GameObject[] nearestNest, float delay, Dictionary<GameObject, bool> respawnPoints)
     {
         yield return new WaitForSeconds(delay);
@@ -74,7 +57,6 @@ public class CatDieAndRespawn : MonoBehaviour
                 this.transform.rotation = nearestNest[i].transform.rotation;
                 respawnPoints[nearestNest[i]] = true;
                 isDead = false;
-                this.enabled = true;
                 Debug.Log("Cat respawned at point: " + nearestNest[i].name);
                 yield break;
             }
