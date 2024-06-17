@@ -2,45 +2,43 @@ using UnityEngine;
 
 public class CatRespawnButton : MonoBehaviour
 {
-    private CatDieAndRespawn catDieAndRespawn;
     private MovingPlatform movingPlatform;
 
     void Start()
     {
         movingPlatform = GetComponentInParent<MovingPlatform>();
-        catDieAndRespawn = FindAnyObjectByType<CatDieAndRespawn>();
-        if (catDieAndRespawn != null)
-        {
-            // catDieAndRespawn.gameObject.SetActive(false);
-            Debug.Log("cat die and respawn found");
-        }
         if (movingPlatform != null)
         {
-            Debug.Log("moving platform found");
+            Debug.Log("Moving platform found");
         }
     }
 
     void Update()
     {
-
     }
 
     public void SpawnCatButton()
     {
-        if (catDieAndRespawn != null)
+        if (movingPlatform != null)
         {
-            Debug.Log("cat die and respan script not null");
-            if (movingPlatform != null)
+            Debug.Log("Moving platform is not null");
+            movingPlatform._shouldMove = true;
+        }
+        CatDieAndRespawn[] catDieAndRespawns = FindObjectsOfType<CatDieAndRespawn>();
+        if (catDieAndRespawns != null && catDieAndRespawns.Length > 0)
+        {
+            Debug.Log("CatDieAndRespawn scripts found: " + catDieAndRespawns.Length);
+            foreach (CatDieAndRespawn catDieAndRespawn in catDieAndRespawns)
             {
-                Debug.Log("moving platforn is not null");
-                movingPlatform._shouldMove = true;
+
+                catDieAndRespawn.RespawnAtFirstPoint();
+                catDieAndRespawn.gameObject.SetActive(true);
+                Debug.Log("Cat respawned and activated: " + catDieAndRespawn.gameObject.name);
             }
-            catDieAndRespawn.RespawnAtFirstPoint();
-            catDieAndRespawn.gameObject.SetActive(true);
         }
         else
         {
-            Debug.LogError("CatDieAndRespawn script is not assigned.");
+            Debug.LogError("No CatDieAndRespawn scripts found.");
         }
     }
 }
