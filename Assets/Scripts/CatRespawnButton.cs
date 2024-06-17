@@ -25,7 +25,7 @@ public class CatRespawnButton : MonoBehaviour
             movingPlatform._shouldMove = true;
         }
         CatDieAndRespawn[] catDieAndRespawns = FindObjectsOfType<CatDieAndRespawn>();
-        if (catDieAndRespawns != null && catDieAndRespawns.Length > 0)
+        if (catDieAndRespawns != null)
         {
             Debug.Log("CatDieAndRespawn scripts found: " + catDieAndRespawns.Length);
             foreach (CatDieAndRespawn catDieAndRespawn in catDieAndRespawns)
