@@ -15,8 +15,8 @@ public class MovingPlatform : MonoBehaviour
     [HideInInspector]
     public bool _shouldMove
     {
-        get { return _shouldMove; }
-        set { _shouldMove = value; }
+        get { return shouldMove; }
+        set { shouldMove = value; }
     }
     public GameObject StopPoint;
     public GameObject EndMenu;
