@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class MovingPlatform : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class MovingPlatform : MonoBehaviour
     private bool shouldMove = true;
     public GameObject StopPoint;
     public GameObject EndMenu;
+    public GameObject player;
+    public Transform head;
 
     // Update is called once per frame
     void Update()
@@ -33,7 +36,6 @@ public class MovingPlatform : MonoBehaviour
         {
             // Stop the platform if a collision is detected
             shouldMove = false;
-            EndMenu.SetActive(true);
             Debug.Log("Platform hit: ");
         }
         else
