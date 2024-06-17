@@ -7,9 +7,17 @@ public class CatRespawnButton : MonoBehaviour
 
     void Start()
     {
-        movingPlatform = GetComponent<MovingPlatform>();
+        movingPlatform = GetComponentInParent<MovingPlatform>();
         catDieAndRespawn = FindAnyObjectByType<CatDieAndRespawn>();
-        catDieAndRespawn.gameObject.SetActive(false);
+        if (catDieAndRespawn != null)
+        {
+            // catDieAndRespawn.gameObject.SetActive(false);
+            Debug.Log("cat die and respawn found");
+        }
+        if (movingPlatform != null)
+        {
+            Debug.Log("moving platform found");
+        }
     }
 
     void Update()
@@ -28,7 +36,7 @@ public class CatRespawnButton : MonoBehaviour
                 movingPlatform._shouldMove = true;
             }
             catDieAndRespawn.RespawnAtFirstPoint();
-            catDieAndRespawn.gameObject.SetActive(false);
+            catDieAndRespawn.gameObject.SetActive(true);
         }
         else
         {
