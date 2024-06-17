@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class CatRespawnButton : MonoBehaviour
 {
-    [SerializeField] private CatDieAndRespawn catDieAndRespawn;
+    private CatDieAndRespawn catDieAndRespawn;
+    private MovingPlatform movingPlatform;
 
     void Start()
     {
-        this.gameObject.SetActive(false);
+        movingPlatform = GetComponent<MovingPlatform>();
+        catDieAndRespawn = FindAnyObjectByType<CatDieAndRespawn>();
+        catDieAndRespawn.gameObject.SetActive(false);
     }
 
     void Update()
@@ -18,8 +21,9 @@ public class CatRespawnButton : MonoBehaviour
     {
         if (catDieAndRespawn != null)
         {
+            movingPlatform._shouldMove = true;
             catDieAndRespawn.RespawnAtFirstPoint();
-            this.gameObject.SetActive(true);
+            catDieAndRespawn.gameObject.SetActive(false);
         }
         else
         {

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 
 public class MovingPlatform : MonoBehaviour
 {
@@ -12,7 +11,13 @@ public class MovingPlatform : MonoBehaviour
     [SerializeField]
     private float Tolencerance;
 
-    private bool shouldMove = true;
+    private bool shouldMove = false;
+    [HideInInspector]
+    public bool _shouldMove
+    {
+        get { return _shouldMove; }
+        set { _shouldMove = value; }
+    }
     public GameObject StopPoint;
     public GameObject EndMenu;
     public GameObject player;
@@ -27,7 +32,7 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    void MovePlatform()
+    private void MovePlatform()
     {
         // Calculate the movement step
         Vector3 movement = direction.normalized * speed * Time.deltaTime;
