@@ -21,7 +21,12 @@ public class CatRespawnButton : MonoBehaviour
     {
         if (catDieAndRespawn != null)
         {
-            movingPlatform._shouldMove = true;
+            Debug.Log("cat die and respan script not null");
+            if (movingPlatform != null)
+            {
+                Debug.Log("moving platforn is not null");
+                movingPlatform._shouldMove = true;
+            }
             catDieAndRespawn.RespawnAtFirstPoint();
             catDieAndRespawn.gameObject.SetActive(false);
         }
