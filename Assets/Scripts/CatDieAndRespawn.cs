@@ -4,16 +4,33 @@ using UnityEngine;
 
 public class CatDieAndRespawn : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject[] CatSpawnPoint;
     [HideInInspector]
     public bool isDead;
+    [SerializeField]
+    private int catRespawnDelay = 1;
+    private Dictionary<GameObject, bool> respawnPoints = new Dictionary<GameObject, bool>();
+
+    private void Start()
+    {
+        foreach (GameObject point in CatSpawnPoint)
+        {
+            respawnPoints[point] = false;
+        }
+    }
+
     private void CatDead()
     {
         if (!isDead)
         {
             isDead = true;
+            Debug.Log("Cat died for the first time.");
         }
         else
         {
+            Debug.Log("Cat is already dead, respawning...");
+            Respawn(CatSpawnPoint, catRespawnDelay, respawnPoints);
             this.enabled = false;
         }
     }
@@ -23,17 +40,17 @@ public class CatDieAndRespawn : MonoBehaviour
         if (other.CompareTag("Water"))
         {
             CatDead();
-            Debug.Log("cat died");
+            Debug.Log("cat died due to water.");
         }
     }
 
     private void OnParticleCollision(GameObject other)
     {
         CatDead();
-        Debug.Log("cat died");
+        Debug.Log("cat died due to particle collision.");
     }
 
-    public void Respawn(GameObject nest, float delay, Dictionary<GameObject, bool> respawnPoints)
+    private void Respawn(GameObject[] nest, float delay, Dictionary<GameObject, bool> respawnPoints)
     {
         if (isDead && nest != null)
         {
@@ -45,13 +62,24 @@ public class CatDieAndRespawn : MonoBehaviour
         }
     }
 
-    private IEnumerator RespawnWithDelay(GameObject nearestNest, float delay, Dictionary<GameObject, bool> respawnPoints)
+    private IEnumerator RespawnWithDelay(GameObject[] nearestNest, float delay, Dictionary<GameObject, bool> respawnPoints)
     {
         yield return new WaitForSeconds(delay);
-        this.transform.position = nearestNest.transform.position;
-        this.transform.rotation = nearestNest.transform.rotation;
-        respawnPoints[nearestNest] = true;
-        isDead = false;
-        this.enabled = true;
+
+        for (int i = 0; i < nearestNest.Length; i++)
+        {
+            if (!respawnPoints[nearestNest[i]])
+            {
+                this.transform.position = nearestNest[i].transform.position;
+                this.transform.rotation = nearestNest[i].transform.rotation;
+                respawnPoints[nearestNest[i]] = true;
+                isDead = false;
+                this.enabled = true;
+                Debug.Log("Cat respawned at point: " + nearestNest[i].name);
+                yield break;
+            }
+        }
+
+        Debug.Log("No available respawn points.");
     }
 }

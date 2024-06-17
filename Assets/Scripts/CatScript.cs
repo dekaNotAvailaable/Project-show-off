@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CatScript : MonoBehaviour
@@ -8,17 +7,15 @@ public class CatScript : MonoBehaviour
     [SerializeField]
     private float stopDistance = 3.0f;
     private GameObject nearestNest;
-    private GameObject nearestCatPoint;
-    [SerializeField]
-    private int catRespawnDelay = 1;
+    //private GameObject nearestCatPoint;
+
     private bool isNestFound;
     private CatDieAndRespawn catDie;
-    private Dictionary<GameObject, bool> respawnPoints = new Dictionary<GameObject, bool>();
 
     void Start()
     {
         catDie = GetComponent<CatDieAndRespawn>();
-        InitializeRespawnPoints();
+        //  InitializeRespawnPoints();
         FindNearestNest();
     }
 
@@ -34,42 +31,42 @@ public class CatScript : MonoBehaviour
         }
         if (catDie.isDead)
         {
-            catDie.Respawn(nearestCatPoint, catRespawnDelay, respawnPoints);
+            //  catDie.Respawn(nearestCatPoint, catRespawnDelay, respawnPoints);
             nearestNest = null;
         }
     }
 
-    private void InitializeRespawnPoints()
-    {
-        GameObject[] catRespawnPoints = GameObject.FindGameObjectsWithTag("CatRespawnPoint");
-        foreach (GameObject point in catRespawnPoints)
-        {
-            respawnPoints[point] = false;
-        }
-    }
+    //private void InitializeRespawnPoints()
+    //{
+    //    GameObject[] catRespawnPoints = GameObject.FindGameObjectsWithTag("CatRespawnPoint");
+    //    foreach (GameObject point in catRespawnPoints)
+    //    {
+    //        respawnPoints[point] = false;
+    //    }
+    //}
 
     private void FindNearestNest()
     {
         GameObject[] nests = GameObject.FindGameObjectsWithTag("Nest");
         float minDistance = float.MaxValue;
         nearestNest = null;
-        nearestCatPoint = null;
+        //  nearestCatPoint = null;
 
-        foreach (var entry in respawnPoints)
-        {
-            GameObject catRespawnPoint = entry.Key;
-            bool isUsed = entry.Value;
+        //foreach (var entry in respawnPoints)
+        //{
+        //    GameObject catRespawnPoint = entry.Key;
+        //    bool isUsed = entry.Value;
 
-            if (!isUsed)
-            {
-                float distance = Vector3.Distance(transform.position, catRespawnPoint.transform.position);
-                if (distance < minDistance)
-                {
-                    minDistance = distance;
-                    nearestCatPoint = catRespawnPoint;
-                }
-            }
-        }
+        //    if (!isUsed)
+        //    {
+        //        float distance = Vector3.Distance(transform.position, catRespawnPoint.transform.position);
+        //        if (distance < minDistance)
+        //        {
+        //            minDistance = distance;
+        //            nearestCatPoint = catRespawnPoint;
+        //        }
+        //    }
+        //}
 
         foreach (GameObject nest in nests)
         {
