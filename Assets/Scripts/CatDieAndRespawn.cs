@@ -45,6 +45,23 @@ public class CatDieAndRespawn : MonoBehaviour
         Debug.Log("cat died due to particle collision.");
     }
 
+    public void RespawnAtFirstPoint()
+    {
+        if (CatSpawnPoint.Length > 0)
+        {
+            GameObject firstPoint = CatSpawnPoint[0];
+            this.transform.position = firstPoint.transform.position;
+            this.transform.rotation = firstPoint.transform.rotation;
+            respawnPoints[firstPoint] = true;
+            isDead = false;
+            Debug.Log("Cat respawned at the first point: " + firstPoint.name);
+        }
+        else
+        {
+            Debug.LogError("No spawn points available.");
+        }
+    }
+
     private IEnumerator RespawnWithDelay(GameObject[] nearestNest, float delay, Dictionary<GameObject, bool> respawnPoints)
     {
         yield return new WaitForSeconds(delay);
