@@ -30250,7 +30250,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa5962dcef6ca7479103019452d8351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CatSpawnPoint:
+  - {fileID: 158688102}
+  - {fileID: 6056421}
   isDead: 0
+  catRespawnDelay: 1
 --- !u!1001 &1183062041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43309,7 +43313,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa5962dcef6ca7479103019452d8351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CatSpawnPoint:
+  - {fileID: 1100770407}
+  - {fileID: 1065845500}
   isDead: 0
+  catRespawnDelay: 1
 --- !u!65 &1892100047
 BoxCollider:
   m_ObjectHideFlags: 0
