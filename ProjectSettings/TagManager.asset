@@ -12,6 +12,8 @@ TagManager:
   - Canvas
   - Marble
   - BlackScreen
+  - MovingPlatform
+  - GlassPlank
   layers:
   - Default
   - TransparentFX

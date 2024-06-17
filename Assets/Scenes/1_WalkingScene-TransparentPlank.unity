@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16921562, g: 0.49040985, b: 0.70454466, a: 1}
+  m_IndirectSpecularColor: {r: 0.16922298, g: 0.49039847, b: 0.7045378, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -22685,19 +22685,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1294343560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294343549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 326559cf308736345a28c3da60489f23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  magnitude: 20
 --- !u!1001 &1294348055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23492,7 +23479,7 @@ MonoBehaviour:
   Death: {fileID: 1440411160}
   DuckQuack: {fileID: 6597904169670528360}
   GlassBreak: {fileID: 0}
-  GlassFoot1: {fileID: 0}
+  GlassFoot1: {fileID: 1969614983}
   GlassFoot2: {fileID: 0}
   GlassFoot3: {fileID: 0}
   NestBreaking: {fileID: 0}
@@ -35802,6 +35789,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1969475748}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1969614983 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8387712726424497229, guid: 815be08204209eb479e8d84209392802,
+    type: 3}
+  m_PrefabInstance: {fileID: 6341217836380540788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1972228055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c5e9c09ca80920947ac57b387ab8f052,
@@ -38528,10 +38521,235 @@ PrefabInstance:
       propertyPath: blackScreen
       value: 
       objectReference: {fileID: 1283405624}
+    - target: {fileID: 7277284469153061797, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
     - target: {fileID: 7808281770975119503, guid: 815be08204209eb479e8d84209392802,
         type: 3}
       propertyPath: m_Name
       value: Path
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982546808914192, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982546824278134, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982546855295143, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982546868428664, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982546907537315, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982546983715044, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982546994917734, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547060569673, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547062792910, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547193798869, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547272445997, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547275649725, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547345244626, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547348242880, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547389248009, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547401940620, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547408823222, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547461525406, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547571915888, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547580864261, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547803844621, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547857278300, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547946824776, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982547993672389, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548018483666, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548090706697, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548103874275, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548120244710, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548130418378, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548188007112, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548246878138, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548350102275, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548359729695, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548361902725, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548412884364, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548427697766, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548508218408, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548575254565, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548674714935, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548716254466, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548728438364, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548833057237, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548855931570, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799982548880355866, guid: 815be08204209eb479e8d84209392802,
+        type: 3}
+      propertyPath: m_TagString
+      value: GlassPlank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815be08204209eb479e8d84209392802, type: 3}
