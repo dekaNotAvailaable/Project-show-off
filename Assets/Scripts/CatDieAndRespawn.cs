@@ -18,9 +18,7 @@ public class CatDieAndRespawn : MonoBehaviour
         {
             respawnPoints[point] = false;
         }
-        this.gameObject.SetActive(false);
     }
-
     private void CatDead()
     {
         if (!isDead)
