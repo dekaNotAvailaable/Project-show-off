@@ -12414,6 +12414,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416742049}
   m_Mesh: {fileID: 3623834706885369118, guid: 23b4c2eea550bda46b933bdb64507be5, type: 3}
+--- !u!1 &425986076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4215896770549997725, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 1290477641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &425986078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425986076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b593cd188a377b48ae033e4cc5de19e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &433227052 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f4ed29429ad6c540a9784eff1c666d7,
@@ -32489,12 +32507,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalingFactor: 2
---- !u!1 &1290477645 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8681176110139845790, guid: e85a777394a37e34eade8a5fc7c2c970,
-    type: 3}
-  m_PrefabInstance: {fileID: 1290477641}
-  m_PrefabAsset: {fileID: 0}
 --- !u!54 &1290477646 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 8681176109490740473, guid: e85a777394a37e34eade8a5fc7c2c970,
@@ -32514,25 +32526,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1290477646}
-  cameraShake: {fileID: 1290477648}
+  cameraShake: {fileID: 425986078}
   postProcessVolume: {fileID: 832575518}
-  shakeIncreaseRate: 10
+  shakeIncreaseRate: 2
   intensityIncreaseRate: 0.6
   maxShakeIntensity: 100
   shakeDuration: 10
   fallThreshold: -0.1
---- !u!114 &1290477648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290477645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b593cd188a377b48ae033e4cc5de19e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1291140681
 GameObject:
   m_ObjectHideFlags: 0
