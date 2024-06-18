@@ -29,6 +29,7 @@ public class Respawn : MonoBehaviour
         {
             Debug.Log("spwanpoint postition");
             this.transform.position = SpawnPoint.transform.position;
+            AudioManager.instance.RespawnSoundPlay();
         }
     }
     private void OnTriggerEnter(Collider collision)
@@ -36,6 +37,7 @@ public class Respawn : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             //score.scoreInt--;
+            AudioManager.instance.DeathSoundPlay();
             if (DieScreen != null)
             {
                 DieScreen.enabled = true;

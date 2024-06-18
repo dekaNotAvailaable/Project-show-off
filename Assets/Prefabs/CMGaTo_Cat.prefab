@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 3942687806393711775}
   - component: {fileID: 3644759676529496344}
   - component: {fileID: -6810459901349545182}
+  - component: {fileID: 6760715255079479906}
   m_Layer: 0
   m_Name: CMGaTo_Cat
   m_TagString: Untagged
@@ -383,7 +384,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   catMoveSpeed: 1
   stopDistance: 0.2
-  catRespawnDelay: 1
 --- !u!82 &7561098874334307711
 AudioSource:
   m_ObjectHideFlags: 0
@@ -394,7 +394,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5be8620695124084c827f53f583c86d8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cb627de9acdc92f4f83ad9e3acbf8d8c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -490,7 +490,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 776c3aa090c6f8d419dd6b4b6a41b9f4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 79ac2b7d0c699804c904ede6d43c4786, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -586,7 +586,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2812a46b44008b546a81335ccfb8233b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d833e375d8935c5408592836287c5d0f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -960,3 +960,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6760715255079479906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6515999077702789947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec53929473d37746870d13ada5ad7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

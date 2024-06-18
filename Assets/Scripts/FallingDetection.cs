@@ -57,13 +57,13 @@ public class FallingDetection : MonoBehaviour
             if (vignette != null)
             {
                 vignette.intensity.value = intensityValue;
-                Debug.Log("viggnete tweaking:" + vignette.intensity.value);
+                // Debug.Log("viggnete tweaking:" + vignette.intensity.value);
 
             }
             if (chromaticAberration != null)
             {
                 chromaticAberration.intensity.value = intensityValue;
-                Debug.Log("chiromistcabertion tweaking:" + chromaticAberration.intensity.value);
+                //Debug.Log("chiromistcabertion tweaking:" + chromaticAberration.intensity.value);
             }
         }
         else

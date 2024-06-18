@@ -1469,6 +1469,7 @@ GameObject:
   - component: {fileID: 24638307}
   - component: {fileID: 24638311}
   - component: {fileID: 24638310}
+  - component: {fileID: 24638312}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1941,6 +1942,45 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &24638312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24638302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb26817790e98b14c9d88ecc486b414f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickUpSound: {fileID: 0}
+  BGM: {fileID: 0}
+  Anvil: {fileID: 0}
+  BirdAmbience: {fileID: 0}
+  ButtonSound: {fileID: 0}
+  CatAttacked1: {fileID: 0}
+  CatAttacked2: {fileID: 0}
+  CatCalling1: {fileID: 0}
+  CatCalling2: {fileID: 0}
+  CatScream1: {fileID: 0}
+  CatScream2: {fileID: 0}
+  ConcreteStep1: {fileID: 0}
+  ConcreteStep2: {fileID: 0}
+  ConcreteStep3: {fileID: 0}
+  ConcreteStep4: {fileID: 0}
+  Death: {fileID: 1440411164}
+  DuckQuack: {fileID: 0}
+  GlassBreak: {fileID: 0}
+  GlassFoot1: {fileID: 0}
+  GlassFoot2: {fileID: 0}
+  GlassFoot3: {fileID: 0}
+  NestBreaking: {fileID: 0}
+  PaperPlane: {fileID: 0}
+  RespawnSound: {fileID: 1440411162}
+  TeleportSound: {fileID: 1440411163}
+  WindAmbience: {fileID: 0}
+  TrafficNoise: {fileID: 0}
 --- !u!1 &28173725 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 82845e28796fff84880ff13eb806c9c1,
@@ -28928,7 +28968,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6631739844218422029}
-  m_RootOrder: 32
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1274018554
 BoxCollider:
@@ -29601,7 +29641,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8f8d3a1807e7f464086bf8b4847c316f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c3cf2f6cda3765f4d95fc5282a7fc578, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -32644,6 +32684,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 814726984299894505, guid: e85a777394a37e34eade8a5fc7c2c970,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3358653418296344528, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_Enabled
@@ -32807,7 +32852,7 @@ PrefabInstance:
     - target: {fileID: 8681176110139845789, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8681176110300247282, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
@@ -32845,6 +32890,24 @@ Transform:
 --- !u!20 &1440411161 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8681176110139845785, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 1440411159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1440411162 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6740554943376265065, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 1440411159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1440411163 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1331084268302053734, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 1440411159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1440411164 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2847575064768380809, guid: e85a777394a37e34eade8a5fc7c2c970,
     type: 3}
   m_PrefabInstance: {fileID: 1440411159}
   m_PrefabAsset: {fileID: 0}
@@ -47252,8 +47315,8 @@ Transform:
   - {fileID: 248921480}
   - {fileID: 168538161}
   - {fileID: 247532423}
-  - {fileID: 4737408}
   - {fileID: 1474343323}
+  - {fileID: 4737408}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -55491,6 +55554,7 @@ Transform:
   m_Children:
   - {fileID: 1038233267}
   - {fileID: 336120968}
+  - {fileID: 1274018553}
   - {fileID: 3078495659633625273}
   - {fileID: 5595814180468759000}
   - {fileID: 5901993997942599308}
@@ -55521,7 +55585,6 @@ Transform:
   - {fileID: 188836310335917939}
   - {fileID: 5060155262321169479}
   - {fileID: 995671416976515411}
-  - {fileID: 1274018553}
   - {fileID: 2585034917194817268}
   - {fileID: 7698127126392945418}
   - {fileID: 6242173166187395433}

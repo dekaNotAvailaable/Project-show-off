@@ -15,6 +15,7 @@ public class CatDieAndRespawn : MonoBehaviour
     private float invisibilityDuration = 5f;
     private float invisibilityTimer;
     private bool isInvisible;
+    private CatSoundManage catSounds;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class CatDieAndRespawn : MonoBehaviour
             respawnPoints[point] = false;
         }
         invisibilityTimer = invisibilityDuration;
+        catSounds = GetComponent<CatSoundManage>();
     }
 
     private void Update()
@@ -54,6 +56,8 @@ public class CatDieAndRespawn : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
+        int random = Random.Range(4, 6);
+        catSounds.PlayAudioSource(random);
         if (!isInvisible)
         {
             CatDead();
