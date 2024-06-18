@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11339543, g: 0.33697468, b: 0.5561584, a: 1}
+  m_IndirectSpecularColor: {r: 0.11340179, g: 0.33703217, b: 0.55589867, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19221,6 +19221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 853327877}
+  - component: {fileID: 853327878}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -19245,6 +19246,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &853327878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853327876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070a22789e0899c4e97e3e7b3475b1c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnpressedButton: {fileID: 2076945975}
+  PressedButton: {fileID: 877685757}
 --- !u!1 &853840238
 GameObject:
   m_ObjectHideFlags: 0
@@ -30347,6 +30362,7 @@ MonoBehaviour:
   - {fileID: 6056421}
   isDead: 0
   catRespawnDelay: 1
+  invisibilityDuration: 0
 --- !u!95 &1175667295
 Animator:
   serializedVersion: 5
@@ -43463,6 +43479,7 @@ MonoBehaviour:
   - {fileID: 1065845500}
   isDead: 0
   catRespawnDelay: 1
+  invisibilityDuration: 0
 --- !u!65 &1892100047
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47046,7 +47063,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2076945981}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CatRespawnButton, Assembly-CSharp
         m_MethodName: SpawnCatButton
         m_Mode: 1
@@ -47140,18 +47157,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2076945974}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2076945981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076945975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 070a22789e0899c4e97e3e7b3475b1c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2076945982
 BoxCollider:
   m_ObjectHideFlags: 0
