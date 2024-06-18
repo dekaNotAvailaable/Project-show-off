@@ -1,62 +1,123 @@
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+
 public class CatDieAndRespawn : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject[] CatSpawnPoint;
     [HideInInspector]
     public bool isDead;
-    // Start is called before the first frame update
-    void Start()
-    {
+    [SerializeField]
+    private int catRespawnDelay = 1;
+    private Dictionary<GameObject, bool> respawnPoints = new Dictionary<GameObject, bool>();
+    [SerializeField]
+    private float invisibilityDuration = 5f;
+    private float invisibilityTimer;
+    private bool isInvisible;
 
+    private void Start()
+    {
+        foreach (GameObject point in CatSpawnPoint)
+        {
+            respawnPoints[point] = false;
+        }
+        invisibilityTimer = invisibilityDuration;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
+        if (isInvisible)
+        {
+            ManageInvisibility();
+        }
     }
+
     private void CatDead()
     {
         if (!isDead)
         {
-            //isCatDead = true;
             isDead = true;
-            //Destroy(gameObject);
-        }
-        else
-        {
-            this.enabled = false;
+            Debug.Log("Cat died.");
+            StartCoroutine(RespawnWithDelay(CatSpawnPoint, catRespawnDelay, respawnPoints));
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Water"))
+        if (other.CompareTag("Water") && !isInvisible)
         {
             CatDead();
-            Debug.Log("cat died");
+            Debug.Log("Cat died due to water.");
         }
     }
+
     private void OnParticleCollision(GameObject other)
     {
-        CatDead();
-        Debug.Log("cat died");
-    }
-    public void Respawn(GameObject nest, float delay)
-    {
-        if (isDead && nest != null)
+        if (!isInvisible)
         {
-            StartCoroutine(RespawnWithDelay(nest, delay));
-
+            CatDead();
+            Debug.Log("Cat died due to particle collision.");
         }
     }
 
-    private IEnumerator RespawnWithDelay(GameObject nearestNest, float delay)
+    private void ManageInvisibility()
     {
-        yield return new WaitForSeconds(delay);
-        this.transform.position = nearestNest.transform.position;
-        isDead = false;
-        this.enabled = true;
+        if (invisibilityTimer > 0)
+        {
+            invisibilityTimer -= Time.deltaTime;
+            if (invisibilityTimer <= 0)
+            {
+                invisibilityTimer = 0;
+                isInvisible = false;
+                Debug.Log("Cat is no longer invisible.");
+            }
+        }
     }
 
+    public void RespawnAtFirstPoint()
+    {
+        if (CatSpawnPoint.Length > 0)
+        {
+            GameObject firstPoint = CatSpawnPoint[0];
+            this.transform.position = firstPoint.transform.position;
+            this.transform.rotation = firstPoint.transform.rotation;
+            respawnPoints[firstPoint] = true;
+            isDead = false;
+            SetInvincibility();
+            Debug.Log("Cat respawned at the first point: " + firstPoint.name);
+        }
+        else
+        {
+            Debug.LogError("No spawn points available.");
+        }
+    }
+
+    private IEnumerator RespawnWithDelay(GameObject[] nearestNest, float delay, Dictionary<GameObject, bool> respawnPoints)
+    {
+        yield return new WaitForSeconds(delay);
+
+        for (int i = 0; i < nearestNest.Length; i++)
+        {
+            if (!respawnPoints[nearestNest[i]])
+            {
+                this.transform.position = nearestNest[i].transform.position;
+                this.transform.rotation = nearestNest[i].transform.rotation;
+                respawnPoints[nearestNest[i]] = true;
+                isDead = false;
+                SetInvincibility();
+                Debug.Log("Cat respawned at point: " + nearestNest[i].name);
+                yield break;
+            }
+        }
+
+        Debug.Log("No available respawn points.");
+    }
+
+    private void SetInvincibility()
+    {
+        isInvisible = true;
+        invisibilityTimer = invisibilityDuration;
+        Debug.Log("Cat is now invisible.");
+    }
 }

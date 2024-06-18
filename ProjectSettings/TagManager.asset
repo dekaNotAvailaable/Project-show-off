@@ -13,12 +13,16 @@ TagManager:
   - Marble
   - BlackScreen
   - MovingPlatform
+<<<<<<< HEAD
   - GlassPlank
+=======
+  - CatRespawnPoint
+>>>>>>> main
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Particles
   - Water
   - UI
   - Player

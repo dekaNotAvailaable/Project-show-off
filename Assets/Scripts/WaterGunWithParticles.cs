@@ -6,11 +6,12 @@ public class WaterGunWithParticles : MonoBehaviour
     public Transform firePoint;
     public ParticleSystem waterParticles;
     [SerializeField]
-    private float maxDistance = 10f;
+    private float LifeTime = 10f;
     [SerializeField]
-    private float waterForce = 10f;
+    private float StartSpeed = 10f;
     private XRGrabInteractable grabbable;
     private Vector3 lastFirePointPosition;
+
 
     private void Start()
     {
@@ -25,8 +26,8 @@ public class WaterGunWithParticles : MonoBehaviour
         }
 
         var main = waterParticles.main;
-        main.startSpeed = maxDistance;  // Adjust this value to control the distance
-        main.startLifetime = maxDistance / main.startSpeed.constant; // Calculate the lifetime based on speed and distance
+        main.startSpeed = StartSpeed;
+        main.startLifetime = LifeTime;
         waterParticles.Stop();
     }
 
@@ -51,11 +52,11 @@ public class WaterGunWithParticles : MonoBehaviour
         waterParticles.transform.rotation = firePoint.rotation;
 
         RaycastHit hit;
-        if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, maxDistance))
+        if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, LifeTime))
         {
             if (hit.rigidbody != null)
             {
-                hit.rigidbody.AddForceAtPosition(firePoint.forward * waterForce, hit.point);
+                hit.rigidbody.AddForceAtPosition(firePoint.forward * 0f, hit.point);
             }
         }
     }

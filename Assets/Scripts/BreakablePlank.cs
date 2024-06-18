@@ -4,17 +4,23 @@ public class BreakablePlank : MonoBehaviour
 {
     [SerializeField]
     private float breakSec = 0;
+<<<<<<< HEAD
     private AudioSource breakSound;
     private void Start()
     {
         breakSound = GetComponent<AudioSource>();
     }
+=======
+
+>>>>>>> main
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             breakSound.Play();
             Destroy(gameObject, breakSec);
+            //  AudioManager.instance.GlassBreakPlay();
+
             Debug.Log("Breaking Plank");
         }
     }
