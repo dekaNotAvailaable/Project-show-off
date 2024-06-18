@@ -4,15 +4,13 @@ public class BreakablePlank : MonoBehaviour
 {
     [SerializeField]
     private float breakSec = 0;
-<<<<<<< HEAD
+
     private AudioSource breakSound;
     private void Start()
     {
         breakSound = GetComponent<AudioSource>();
     }
-=======
 
->>>>>>> main
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
