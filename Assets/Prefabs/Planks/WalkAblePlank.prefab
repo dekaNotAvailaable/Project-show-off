@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 284792100733990714}
   - component: {fileID: 8057282049668151616}
   - component: {fileID: 969631403131349347}
+  - component: {fileID: -7405440471933201501}
   m_Layer: 0
   m_Name: WalkAblePlank
   m_TagString: Untagged
@@ -416,3 +417,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cbff09400280142af4407d627993a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7405440471933201501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193293994041442758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3177a04c8bf6182459e34f156c13853a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.03
+  frequency: 1

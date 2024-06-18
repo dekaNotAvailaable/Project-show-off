@@ -260,9 +260,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1ff84c2da2f6b4e844f75270bbbb64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  amplitude: 1
-  frequency: 1
+  speed: 5
+  amplitude: 2
+  frequency: 0.3
 --- !u!82 &5438254326463877891
 AudioSource:
   m_ObjectHideFlags: 0
@@ -274,7 +274,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9d4729a4df16e7749b6777d093c52d27, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.341
   m_Pitch: 1
   Loop: 0
