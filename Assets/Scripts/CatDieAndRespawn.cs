@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +11,9 @@ public class CatDieAndRespawn : MonoBehaviour
     [SerializeField]
     private int catRespawnDelay = 1;
     private Dictionary<GameObject, bool> respawnPoints = new Dictionary<GameObject, bool>();
+    [SerializeField]
+    private float invisibilityDuration;
+    private bool isInvisible;
 
     private void Start()
     {
@@ -60,7 +63,18 @@ public class CatDieAndRespawn : MonoBehaviour
             Debug.LogError("No spawn points available.");
         }
     }
-
+    private void 无敌时间()
+    {
+        if (invisibilityDuration > 0)
+        {
+            invisibilityDuration -= 1 * Time.deltaTime;
+            if (invisibilityDuration < 0)
+            {
+                invisibilityDuration = 0;
+                isInvisible = false;
+            }
+        }
+    }
     private IEnumerator RespawnWithDelay(GameObject[] nearestNest, float delay, Dictionary<GameObject, bool> respawnPoints)
     {
         yield return new WaitForSeconds(delay);

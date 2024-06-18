@@ -7,8 +7,6 @@ public class CatScript : MonoBehaviour
     [SerializeField]
     private float stopDistance = 3.0f;
     private GameObject nearestNest;
-    //private GameObject nearestCatPoint;
-
     private bool isNestFound;
     private CatDieAndRespawn catDie;
 
