@@ -4,11 +4,14 @@ public class BreakablePlank : MonoBehaviour
 {
     [SerializeField]
     private float breakSec = 0;
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject, breakSec);
+            //  AudioManager.instance.GlassBreakPlay();
+
             Debug.Log("Breaking Plank");
         }
     }

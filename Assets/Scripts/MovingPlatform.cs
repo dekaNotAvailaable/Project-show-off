@@ -11,8 +11,17 @@ public class MovingPlatform : MonoBehaviour
     [SerializeField]
     private float Tolencerance;
 
-    private bool shouldMove = true;
+    private bool shouldMove = false;
+    [HideInInspector]
+    public bool _shouldMove
+    {
+        get { return shouldMove; }
+        set { shouldMove = value; }
+    }
     public GameObject StopPoint;
+    public GameObject EndMenu;
+    public GameObject player;
+    public Transform head;
 
     // Update is called once per frame
     void Update()
@@ -23,7 +32,7 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    void MovePlatform()
+    private void MovePlatform()
     {
         // Calculate the movement step
         Vector3 movement = direction.normalized * speed * Time.deltaTime;
