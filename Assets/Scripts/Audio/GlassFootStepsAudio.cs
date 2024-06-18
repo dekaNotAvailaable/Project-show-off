@@ -9,7 +9,7 @@ public class GlassFootStepsAudio : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("player"))
+        if (other.CompareTag("Player"))
         {
             PlayRandomAudio();
         }

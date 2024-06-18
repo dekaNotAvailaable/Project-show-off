@@ -72,30 +72,137 @@ public class AudioManager : MonoBehaviour
     {
         PlayBGM();
     }
-    private void PlayBGM() { BGM.Play(); BGM.loop = true; }
-    public void AnvilPlay() { Anvil.Play(); }
-    public void BirdSoundPlay() { BirdAmbience.Play(); }
-    public void ButtonSoundPlay() { ButtonSound.Play(); }
-    public void CatAttacked2Play() { CatAttacked2.Play(); }
-    public void CatCalling1Play() { CatCalling1.Play(); }
-    public void CatCalling2Play() { CatCalling2.Play(); }
-    public void CatAttacked1Play() { CatAttacked1.Play(); }
-    public void CatScream1Play() { CatScream1.Play(); }
-    public void CatScream2Play() { CatScream2.Play(); }
-    public void ConcreteStep1Play() { ConcreteStep1.Play(); }
-    public void ConcreteStep2Play() { ConcreteStep2.Play(); }
-    public void ConcreteStep3Play() { ConcreteStep3.Play(); }
-    public void ConcreteStep4Play() { ConcreteStep4.Play(); }
-    public void DeathSoundPlay() { Death.Play(); }
-    public void DuckQuackPlay() { DuckQuack.Play(); }
-    public void GlassBreakPlay() { GlassBreak.Play(); }
-    public void GlassFoot1Play() { GlassFoot1.Play(); }
-    public void GlassFoot2Play() { GlassFoot2.Play(); }
-    public void GlassFoot3Play() { GlassFoot3.Play(); }
-    public void NestBreakingPlay() { NestBreaking.Play(); }
-    public void PaperPlanePlay() { PaperPlane.Play(); }
-    public void RespawnSoundPlay() { RespawnSound.Play(); }
-    public void TeleportSoundPlay() { TeleportSound.Play(); }
-    public void WindAmbiencePlay() { WindAmbience.Play(); }
-    public void TrafficNoisePlay() { TrafficNoise.Play(); }
+    private void PlayBGM()
+    {
+        if (BGM != null)
+        {
+            BGM.Play();
+            BGM.loop = true;
+        }
+    }
+
+    public void AnvilPlay()
+    {
+        if (Anvil != null) Anvil.Play();
+    }
+
+    public void BirdSoundPlay()
+    {
+        if (BirdAmbience != null) BirdAmbience.Play();
+    }
+
+    public void ButtonSoundPlay()
+    {
+        if (ButtonSound != null) ButtonSound.Play();
+    }
+
+    public void CatAttacked2Play()
+    {
+        if (CatAttacked2 != null) CatAttacked2.Play();
+    }
+
+    public void CatCalling1Play()
+    {
+        if (CatCalling1 != null) CatCalling1.Play();
+    }
+
+    public void CatCalling2Play()
+    {
+        if (CatCalling2 != null) CatCalling2.Play();
+    }
+
+    public void CatAttacked1Play()
+    {
+        if (CatAttacked1 != null) CatAttacked1.Play();
+    }
+
+    public void CatScream1Play()
+    {
+        if (CatScream1 != null) CatScream1.Play();
+    }
+
+    public void CatScream2Play()
+    {
+        if (CatScream2 != null) CatScream2.Play();
+    }
+
+    public void ConcreteStep1Play()
+    {
+        if (ConcreteStep1 != null) ConcreteStep1.Play();
+    }
+
+    public void ConcreteStep2Play()
+    {
+        if (ConcreteStep2 != null) ConcreteStep2.Play();
+    }
+
+    public void ConcreteStep3Play()
+    {
+        if (ConcreteStep3 != null) ConcreteStep3.Play();
+    }
+
+    public void ConcreteStep4Play()
+    {
+        if (ConcreteStep4 != null) ConcreteStep4.Play();
+    }
+
+    public void DeathSoundPlay()
+    {
+        if (Death != null) Death.Play();
+    }
+
+    public void DuckQuackPlay()
+    {
+        if (DuckQuack != null) DuckQuack.Play();
+    }
+
+    public void GlassBreakPlay()
+    {
+        if (GlassBreak != null) GlassBreak.Play();
+    }
+
+    public void GlassFoot1Play()
+    {
+        if (GlassFoot1 != null) GlassFoot1.Play();
+    }
+
+    public void GlassFoot2Play()
+    {
+        if (GlassFoot2 != null) GlassFoot2.Play();
+    }
+
+    public void GlassFoot3Play()
+    {
+        if (GlassFoot3 != null) GlassFoot3.Play();
+    }
+
+    public void NestBreakingPlay()
+    {
+        if (NestBreaking != null) NestBreaking.Play();
+    }
+
+    public void PaperPlanePlay()
+    {
+        if (PaperPlane != null) PaperPlane.Play();
+    }
+
+    public void RespawnSoundPlay()
+    {
+        if (RespawnSound != null) RespawnSound.Play();
+    }
+
+    public void TeleportSoundPlay()
+    {
+        if (TeleportSound != null) TeleportSound.Play();
+    }
+
+    public void WindAmbiencePlay()
+    {
+        if (WindAmbience != null) WindAmbience.Play();
+    }
+
+    public void TrafficNoisePlay()
+    {
+        if (TrafficNoise != null) TrafficNoise.Play();
+    }
 }

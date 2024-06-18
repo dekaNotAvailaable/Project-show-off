@@ -10285,6 +10285,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2123227616}
     m_Modifications:
+    - target: {fileID: 5438254326463877891, guid: cf2d7c15373759b438b2313cdd2acdd8,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6291844459419419772, guid: cf2d7c15373759b438b2313cdd2acdd8,
         type: 3}
       propertyPath: m_Name
@@ -13295,7 +13300,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794954915}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d08afbfe50295cf48b3efbfdbf862159, type: 3}
   m_Name: 
@@ -23360,6 +23365,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2123227616}
     m_Modifications:
+    - target: {fileID: 5438254326463877891, guid: cf2d7c15373759b438b2313cdd2acdd8,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6291844459419419772, guid: cf2d7c15373759b438b2313cdd2acdd8,
         type: 3}
       propertyPath: m_Name
@@ -34758,6 +34768,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2123227616}
     m_Modifications:
+    - target: {fileID: 5438254326463877891, guid: cf2d7c15373759b438b2313cdd2acdd8,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6291844459419419772, guid: cf2d7c15373759b438b2313cdd2acdd8,
         type: 3}
       propertyPath: m_Name
@@ -38751,7 +38766,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GlassPlank
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6853629900137204490, guid: 815be08204209eb479e8d84209392802, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 815be08204209eb479e8d84209392802, type: 3}
 --- !u!33 &6358484764027278336
 MeshFilter:
