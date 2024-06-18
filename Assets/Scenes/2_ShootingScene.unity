@@ -42992,7 +42992,7 @@ MonoBehaviour:
   - {fileID: 1065845500}
   isDead: 0
   catRespawnDelay: 1
-  invisibilityDuration: 0
+  invisibilityDuration: 5
 --- !u!65 &1892100047
 BoxCollider:
   m_ObjectHideFlags: 0
