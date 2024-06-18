@@ -57,7 +57,10 @@ public class CatDieAndRespawn : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         int random = Random.Range(4, 6);
-        catSounds.PlayAudioSource(random);
+        if (!isInvisible)
+        {
+            catSounds.PlayAudioSource(random);
+        }
         if (!isInvisible)
         {
             CatDead();
