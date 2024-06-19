@@ -3,30 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Left Hand
-  - Right Hand
-  - Ground
-  - Nest
-  - Water
-  - Canvas
-  - Marble
-  - BlackScreen
-  - MovingPlatform
-<<<<<<< HEAD
-  - GlassPlank
-=======
-  - CatRespawnPoint
->>>>>>> main
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Particles
+  - 
   - Water
   - UI
-  - Player
-  - Intractable
+  - 
+  - 
   - 
   - 
   - 

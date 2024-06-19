@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11340179, g: 0.33703217, b: 0.55589867, a: 1}
+  m_IndirectSpecularColor: {r: 0.11339543, g: 0.33697468, b: 0.5561584, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1100,7 +1100,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 853840241}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
@@ -14531,6 +14531,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4358884468357561944, guid: 33be0dd60280848b6924b832eae889e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33be0dd60280848b6924b832eae889e3, type: 3}
 --- !u!4 &552942243 stripped
@@ -18752,6 +18757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 853327877}
   - component: {fileID: 853327878}
+  - component: {fileID: 853327879}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -18790,6 +18796,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnpressedButton: {fileID: 2076945975}
   PressedButton: {fileID: 877685757}
+--- !u!65 &853327879
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853327876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40696526, y: 0.40503883, z: 0.10799885}
+  m_Center: {x: 0, y: -0.00096416473, z: -0.03920889}
 --- !u!1 &853840238
 GameObject:
   m_ObjectHideFlags: 0
@@ -18800,6 +18819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 853840240}
   - component: {fileID: 853840239}
+  - component: {fileID: 853840241}
   m_Layer: 0
   m_Name: Game Menu
   m_TagString: Untagged
@@ -18853,6 +18873,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &853840241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853840238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822bfcfb4abcdd3489b58d7cde282946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &855553098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20157,6 +20189,11 @@ PrefabInstance:
       value: Left_GlassPane2
       objectReference: {fileID: 0}
     - target: {fileID: 3264006284144439888, guid: 33be0dd60280848b6924b832eae889e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358884468357561944, guid: 33be0dd60280848b6924b832eae889e3,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -21509,7 +21546,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 853840241}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
@@ -33738,6 +33775,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4358884468357561944, guid: 33be0dd60280848b6924b832eae889e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8428123310694758785, guid: 33be0dd60280848b6924b832eae889e3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 33be0dd60280848b6924b832eae889e3, type: 3}
@@ -43542,6 +43584,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4358884468357561944, guid: 33be0dd60280848b6924b832eae889e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33be0dd60280848b6924b832eae889e3, type: 3}
 --- !u!1 &1923511893 stripped
@@ -44132,7 +44179,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 853840241}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: ShootingLevel
         m_Mode: 1
@@ -44275,6 +44322,11 @@ PrefabInstance:
       value: Right_GlassPane2
       objectReference: {fileID: 0}
     - target: {fileID: 3264006284144439888, guid: 33be0dd60280848b6924b832eae889e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358884468357561944, guid: 33be0dd60280848b6924b832eae889e3,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -44503,6 +44555,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: MovingPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358884468357561944, guid: 33be0dd60280848b6924b832eae889e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33be0dd60280848b6924b832eae889e3, type: 3}
@@ -45441,6 +45498,11 @@ PrefabInstance:
       value: Left_GlassPane1
       objectReference: {fileID: 0}
     - target: {fileID: 3264006284144439888, guid: 33be0dd60280848b6924b832eae889e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358884468357561944, guid: 33be0dd60280848b6924b832eae889e3,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -47237,7 +47299,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 853840241}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
