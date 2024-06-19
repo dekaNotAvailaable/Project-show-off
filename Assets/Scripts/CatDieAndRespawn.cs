@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CatDieAndRespawn : MonoBehaviour
@@ -17,6 +16,7 @@ public class CatDieAndRespawn : MonoBehaviour
     private float invisibilityTimer;
     private bool isInvisible;
     private CatSoundManage catSounds;
+    private bool noAvailableRespawnPoints = false; // Flag to track availability of respawn points
 
     private void Start()
     {
@@ -42,7 +42,16 @@ public class CatDieAndRespawn : MonoBehaviour
         {
             isDead = true;
             Debug.Log("Cat died.");
-            StartCoroutine(RespawnWithDelay(CatSpawnPoint, catRespawnDelay, respawnPoints));
+            if (!noAvailableRespawnPoints)
+            {
+                StartCoroutine(RespawnWithDelay(CatSpawnPoint, catRespawnDelay, respawnPoints));
+            }
+            else
+            {
+               // Debug.Log("No available respawn points. Cat will not respawn.");
+                //Destroy(gameObject);
+                this.gameObject.SetActive(false);   
+            }
         }
     }
 
@@ -119,7 +128,10 @@ public class CatDieAndRespawn : MonoBehaviour
             }
         }
 
-        Debug.Log("No available respawn points.");
+        // If no available respawn points, set flag
+        noAvailableRespawnPoints = true;
+        Debug.Log("No available respawn points. Cat will not respawn.");
+        Destroy(gameObject);
     }
 
     private void SetInvincibility()
