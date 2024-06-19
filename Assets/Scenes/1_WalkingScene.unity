@@ -2424,7 +2424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2e8ed6f0abb934babf97423586d7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EndMenu: {fileID: 0}
+  EndMenu: {fileID: 556544290}
   player: {fileID: 794954915}
   head: {fileID: 1440411160}
 --- !u!1001 &48683716
@@ -13295,6 +13295,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 556544288}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &556544290 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 282992152190460485, guid: 4de16b09642e84e4d869759cae18b7eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 556544288}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &557175949 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8323245994863903103, guid: 3f309a8a39500cb45af6852e0e2f48b4,
@@ -15476,6 +15482,12 @@ PrefabInstance:
 --- !u!224 &688242728 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1253569264518282012, guid: d7adea7540fe24753b3ccce758ba825d,
+    type: 3}
+  m_PrefabInstance: {fileID: 688242727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &688242729 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1253569264518282013, guid: d7adea7540fe24753b3ccce758ba825d,
     type: 3}
   m_PrefabInstance: {fileID: 688242727}
   m_PrefabAsset: {fileID: 0}
@@ -19117,7 +19129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjects:
-  - {fileID: 0}
+  - {fileID: 688242729}
   head: {fileID: 1440411160}
   spawnDistance: 2
   showButton:

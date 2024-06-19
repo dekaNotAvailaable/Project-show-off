@@ -37,11 +37,14 @@ public class CatSoundManage : MonoBehaviour
     {
         if (index < 0 || index >= audioSources.Length)
         {
+
             Debug.LogError("AudioSource index out of range.");
             return;
         }
-
-        audioSources[index].Play();
+        if (!audioSources[index].isPlaying)
+        {
+            audioSources[index].Play();
+        }
         Debug.Log("Playing audio clip: " + audioSources[index].clip.name);
     }
 
