@@ -1,3 +1,4 @@
+using Cinemachine; // Add this to access Cinemachine components
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -5,8 +6,9 @@ using UnityEngine.Rendering.Universal;
 public class FallingDetection : MonoBehaviour
 {
     public Rigidbody rb;
-    public CameraShake cameraShake;
+    public CinemachineImpulseSource impulseSource; // Add this for Cinemachine Impulse
     public Volume postProcessVolume;
+
     [Header("Post processing tweak")]
     [SerializeField]
     private float shakeIncreaseRate = 0.5f;
@@ -33,7 +35,10 @@ public class FallingDetection : MonoBehaviour
             postProcessVolume.profile.TryGet<Vignette>(out vignette);
             postProcessVolume.profile.TryGet<ChromaticAberration>(out chromaticAberration);
         }
-        else { Debug.Log("postprocessingvolume is null "); }
+        else
+        {
+            Debug.Log("postprocessingvolume is null");
+        }
     }
 
     void Update()
@@ -53,17 +58,24 @@ public class FallingDetection : MonoBehaviour
             intensityValue = Mathf.Clamp(intensityValue, 0, 1f);
             shakeStrength += shakeIncreaseRate * Time.deltaTime;
             shakeStrength = Mathf.Clamp(shakeStrength, 0.0f, maxShakeIntensity);
-            cameraShake.StartShake(shakeDuration, shakeStrength);
+
+            // Invoke Cinemachine Impulse
+            if (impulseSource != null)
+            {
+                Vector3 impulseDirection = new Vector3(0, -1, 0); // Direction of the impulse
+                float forceMagnitude = shakeStrength; // Adjust the force based on shakeStrength
+                impulseSource.GenerateImpulse(impulseDirection * forceMagnitude); // Generate impulse with adjusted force
+            }
+
             if (vignette != null)
             {
                 vignette.intensity.value = intensityValue;
-                // Debug.Log("viggnete tweaking:" + vignette.intensity.value);
-
+                // Debug.Log("vignette tweaking:" + vignette.intensity.value);
             }
             if (chromaticAberration != null)
             {
                 chromaticAberration.intensity.value = intensityValue;
-                //Debug.Log("chiromistcabertion tweaking:" + chromaticAberration.intensity.value);
+                // Debug.Log("chromatic aberration tweaking:" + chromaticAberration.intensity.value);
             }
         }
         else
@@ -71,7 +83,6 @@ public class FallingDetection : MonoBehaviour
             if (isFalling)
             {
                 isFalling = false;
-                cameraShake.StopShake();
 
                 // Reset post-processing effects
                 if (vignette != null)
