@@ -48,8 +48,9 @@ public class CatDieAndRespawn : MonoBehaviour
             }
             else
             {
-                Debug.Log("No available respawn points. Cat will not respawn.");
-                Destroy(this.gameObject);
+               // Debug.Log("No available respawn points. Cat will not respawn.");
+                //Destroy(gameObject);
+                this.gameObject.SetActive(false);   
             }
         }
     }
@@ -130,6 +131,7 @@ public class CatDieAndRespawn : MonoBehaviour
         // If no available respawn points, set flag
         noAvailableRespawnPoints = true;
         Debug.Log("No available respawn points. Cat will not respawn.");
+        Destroy(gameObject);
     }
 
     private void SetInvincibility()
