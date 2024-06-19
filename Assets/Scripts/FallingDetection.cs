@@ -1,4 +1,4 @@
-using Cinemachine; // Add this to access Cinemachine components
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;
 public class FallingDetection : MonoBehaviour
 {
     public Rigidbody rb;
-    public CinemachineImpulseSource impulseSource; // Add this for Cinemachine Impulse
+    public CinemachineImpulseSource impulseSource;
     public Volume postProcessVolume;
 
     [Header("Post processing tweak")]
@@ -58,13 +58,11 @@ public class FallingDetection : MonoBehaviour
             intensityValue = Mathf.Clamp(intensityValue, 0, 1f);
             shakeStrength += shakeIncreaseRate * Time.deltaTime;
             shakeStrength = Mathf.Clamp(shakeStrength, 0.0f, maxShakeIntensity);
-
-            // Invoke Cinemachine Impulse
             if (impulseSource != null)
             {
-                Vector3 impulseDirection = new Vector3(0, -1, 0); // Direction of the impulse
-                float forceMagnitude = shakeStrength; // Adjust the force based on shakeStrength
-                impulseSource.GenerateImpulse(impulseDirection * forceMagnitude); // Generate impulse with adjusted force
+                Vector3 impulseDirection = new Vector3(0, -1, 0);
+                float forceMagnitude = shakeStrength;
+                impulseSource.GenerateImpulse(impulseDirection * forceMagnitude);
             }
 
             if (vignette != null)
@@ -83,8 +81,6 @@ public class FallingDetection : MonoBehaviour
             if (isFalling)
             {
                 isFalling = false;
-
-                // Reset post-processing effects
                 if (vignette != null)
                 {
                     vignette.intensity.value = 0.0f;
