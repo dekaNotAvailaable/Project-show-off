@@ -37,7 +37,7 @@ public class CatRespawnButton : MonoBehaviour
         if (movingPlatform != null)
         {
             Debug.Log("Moving platform is not null");
-            movingPlatform._shouldMove = !movingPlatform._shouldMove;
+            movingPlatform._shouldMove = true;
         }
 
         foreach (CatDieAndRespawn catDieAndRespawn in catDieAndRespawns)
