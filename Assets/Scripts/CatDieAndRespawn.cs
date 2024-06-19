@@ -49,7 +49,7 @@ public class CatDieAndRespawn : MonoBehaviour
             else
             {
                 Debug.Log("No available respawn points. Cat will not respawn.");
-
+                Destroy(this.gameObject);
             }
         }
     }
