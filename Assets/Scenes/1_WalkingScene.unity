@@ -52140,6 +52140,11 @@ PrefabInstance:
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3443352366751535125, guid: 2c98422c81bf07342a20614856702814,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 273c0577dd75b5c4c8e6b7b38212f1b5, type: 2}
     - target: {fileID: 3443352366751535126, guid: 2c98422c81bf07342a20614856702814,
         type: 3}
       propertyPath: MaxDistance
