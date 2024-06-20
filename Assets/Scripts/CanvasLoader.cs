@@ -22,7 +22,8 @@ public class CanvasLoader : MonoBehaviour
             EndMenu.SetActive(true);
             player.GetComponent <ContinuousMoveProviderBase>().enabled = false;
             player.GetComponent<ContinuousTurnProviderBase>().enabled = false;
-            EndMenu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * 2;
+            Vector3 forwardDirection = new Vector3(head.forward.x, 0, head.forward.z).normalized;
+            EndMenu.transform.position = head.position + forwardDirection * 2;
             EndMenu.transform.LookAt(new Vector3(head.position.x, EndMenu.transform.position.y, head.position.z));
             EndMenu.transform.forward *= -1;
         }
