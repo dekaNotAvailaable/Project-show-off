@@ -3083,6 +3083,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 853840240}
     m_Modifications:
+    - target: {fileID: 2786275279766507656, guid: 3dfa36145bbdb49c3b6760d31b30374a,
+        type: 3}
+      propertyPath: m_text
+      value: Press to Select or Shoot
+      objectReference: {fileID: 0}
     - target: {fileID: 2786275280680728984, guid: 3dfa36145bbdb49c3b6760d31b30374a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3127,6 +3132,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786275280680728984, guid: 3dfa36145bbdb49c3b6760d31b30374a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786275280680728984, guid: 3dfa36145bbdb49c3b6760d31b30374a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786275280680728984, guid: 3dfa36145bbdb49c3b6760d31b30374a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 2786275280680728984, guid: 3dfa36145bbdb49c3b6760d31b30374a,
         type: 3}
@@ -3196,6 +3216,11 @@ PrefabInstance:
     - target: {fileID: 2786275280680728985, guid: 3dfa36145bbdb49c3b6760d31b30374a,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786275280680728986, guid: 3dfa36145bbdb49c3b6760d31b30374a,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -14631,6 +14656,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 374809126117419264, guid: a73fd586f5072419589be949c095132c,
+        type: 3}
+      propertyPath: m_text
+      value: The CMGT mascot, CMGaTo, will try to destroy the nests scattered around.
+        Use the water gun to spray the cat and keep the nests from getting destroyed!
+      objectReference: {fileID: 0}
+    - target: {fileID: 374809126117419264, guid: a73fd586f5072419589be949c095132c,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 629.0815
+      objectReference: {fileID: 0}
     - target: {fileID: 374809126118425974, guid: a73fd586f5072419589be949c095132c,
         type: 3}
       propertyPath: m_Name
@@ -14780,6 +14816,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 374809126395126875, guid: a73fd586f5072419589be949c095132c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 374809126395126875, guid: a73fd586f5072419589be949c095132c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a73fd586f5072419589be949c095132c, type: 3}
@@ -27558,6 +27604,23 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3639998945287864553, guid: f32c826eafa3e4889ac7a0d7d92829b1,
+        type: 3}
+      propertyPath: m_text
+      value: You need to walk across to the other building. If you step on the wrong
+        glass panel, the glass will break and you will fall.  Use the marbles next
+        to you on the table or any other means to see if the glass is strong enough!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3639998945287864553, guid: f32c826eafa3e4889ac7a0d7d92829b1,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 654.53204
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696475919964407852, guid: f32c826eafa3e4889ac7a0d7d92829b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 6620468154241449975, guid: f32c826eafa3e4889ac7a0d7d92829b1,
         type: 3}
