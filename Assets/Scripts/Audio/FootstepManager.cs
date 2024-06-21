@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FootstepManager : MonoBehaviour {
     public AudioSource audioSource; // Assign the player's AudioSource here
-    public AudioClip glass;
-    public AudioClip normal;
+    public AudioSource glass;
+    public AudioSource normal;
     public float footstepInterval = 0.5f; // Time interval between footsteps
     private float nextFootstepTime = 0f;
     private CharacterController characterController;
@@ -38,15 +38,15 @@ public class FootstepManager : MonoBehaviour {
                     Debug.Log(hit.collider.name);
 
 
-                    if (hit.collider.CompareTag("glass")) {
-                        PlayFootstepSound(glass);
-                        Debug.Log("glass ");
+                    if (hit.collider.CompareTag("Glass")) {
+                        //PlayFootstepSound(g);
+                        Debug.Log("glass");
                     } else {
-                        PlayFootstepSound(normal);
+                        //PlayFootstepSound(normal);
                         Debug.Log("normal ");
                     }
                 } else {
-                    PlayFootstepSound(normal); // Default to normal if no specific surface is detected
+                    //PlayFootstepSound(normal); // Default to normal if no specific surface is detected
                     Debug.Log("normal alt");
                 }
                 nextFootstepTime = Time.time + footstepInterval;

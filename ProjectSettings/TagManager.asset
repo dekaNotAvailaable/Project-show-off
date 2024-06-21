@@ -8,7 +8,11 @@ TagManager:
   - Ground
   - Left Hand
   - Right Hand
-  - normal
+  - CatRespawnPoint
+  - Nest
+  - MovingPlatform
+  - Normal
+  - Glass
   layers:
   - Default
   - TransparentFX
