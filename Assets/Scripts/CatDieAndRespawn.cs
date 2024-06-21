@@ -9,7 +9,7 @@ public class CatDieAndRespawn : MonoBehaviour
     [HideInInspector]
     public bool isDead;
     [SerializeField]
-    private int catRespawnDelay = 1;
+    private float catRespawnDelay = 1f;
     private Dictionary<GameObject, bool> respawnPoints = new Dictionary<GameObject, bool>();
     [SerializeField]
     private float invisibilityDuration = 5f;
