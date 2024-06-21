@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
     public float speed = 5f;
     public Transform cam;
+    [SerializeField] CharacterController controller;
 
     void Update() {
         // Get the input from the player
@@ -13,7 +14,8 @@ public class PlayerMovement : MonoBehaviour {
         Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput).normalized;
 
         // Move the player
-        transform.Translate(movement * speed * Time.deltaTime);
+        //transform.Translate(movement * speed * Time.deltaTime);
+        controller.Move(-movement * speed * Time.deltaTime);
 
         // Update the camera position to follow the player
         if (cam != null) {
