@@ -20328,9 +20328,16 @@ MonoBehaviour:
   isDead: 0
   catRespawnDelay: 1
   invisibilityDuration: 1
+  smokeParticle: {fileID: 953701478}
 --- !u!4 &953701477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2901311872200163249, guid: 2c98422c81bf07342a20614856702814,
+    type: 3}
+  m_PrefabInstance: {fileID: 953701474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &953701478 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6629960022272093653, guid: 2c98422c81bf07342a20614856702814,
     type: 3}
   m_PrefabInstance: {fileID: 953701474}
   m_PrefabAsset: {fileID: 0}
@@ -33652,9 +33659,16 @@ MonoBehaviour:
   isDead: 0
   catRespawnDelay: 1
   invisibilityDuration: 1
+  smokeParticle: {fileID: 1368110878}
 --- !u!4 &1368110877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2901311872200163249, guid: 2c98422c81bf07342a20614856702814,
+    type: 3}
+  m_PrefabInstance: {fileID: 1368110874}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1368110878 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6629960022272093653, guid: 2c98422c81bf07342a20614856702814,
     type: 3}
   m_PrefabInstance: {fileID: 1368110874}
   m_PrefabAsset: {fileID: 0}

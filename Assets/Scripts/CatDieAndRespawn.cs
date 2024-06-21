@@ -18,6 +18,8 @@ public class CatDieAndRespawn : MonoBehaviour
     private CatSoundManage catSounds;
     private bool noAvailableRespawnPoints = false; // Flag to track availability of respawn points
 
+    public ParticleSystem smokeParticle;
+
     private void Start()
     {
         foreach (GameObject point in CatSpawnPoint)
@@ -42,6 +44,7 @@ public class CatDieAndRespawn : MonoBehaviour
         {
             isDead = true;
             Debug.Log("Cat died.");
+            smokeParticle.Play();
             if (!noAvailableRespawnPoints)
             {
                 StartCoroutine(RespawnWithDelay(CatSpawnPoint, catRespawnDelay, respawnPoints));
