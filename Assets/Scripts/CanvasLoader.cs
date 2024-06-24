@@ -9,6 +9,8 @@ public class CanvasLoader : MonoBehaviour
     public GameObject player;
     public Transform head;
     public Animator animator;//elia
+    public ParticleSystem confetti1Particles;
+    public ParticleSystem confetti2Particles;
     private void OnTriggerEnter(Collider collision)
     {
         //Temporarily disable animation
@@ -19,6 +21,8 @@ public class CanvasLoader : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
+            confetti1Particles.Play();
+            confetti2Particles.Play();
             EndMenu.SetActive(true);
             player.GetComponent<ContinuousMoveProviderBase>().enabled = false;
             player.GetComponent<ContinuousTurnProviderBase>().enabled = false;
