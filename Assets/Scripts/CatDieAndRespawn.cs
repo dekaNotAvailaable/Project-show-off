@@ -17,6 +17,7 @@ public class CatDieAndRespawn : MonoBehaviour
     private bool isInvisible;
     private CatSoundManage catSounds;
     private bool noAvailableRespawnPoints = false; // Flag to track availability of respawn points
+    private Score score;
 
     public ParticleSystem smokeParticle;
 
@@ -28,6 +29,7 @@ public class CatDieAndRespawn : MonoBehaviour
         }
         invisibilityTimer = invisibilityDuration;
         catSounds = GetComponent<CatSoundManage>();
+        score = FindAnyObjectByType<Score>();
     }
 
     private void Update()
@@ -38,7 +40,7 @@ public class CatDieAndRespawn : MonoBehaviour
         }
     }
 
-    private void CatDead()
+    public void CatDead()
     {
         if (!isDead)
         {
@@ -51,9 +53,9 @@ public class CatDieAndRespawn : MonoBehaviour
             }
             else
             {
-               // Debug.Log("No available respawn points. Cat will not respawn.");
+                // Debug.Log("No available respawn points. Cat will not respawn.");
                 //Destroy(gameObject);
-                this.gameObject.SetActive(false);   
+                this.gameObject.SetActive(false);
             }
         }
     }
@@ -62,6 +64,7 @@ public class CatDieAndRespawn : MonoBehaviour
     {
         if (other.CompareTag("Water") && !isInvisible)
         {
+
             CatDead();
             Debug.Log("Cat died due to water.");
         }
@@ -76,6 +79,7 @@ public class CatDieAndRespawn : MonoBehaviour
         }
         if (!isInvisible)
         {
+            score.CatDieScore++;
             CatDead();
             Debug.Log("Cat died due to particle collision.");
         }

@@ -4,18 +4,30 @@ using UnityEngine;
 public class FlyBird : MonoBehaviour
 {
     public float speed = 5f;
-    public float amplitude = 2f;
-    public float frequency = 0.3f;
+    public float sideLength = 10f; // Length of each side of the square
     private Rigidbody rb;
-    private Vector3 startPosition;
     private AudioSource quackSound;
+    private int currentSide = 0;
+    private Vector3 startPosition;
+    private Vector3[] directions;
+    private float traveledDistance = 0f;
 
     void Start()
     {
         quackSound = GetComponent<AudioSource>();
-        startPosition = transform.position;
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX;
+
+        // Initialize directions for square movement
+        directions = new Vector3[]
+        {
+            Vector3.forward,
+            Vector3.right,
+            Vector3.back,
+            Vector3.left
+        };
+
+        startPosition = transform.position;
 
         // Start the coroutine to play the quack sound randomly
         StartCoroutine(PlayQuackSoundRandomly());
@@ -23,15 +35,23 @@ public class FlyBird : MonoBehaviour
 
     void Update()
     {
-        Vector3 forwardMovement = transform.forward * speed * Time.deltaTime;
-        float wave = Mathf.Sin(Time.time * frequency) * amplitude;
-        Vector3 newPosition = transform.position + forwardMovement;
-        newPosition.y = startPosition.y + wave;
-        transform.position = newPosition;
-        Vector3 lookDirection = forwardMovement;
-        if (lookDirection != Vector3.zero)
+        MoveInSquarePattern();
+    }
+
+    private void MoveInSquarePattern()
+    {
+        Vector3 direction = directions[currentSide];
+        Vector3 forwardMovement = direction * speed * Time.deltaTime;
+        transform.position += forwardMovement;
+        traveledDistance += forwardMovement.magnitude;
+
+        // If the bird has traveled the length of one side of the square, switch to the next side
+        if (traveledDistance >= sideLength)
         {
-            transform.rotation = Quaternion.LookRotation(lookDirection, Vector3.up);
+            traveledDistance = 0f;
+            currentSide = (currentSide + 1) % 4;
+            // Adjust the bird's rotation to face the new direction
+            transform.rotation = Quaternion.LookRotation(directions[currentSide], Vector3.up);
         }
     }
 

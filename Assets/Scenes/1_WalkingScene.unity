@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11339543, g: 0.33697468, b: 0.5561584, a: 1}
+  m_IndirectSpecularColor: {r: 0.11340179, g: 0.33703217, b: 0.55589867, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8290,6 +8290,7 @@ GameObject:
   - component: {fileID: 354229525}
   - component: {fileID: 354229524}
   - component: {fileID: 354229523}
+  - component: {fileID: 354229528}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Ground
@@ -8487,6 +8488,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &354229528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354229522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47834a5ffe1f2b48a92de132a9fd55a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &354721609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8323245994863903103, guid: 3f309a8a39500cb45af6852e0e2f48b4,
@@ -12694,6 +12707,44 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 556544288}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &556544291 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6261750629309036921, guid: 4de16b09642e84e4d869759cae18b7eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 556544288}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &556544292 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8742958296947865871, guid: 4de16b09642e84e4d869759cae18b7eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 556544288}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &556544293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556544290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc64beee3a7055947995736c7028fbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 556544292}
+  Marble: {fileID: 556544291}
 --- !u!1 &557175949 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8323245994863903103, guid: 3f309a8a39500cb45af6852e0e2f48b4,
@@ -20212,8 +20263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  amplitude: 1
-  frequency: 1
+  sideLength: 10
 --- !u!1 &899676981 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8323245994863903103, guid: 3f309a8a39500cb45af6852e0e2f48b4,

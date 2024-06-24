@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -9,6 +7,11 @@ public class CanvasLoader : MonoBehaviour
     public GameObject player;
     public Transform head;
     public Animator animator;//elia
+    private Score score;
+    private void Start()
+    {
+        score = FindAnyObjectByType<Score>();
+    }
     private void OnTriggerEnter(Collider collision)
     {
         //Temporarily disable animation
@@ -19,6 +22,7 @@ public class CanvasLoader : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
+            score.ScoreUpdate();
             EndMenu.SetActive(true);
             player.GetComponent<ContinuousMoveProviderBase>().enabled = false;
             player.GetComponent<ContinuousTurnProviderBase>().enabled = false;
