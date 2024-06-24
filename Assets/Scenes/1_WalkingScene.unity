@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11340179, g: 0.33703217, b: 0.55589867, a: 1}
+  m_IndirectSpecularColor: {r: 0.11339543, g: 0.33697468, b: 0.5561584, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1730,8 +1730,6 @@ MonoBehaviour:
   player: {fileID: 794954915}
   head: {fileID: 1440411160}
   animator: {fileID: 0}
-  confetti1Particles: {fileID: 8887451074557909820}
-  confetti2Particles: {fileID: 8887451074312106751}
 --- !u!1001 &48683716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12731,20 +12729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &556544293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556544290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc64beee3a7055947995736c7028fbde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 556544292}
-  Marble: {fileID: 556544291}
 --- !u!1 &557175949 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8323245994863903103, guid: 3f309a8a39500cb45af6852e0e2f48b4,
@@ -19120,6 +19104,7 @@ GameObject:
   - component: {fileID: 853840240}
   - component: {fileID: 853840239}
   - component: {fileID: 853840241}
+  - component: {fileID: 853840242}
   m_Layer: 0
   m_Name: Game Menu
   m_TagString: Untagged
@@ -19186,6 +19171,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822bfcfb4abcdd3489b58d7cde282946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &853840242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853840238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc64beee3a7055947995736c7028fbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreText: {fileID: 556544292}
+  Marble: {fileID: 556544291}
+  CatDieTxt: {fileID: 0}
 --- !u!1001 &855553098
 PrefabInstance:
   m_ObjectHideFlags: 0
