@@ -102,7 +102,7 @@ public class CatScript : MonoBehaviour
         if (distanceToNest <= stopDistance)
         {
             DestroyNearestNest();
-            catDie.CatDead();
+            catDie.CatDead(false);
             return;
 
         }
