@@ -4,7 +4,6 @@ public class BreakablePlank : MonoBehaviour
 {
     [SerializeField]
     private float breakSec = 0;
-    public ParticleSystem glassParticles;
 
     private AudioSource breakSound;
     private void Start()
@@ -17,9 +16,9 @@ public class BreakablePlank : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             breakSound.Play();
-            glassParticles.Play();
-            //  AudioManager.instance.GlassBreakPlay();
             Destroy(gameObject, breakSec);
+            //  AudioManager.instance.GlassBreakPlay();
+
             Debug.Log("Breaking Plank");
         }
     }
@@ -28,8 +27,6 @@ public class BreakablePlank : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Marble"))
         {
-            breakSound.Play();
-            glassParticles.Play();
             Destroy(gameObject, breakSec);
             Debug.Log("Breaking Plank");
         }
