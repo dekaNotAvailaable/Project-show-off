@@ -41,13 +41,17 @@ public class CatDieAndRespawn : MonoBehaviour
         }
     }
 
-    public void CatDead()
+    public void CatDead(bool diedFromParticles)
     {
         if (!isDead)
         {
             isDead = true;
             Debug.Log("Cat died.");
             smokeParticle.Play();
+            if (diedFromParticles)
+            {
+                score.CatDieScore++;  // Increment score only if the cat died from particles
+            }
             if (!noAvailableRespawnPoints)
             {
                 StartCoroutine(RespawnWithDelay(CatSpawnPoint, catRespawnDelay, respawnPoints));
@@ -65,8 +69,7 @@ public class CatDieAndRespawn : MonoBehaviour
     {
         if (other.CompareTag("Water") && !isInvisible)
         {
-
-            CatDead();
+            CatDead(false);
             Debug.Log("Cat died due to water.");
         }
     }
@@ -75,9 +78,8 @@ public class CatDieAndRespawn : MonoBehaviour
     {
         isHit = true;
         int random = Random.Range(4, 6);
-        if(isHit)
+        if (isHit)
         {
-            score.CatDieScore++;
             isHit = false;
         }
         if (!isInvisible)
@@ -86,8 +88,7 @@ public class CatDieAndRespawn : MonoBehaviour
         }
         if (!isInvisible)
         {
-            
-            CatDead();
+            CatDead(true);
             Debug.Log("Cat died due to particle collision.");
         }
     }
