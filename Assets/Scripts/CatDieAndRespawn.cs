@@ -18,6 +18,7 @@ public class CatDieAndRespawn : MonoBehaviour
     private CatSoundManage catSounds;
     private bool noAvailableRespawnPoints = false; // Flag to track availability of respawn points
     private Score score;
+    private bool isHit = false;
 
     public ParticleSystem smokeParticle;
 
@@ -72,14 +73,20 @@ public class CatDieAndRespawn : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
+        isHit = true;
         int random = Random.Range(4, 6);
+        if(isHit)
+        {
+            score.CatDieScore++;
+            isHit = false;
+        }
         if (!isInvisible)
         {
             catSounds.PlayAudioSource(random);
         }
         if (!isInvisible)
         {
-            score.CatDieScore++;
+            
             CatDead();
             Debug.Log("Cat died due to particle collision.");
         }

@@ -26,17 +26,17 @@ public class Score : MonoBehaviour
         {
             CatDieTxt.text = "cat killed:" + CatDieScore.ToString();
         }
-        else { CatDieTxt.gameObject.SetActive(false); }
+       // else { CatDieTxt.gameObject.SetActive(false); }
         if (ScoreText != null)
         {
             ScoreText.text = "fall count:" + FallCount.ToString();
         }
-        else { ScoreText.gameObject.SetActive(false); }
+       // else { ScoreText.gameObject.SetActive(false); }
         if (Marble != null)
         {
             Marble.text = "marble fall:" + MarbleScore.ToString();
         }
-        else { Marble.gameObject.SetActive(false); }
+        //else { Marble.gameObject.SetActive(false); }
     }
     public void ScoreUpdate()
     {
