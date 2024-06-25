@@ -24,33 +24,34 @@ public class Score : MonoBehaviour
     {
         if (CatDieTxt != null)
         {
-            CatDieTxt.text = "Nests Saved:" + CatDieScore.ToString();
+            CatDieTxt.text = "Nests Saved: " + CatDieScore.ToString();
         }
        // else { CatDieTxt.gameObject.SetActive(false); }
         if (ScoreText != null)
         {
-            ScoreText.text = "Fall count:" + FallCount.ToString();
+            ScoreText.text = "Fall count: " + (-1 * FallCount).ToString();
         }
        // else { ScoreText.gameObject.SetActive(false); }
         if (Marble != null)
         {
-            Marble.text = "Objects used:" + MarbleScore.ToString();
+            Marble.text = "Objects used: " + MarbleScore.ToString();
         }
+        //ScoreUpdate();
         //else { Marble.gameObject.SetActive(false); }
     }
     public void ScoreUpdate()
     {
         if (CatDieTxt != null)
         {
-            CatDieTxt.text = "Nests Saved:" + CatDieScore.ToString();
+            CatDieTxt.text = "Nests Saved: " + CatDieScore.ToString();
         }
         if (ScoreText != null)
         {
-            ScoreText.text = "Fall count:" + FallCount.ToString();
+            ScoreText.text = "Fall count: " + (-1 * FallCount).ToString();
         }
         if (Marble != null)
         {
-            Marble.text = "Objects used:" + MarbleScore.ToString();
+            Marble.text = "Objects used: " + MarbleScore.ToString();
         }
     }
 }
