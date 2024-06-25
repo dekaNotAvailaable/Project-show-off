@@ -1,4 +1,5 @@
 using Cinemachine;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -23,6 +24,9 @@ public class FallingDetection : MonoBehaviour
     private float fallThreshold = -0.1f;
     private float intensityValue = 0.0f;
     private float shakeStrength = 0.0f;
+    private float distortionValue = 0.0f;
+    [SerializeField]
+    private int negativevalue;
     private bool isFalling = false;
     private Vector3 previousPosition;
     private Vignette vignette;
@@ -40,12 +44,12 @@ public class FallingDetection : MonoBehaviour
         }
         else
         {
-            Debug.Log("postprocessingvolume is null");
+            UnityEngine.Debug.Log("postprocessingvolume is null");
         }
 
         if (fallingAudioSource == null)
         {
-            Debug.LogWarning("fallingAudioSource is not assigned");
+            UnityEngine.Debug.LogWarning("fallingAudioSource is not assigned");
         }
     }
 
@@ -61,12 +65,15 @@ public class FallingDetection : MonoBehaviour
                 isFalling = true;
                 shakeStrength = 0.0f;
                 intensityValue = 0.0f;
+                distortionValue = 0.0f;
                 if (fallingAudioSource != null && !fallingAudioSource.isPlaying)
                 {
                     fallingAudioSource.Play();  // Play falling sound
                 }
             }
             intensityValue += intensityIncreaseRate * Time.deltaTime;
+            distortionValue+= (intensityIncreaseRate*negativevalue) * Time.deltaTime;
+           
             intensityValue = Mathf.Clamp(intensityValue, 0, 1f);
             shakeStrength += shakeIncreaseRate * Time.deltaTime;
             shakeStrength = Mathf.Clamp(shakeStrength, 0.0f, maxShakeIntensity);
@@ -87,7 +94,7 @@ public class FallingDetection : MonoBehaviour
                 chromaticAberration.intensity.value = intensityValue;
                 // Debug.Log("chromatic aberration tweaking:" + chromaticAberration.intensity.value);
             }
-            if (lensDistortion != null) { lensDistortion.intensity.value = intensityValue; }
+            if (lensDistortion != null) { lensDistortion.intensity.value = distortionValue; }
         }
         else
         {

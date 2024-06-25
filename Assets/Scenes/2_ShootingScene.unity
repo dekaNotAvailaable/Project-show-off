@@ -33785,10 +33785,11 @@ MonoBehaviour:
   postProcessVolume: {fileID: 832575518}
   fallingAudioSource: {fileID: 2120682578}
   shakeIncreaseRate: 2
-  intensityIncreaseRate: 0.6
+  intensityIncreaseRate: 0.5
   maxShakeIntensity: 100
   shakeDuration: 10
   fallThreshold: -0.1
+  negativevalue: 1
 --- !u!114 &1290477648
 MonoBehaviour:
   m_ObjectHideFlags: 0

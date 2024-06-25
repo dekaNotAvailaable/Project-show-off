@@ -34,8 +34,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.0025000004, y: 0.01, z: 0.0025}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8004216205134365389}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -224,7 +223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakSec: 0
-  breakParticle: {fileID: 8016855661686294362}
+  glassParticlesPrefab: {fileID: 5861420265448092992, guid: 0638eb48327a80d498340dcca244ab5e,
+    type: 3}
 --- !u!114 &8982380088203489512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,84 +239,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amplitude: 0.03
   frequency: 1
---- !u!1001 &6959820688476471648
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8703712668831062981}
-    m_Modifications:
-    - target: {fileID: 1117719748125885357, guid: 0638eb48327a80d498340dcca244ab5e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1117719748125885357, guid: 0638eb48327a80d498340dcca244ab5e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.671858
-      objectReference: {fileID: 0}
-    - target: {fileID: 1117719748125885357, guid: 0638eb48327a80d498340dcca244ab5e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.387802
-      objectReference: {fileID: 0}
-    - target: {fileID: 1117719748125885357, guid: 0638eb48327a80d498340dcca244ab5e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.4537318
-      objectReference: {fileID: 0}
-    - target: {fileID: 1117719748125885357, guid: 0638eb48327a80d498340dcca244ab5e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1117719748125885357, guid: 0638eb48327a80d498340dcca244ab5e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1117719748125885357, guid: 0638eb48327a80d498340dcca244ab5e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1117719748125885357, guid: 0638eb48327a80d498340dcca244ab5e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1117719748125885357, guid: 0638eb48327a80d498340dcca244ab5e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -270
-      objectReference: {fileID: 0}
-    - target: {fileID: 1117719748125885357, guid: 0638eb48327a80d498340dcca244ab5e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1117719748125885357, guid: 0638eb48327a80d498340dcca244ab5e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5861420265448092992, guid: 0638eb48327a80d498340dcca244ab5e,
-        type: 3}
-      propertyPath: m_Name
-      value: GlassParticles
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0638eb48327a80d498340dcca244ab5e, type: 3}
---- !u!4 &8004216205134365389 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1117719748125885357, guid: 0638eb48327a80d498340dcca244ab5e,
-    type: 3}
-  m_PrefabInstance: {fileID: 6959820688476471648}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &8016855661686294362 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1141618204417328698, guid: 0638eb48327a80d498340dcca244ab5e,
-    type: 3}
-  m_PrefabInstance: {fileID: 6959820688476471648}
-  m_PrefabAsset: {fileID: 0}
