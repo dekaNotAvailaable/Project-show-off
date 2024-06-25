@@ -12360,7 +12360,7 @@ MonoBehaviour:
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
   m_ThrowOnDetach: 1
-  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingDuration: 0.1
   m_ThrowSmoothingCurve:
     serializedVersion: 2
     m_Curve:
@@ -12376,8 +12376,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_ThrowVelocityScale: 1.5
-  m_ThrowAngularVelocityScale: 1
+  m_ThrowVelocityScale: 1
+  m_ThrowAngularVelocityScale: 0.1
   m_ForceGravityOnDetach: 1
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
@@ -34049,6 +34049,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8681176109490740466, guid: e85a777394a37e34eade8a5fc7c2c970,
+        type: 3}
+      propertyPath: m_MoveSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8681176109490740467, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_Enabled
@@ -34172,17 +34177,17 @@ PrefabInstance:
     - target: {fileID: 8681176109504545631, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.030012242
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8681176109504545631, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6991428
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8681176109504545631, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.08284513
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8681176109504545631, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
