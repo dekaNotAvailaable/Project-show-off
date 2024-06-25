@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class FlyBird : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 1f;
     public float circleRadius = 10f; // Radius of the circular movement
     public float verticalAmplitude = 2f; // Amplitude of the vertical oscillation
     public float verticalFrequency = 1f; // Frequency of the vertical oscillation
@@ -37,8 +37,6 @@ public class FlyBird : MonoBehaviour
         float y = verticalAmplitude * Mathf.Sin(verticalFrequency * angle);
         transform.position = startPosition + new Vector3(x, y, z);
         angle += speed * Time.deltaTime;
-
-        // Ensure the bird is always facing forward along the circular path
         Vector3 direction = new Vector3(-Mathf.Sin(angle), 0, Mathf.Cos(angle));
         transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
     }

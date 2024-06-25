@@ -3,7 +3,8 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-public class FallingDetection : MonoBehaviour {
+public class FallingDetection : MonoBehaviour
+{
     public Rigidbody rb;
     public CinemachineImpulseSource impulseSource;
     public Volume postProcessVolume;
@@ -26,31 +27,42 @@ public class FallingDetection : MonoBehaviour {
     private Vector3 previousPosition;
     private Vignette vignette;
     private ChromaticAberration chromaticAberration;
+    private LensDistortion lensDistortion;
 
-    void Start() {
+    void Start()
+    {
         previousPosition = rb.position;
-        if (postProcessVolume != null) {
+        if (postProcessVolume != null)
+        {
             postProcessVolume.profile.TryGet<Vignette>(out vignette);
             postProcessVolume.profile.TryGet<ChromaticAberration>(out chromaticAberration);
-        } else {
+            postProcessVolume.profile.TryGet<LensDistortion>(out lensDistortion);
+        }
+        else
+        {
             Debug.Log("postprocessingvolume is null");
         }
 
-        if (fallingAudioSource == null) {
+        if (fallingAudioSource == null)
+        {
             Debug.LogWarning("fallingAudioSource is not assigned");
         }
     }
 
-    void Update() {
+    void Update()
+    {
         Vector3 currentPosition = rb.position;
         float yVelocity = (currentPosition.y - previousPosition.y);
 
-        if (yVelocity < fallThreshold) {
-            if (!isFalling) {
+        if (yVelocity < fallThreshold)
+        {
+            if (!isFalling)
+            {
                 isFalling = true;
                 shakeStrength = 0.0f;
                 intensityValue = 0.0f;
-                if (fallingAudioSource != null && !fallingAudioSource.isPlaying) {
+                if (fallingAudioSource != null && !fallingAudioSource.isPlaying)
+                {
                     fallingAudioSource.Play();  // Play falling sound
                 }
             }
@@ -58,34 +70,45 @@ public class FallingDetection : MonoBehaviour {
             intensityValue = Mathf.Clamp(intensityValue, 0, 1f);
             shakeStrength += shakeIncreaseRate * Time.deltaTime;
             shakeStrength = Mathf.Clamp(shakeStrength, 0.0f, maxShakeIntensity);
-            if (impulseSource != null) {
+            if (impulseSource != null)
+            {
                 Vector3 impulseDirection = new Vector3(0, -1, 0);
                 float forceMagnitude = shakeStrength;
                 impulseSource.GenerateImpulse(impulseDirection * forceMagnitude);
             }
 
-            if (vignette != null) {
+            if (vignette != null)
+            {
                 vignette.intensity.value = intensityValue;
                 // Debug.Log("vignette tweaking:" + vignette.intensity.value);
             }
-            if (chromaticAberration != null) {
+            if (chromaticAberration != null)
+            {
                 chromaticAberration.intensity.value = intensityValue;
                 // Debug.Log("chromatic aberration tweaking:" + chromaticAberration.intensity.value);
             }
-        } else {
-            if (isFalling) {
+            if (lensDistortion != null) { lensDistortion.intensity.value = intensityValue; }
+        }
+        else
+        {
+            if (isFalling)
+            {
                 isFalling = false;
-                if (fallingAudioSource != null && fallingAudioSource.isPlaying) {
+                if (fallingAudioSource != null && fallingAudioSource.isPlaying)
+                {
                     fallingAudioSource.Stop();  // Stop falling sound
                 }
 
-                if (vignette != null) {
+                if (vignette != null)
+                {
                     vignette.intensity.value = 0.0f;
                 }
 
-                if (chromaticAberration != null) {
+                if (chromaticAberration != null)
+                {
                     chromaticAberration.intensity.value = 0.0f;
                 }
+                if (lensDistortion != null) { lensDistortion.intensity.value = 0f; }
             }
         }
 
