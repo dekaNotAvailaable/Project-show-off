@@ -8,6 +8,9 @@ public class CanvasLoader : MonoBehaviour
     public Transform head;
     public Animator animator;//elia
     private Score score;
+
+    public ParticleSystem confetti1Particle;
+    public ParticleSystem confetti2Particle;
     private void Start()
     {
         score = FindAnyObjectByType<Score>();
@@ -22,6 +25,8 @@ public class CanvasLoader : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
+            confetti1Particle.Play();
+            confetti2Particle.Play();
             score.ScoreUpdate();
             EndMenu.SetActive(true);
             player.GetComponent<ContinuousMoveProviderBase>().enabled = false;

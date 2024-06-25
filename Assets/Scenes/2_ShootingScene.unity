@@ -18434,6 +18434,8 @@ MonoBehaviour:
   player: {fileID: 1290477642}
   head: {fileID: 370141027}
   animator: {fileID: 0}
+  confetti1Particle: {fileID: 8887451075867132038}
+  confetti2Particle: {fileID: 8887451075198704556}
 --- !u!65 &839992234
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46438,7 +46440,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 336aec155f1433947b8fece0cbb1fe06, type: 2}
+  - {fileID: 2100000, guid: 5bce88aa354e6fb41a570b3371a3c28a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -46510,7 +46512,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 336aec155f1433947b8fece0cbb1fe06, type: 2}
+  - {fileID: 2100000, guid: 5bce88aa354e6fb41a570b3371a3c28a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
