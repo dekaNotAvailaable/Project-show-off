@@ -10942,20 +10942,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6650304018865234114, guid: 4adc8995aa909274bba62ef4c661b8c1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Concrete
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4adc8995aa909274bba62ef4c661b8c1,
         type: 3}
       propertyPath: m_Name
       value: GlassBuilding
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4adc8995aa909274bba62ef4c661b8c1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Concrete
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162820104835090806, guid: 4adc8995aa909274bba62ef4c661b8c1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Concrete
+      objectReference: {fileID: 0}
     - target: {fileID: 8531084230230199607, guid: 4adc8995aa909274bba62ef4c661b8c1,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8531084230230199607, guid: 4adc8995aa909274bba62ef4c661b8c1,
         type: 3}
       propertyPath: m_TagString
-      value: Normal
+      value: Concrete
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4adc8995aa909274bba62ef4c661b8c1, type: 3}
@@ -12729,6 +12744,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &556544297
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556544290}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b62984a79417b014f90a1c02d4b1fc52, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &557175949 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8323245994863903103, guid: 3f309a8a39500cb45af6852e0e2f48b4,
@@ -17647,6 +17758,12 @@ AudioSource:
 --- !u!4 &794954953 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8681176109490740468, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 1440411159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &794954954 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 8681176109490740467, guid: e85a777394a37e34eade8a5fc7c2c970,
     type: 3}
   m_PrefabInstance: {fileID: 1440411159}
   m_PrefabAsset: {fileID: 0}
@@ -33751,12 +33868,27 @@ PrefabInstance:
         type: 3}
       propertyPath: glass
       value: 
-      objectReference: {fileID: 794954952}
+      objectReference: {fileID: 8300000, guid: bf7d7d6c3265dbb49b5746a281629bb5, type: 3}
+    - target: {fileID: 4940455129308062907, guid: e85a777394a37e34eade8a5fc7c2c970,
+        type: 3}
+      propertyPath: range
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4940455129308062907, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: normal
       value: 
       objectReference: {fileID: 794954951}
+    - target: {fileID: 4940455129308062907, guid: e85a777394a37e34eade8a5fc7c2c970,
+        type: 3}
+      propertyPath: concrete
+      value: 
+      objectReference: {fileID: 8300000, guid: 93e0c6f29b47522449b6f6bbb3a4c23f, type: 3}
+    - target: {fileID: 4940455129308062907, guid: e85a777394a37e34eade8a5fc7c2c970,
+        type: 3}
+      propertyPath: rayStart
+      value: 
+      objectReference: {fileID: 794954953}
     - target: {fileID: 4940455129308062907, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: glassSource
@@ -33767,6 +33899,11 @@ PrefabInstance:
       propertyPath: normalSource
       value: 
       objectReference: {fileID: 608598511}
+    - target: {fileID: 4940455129308062907, guid: e85a777394a37e34eade8a5fc7c2c970,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8681176108995325544, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_RootOrder
@@ -33855,8 +33992,13 @@ PrefabInstance:
     - target: {fileID: 8681176109490740474, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8681176109490740474, guid: e85a777394a37e34eade8a5fc7c2c970,
+        type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 794954954}
     - target: {fileID: 8681176109490740475, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: SpawnPoint
