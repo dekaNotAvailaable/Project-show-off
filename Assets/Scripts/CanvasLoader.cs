@@ -29,6 +29,14 @@ public class CanvasLoader : MonoBehaviour
             confetti2Particle.Play();
             score.ScoreUpdate();
             EndMenu.SetActive(true);
+            AudioSource audioSource = EndMenu.GetComponent<AudioSource>();
+            if (audioSource != null) {
+                audioSource.Play();
+
+            } else {
+                Debug.Log("AudioSource component not found on EndMenu GameObject.");
+            }
+            
             player.GetComponent<ContinuousMoveProviderBase>().enabled = false;
             player.GetComponent<ContinuousTurnProviderBase>().enabled = false;
             Vector3 forwardDirection = new Vector3(head.forward.x, 0, head.forward.z).normalized;
