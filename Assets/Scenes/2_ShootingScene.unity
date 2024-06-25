@@ -18434,6 +18434,8 @@ MonoBehaviour:
   player: {fileID: 1290477642}
   head: {fileID: 370141027}
   animator: {fileID: 0}
+  confetti1Particle: {fileID: 8887451075867132038}
+  confetti2Particle: {fileID: 8887451075198704556}
 --- !u!65 &839992234
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18796,6 +18798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnpressedButton: {fileID: 2076945975}
   PressedButton: {fileID: 877685757}
+  cat: 0
 --- !u!65 &853327879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20170,6 +20173,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &928840687
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710854759}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b62984a79417b014f90a1c02d4b1fc52, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &945280113 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c5e9c09ca80920947ac57b387ab8f052,
@@ -20639,7 +20738,7 @@ PrefabInstance:
     - target: {fileID: 3443352366751535134, guid: 2c98422c81bf07342a20614856702814,
         type: 3}
       propertyPath: stopDistance
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c98422c81bf07342a20614856702814, type: 3}
@@ -34099,7 +34198,7 @@ PrefabInstance:
     - target: {fileID: 3443352366751535134, guid: 2c98422c81bf07342a20614856702814,
         type: 3}
       propertyPath: stopDistance
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6629960022272093653, guid: 2c98422c81bf07342a20614856702814,
         type: 3}
@@ -46690,7 +46789,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 336aec155f1433947b8fece0cbb1fe06, type: 2}
+  - {fileID: 2100000, guid: 5bce88aa354e6fb41a570b3371a3c28a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -46762,7 +46861,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 336aec155f1433947b8fece0cbb1fe06, type: 2}
+  - {fileID: 2100000, guid: 5bce88aa354e6fb41a570b3371a3c28a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

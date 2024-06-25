@@ -1730,6 +1730,8 @@ MonoBehaviour:
   player: {fileID: 794954915}
   head: {fileID: 1440411160}
   animator: {fileID: 0}
+  confetti1Particle: {fileID: 8887451074557909820}
+  confetti2Particle: {fileID: 8887451074312106751}
 --- !u!1001 &48683716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34120,7 +34122,7 @@ PrefabInstance:
     - target: {fileID: 8681176109490740474, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8681176109490740474, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
@@ -53789,7 +53791,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 336aec155f1433947b8fece0cbb1fe06, type: 2}
+  - {fileID: 2100000, guid: 5bce88aa354e6fb41a570b3371a3c28a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -53861,7 +53863,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 336aec155f1433947b8fece0cbb1fe06, type: 2}
+  - {fileID: 2100000, guid: 5bce88aa354e6fb41a570b3371a3c28a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -59988,7 +59990,7 @@ Transform:
   m_GameObject: {fileID: 3938394538836026185}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -15.79, y: 28.972572, z: -28.13}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9999999, y: 1.0000002, z: 1.0000002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -60003,7 +60005,7 @@ Transform:
   m_GameObject: {fileID: 3938394538054355594}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -11.44, y: 28.972572, z: -28.13}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9999999, y: 1.0000002, z: 1.0000002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
