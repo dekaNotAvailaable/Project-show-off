@@ -42,7 +42,7 @@ public class FootstepManager : MonoBehaviour {
         while (true) {
             Debug.Log("FootstepRoutine:" + deltaDistance);
             // Check for movement
-            if (deltaDistance > 0.05f) {
+            if (deltaDistance > 0.01f) {
                 Footstep();
             }
 
