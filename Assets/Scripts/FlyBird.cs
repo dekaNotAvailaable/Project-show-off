@@ -4,28 +4,20 @@ using UnityEngine;
 public class FlyBird : MonoBehaviour
 {
     public float speed = 5f;
-    public float sideLength = 10f; // Length of each side of the square
+    public float circleRadius = 10f; // Radius of the circular movement
+    public float verticalAmplitude = 2f; // Amplitude of the vertical oscillation
+    public float verticalFrequency = 1f; // Frequency of the vertical oscillation
+
     private Rigidbody rb;
     private AudioSource quackSound;
-    private int currentSide = 0;
+    private float angle = 0f; // Angle for the circular movement
     private Vector3 startPosition;
-    private Vector3[] directions;
-    private float traveledDistance = 0f;
 
     void Start()
     {
         quackSound = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX;
-
-        // Initialize directions for square movement
-        directions = new Vector3[]
-        {
-            Vector3.forward,
-            Vector3.right,
-            Vector3.back,
-            Vector3.left
-        };
 
         startPosition = transform.position;
 
@@ -35,24 +27,26 @@ public class FlyBird : MonoBehaviour
 
     void Update()
     {
-        MoveInSquarePattern();
+        MoveInDynamicPattern();
     }
 
-    private void MoveInSquarePattern()
+    private void MoveInDynamicPattern()
     {
-        Vector3 direction = directions[currentSide];
-        Vector3 forwardMovement = direction * speed * Time.deltaTime;
-        transform.position += forwardMovement;
-        traveledDistance += forwardMovement.magnitude;
+        // Calculate the new position using sine and cosine for circular movement
+        float x = circleRadius * Mathf.Cos(angle);
+        float z = circleRadius * Mathf.Sin(angle);
+        // Calculate the vertical oscillation
+        float y = verticalAmplitude * Mathf.Sin(verticalFrequency * angle);
 
-        // If the bird has traveled the length of one side of the square, switch to the next side
-        if (traveledDistance >= sideLength)
-        {
-            traveledDistance = 0f;
-            currentSide = (currentSide + 1) % 4;
-            // Adjust the bird's rotation to face the new direction
-            transform.rotation = Quaternion.LookRotation(directions[currentSide], Vector3.up);
-        }
+        // Update the bird's position
+        transform.position = startPosition + new Vector3(x, y, z);
+
+        // Update the angle based on the speed and time
+        angle += speed * Time.deltaTime;
+
+        // Ensure the bird is always facing forward along the circular path
+        Vector3 direction = new Vector3(-Mathf.Sin(angle), 0, Mathf.Cos(angle));
+        transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
     }
 
     private IEnumerator PlayQuackSoundRandomly()
