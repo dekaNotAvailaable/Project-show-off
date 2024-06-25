@@ -6,8 +6,8 @@ public class BreakablePlank : MonoBehaviour
     private float breakSec = 0;
 
     private AudioSource breakSound;
-
-    public ParticleSystem breakParticle;
+    public GameObject glassParticlesPrefab;
+  //  public ParticleSystem breakParticle;
     private void Start()
     {
         breakSound = GetComponent<AudioSource>();
@@ -18,7 +18,9 @@ public class BreakablePlank : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             breakSound.Play();
-            breakParticle.Play();
+          //  breakParticle.gameObject.transform.parent = null;
+        //    breakParticle.Play();
+            Instantiate(glassParticlesPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject, breakSec);
             //  AudioManager.instance.GlassBreakPlay();
 
@@ -30,7 +32,10 @@ public class BreakablePlank : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Marble"))
         {
-            breakParticle.Play();
+            breakSound.Play();
+            Instantiate(glassParticlesPrefab, transform.position, Quaternion.identity);
+         //   breakParticle.Play();
+            //breakParticle.gameObject.transform.parent = null;
             Destroy(gameObject, breakSec);
             Debug.Log("Breaking Plank");
         }

@@ -16,7 +16,7 @@ public class CatDieAndRespawn : MonoBehaviour
     private float invisibilityTimer;
     private bool isInvisible;
     private CatSoundManage catSounds;
-    private bool noAvailableRespawnPoints = false; // Flag to track availability of respawn points
+    private bool noAvailableRespawnPoints = false;
     private Score score;
     private bool isHit = false;
 
@@ -50,7 +50,7 @@ public class CatDieAndRespawn : MonoBehaviour
             smokeParticle.Play();
             if (diedFromParticles)
             {
-                score.CatDieScore++;  // Increment score only if the cat died from particles
+                score.CatDieScore++;
             }
             if (!noAvailableRespawnPoints)
             {
@@ -58,8 +58,6 @@ public class CatDieAndRespawn : MonoBehaviour
             }
             else
             {
-                // Debug.Log("No available respawn points. Cat will not respawn.");
-                //Destroy(gameObject);
                 this.gameObject.SetActive(false);
             }
         }
@@ -142,8 +140,6 @@ public class CatDieAndRespawn : MonoBehaviour
                 yield break;
             }
         }
-
-        // If no available respawn points, set flag
         noAvailableRespawnPoints = true;
         Debug.Log("No available respawn points. Cat will not respawn.");
         Destroy(gameObject);

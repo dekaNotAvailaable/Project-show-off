@@ -63,6 +63,7 @@ public class CatScript : MonoBehaviour
     {
         if (nearestNest != null)
         {
+           
             Destroy(nearestNest);
             nearestNest = null;
             FindNearestNest();
@@ -79,7 +80,7 @@ public class CatScript : MonoBehaviour
         if (distanceToNest <= stopDistance)
         {
             DestroyNearestNest();
-            if (!catDie.isDead) // Ensure CatDead() is called only once
+            if (!catDie.isDead)
             {
                 catDie.CatDead(false);
             }
