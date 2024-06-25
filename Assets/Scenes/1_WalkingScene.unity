@@ -11084,6 +11084,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6650304018865234114, guid: 4adc8995aa909274bba62ef4c661b8c1,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -6650304018865234114, guid: 4adc8995aa909274bba62ef4c661b8c1,
+        type: 3}
       propertyPath: m_TagString
       value: Concrete
       objectReference: {fileID: 0}
@@ -11105,7 +11110,7 @@ PrefabInstance:
     - target: {fileID: 8531084230230199607, guid: 4adc8995aa909274bba62ef4c661b8c1,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8531084230230199607, guid: 4adc8995aa909274bba62ef4c661b8c1,
         type: 3}
@@ -34085,7 +34090,7 @@ PrefabInstance:
         type: 3}
       propertyPath: glass
       value: 
-      objectReference: {fileID: 8300000, guid: bf7d7d6c3265dbb49b5746a281629bb5, type: 3}
+      objectReference: {fileID: 1921228919}
     - target: {fileID: 4940455129308062907, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: range
@@ -34100,7 +34105,7 @@ PrefabInstance:
         type: 3}
       propertyPath: concrete
       value: 
-      objectReference: {fileID: 8300000, guid: 93e0c6f29b47522449b6f6bbb3a4c23f, type: 3}
+      objectReference: {fileID: 608598511}
     - target: {fileID: 4940455129308062907, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: rayStart
@@ -34119,7 +34124,7 @@ PrefabInstance:
     - target: {fileID: 4940455129308062907, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: layerMask.m_Bits
-      value: 1
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 8681176108995325544, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
