@@ -17,6 +17,8 @@ public class CatDieAndRespawn : MonoBehaviour
     private bool isInvisible;
     private CatSoundManage catSounds;
     private bool noAvailableRespawnPoints = false; // Flag to track availability of respawn points
+    private Score score;
+    private bool isHit = false;
 
     public ParticleSystem smokeParticle;
 
@@ -28,6 +30,7 @@ public class CatDieAndRespawn : MonoBehaviour
         }
         invisibilityTimer = invisibilityDuration;
         catSounds = GetComponent<CatSoundManage>();
+        score = FindAnyObjectByType<Score>();
     }
 
     private void Update()
@@ -38,22 +41,26 @@ public class CatDieAndRespawn : MonoBehaviour
         }
     }
 
-    private void CatDead()
+    public void CatDead(bool diedFromParticles)
     {
         if (!isDead)
         {
             isDead = true;
             Debug.Log("Cat died.");
             smokeParticle.Play();
+            if (diedFromParticles)
+            {
+                score.CatDieScore++;  // Increment score only if the cat died from particles
+            }
             if (!noAvailableRespawnPoints)
             {
                 StartCoroutine(RespawnWithDelay(CatSpawnPoint, catRespawnDelay, respawnPoints));
             }
             else
             {
-               // Debug.Log("No available respawn points. Cat will not respawn.");
+                // Debug.Log("No available respawn points. Cat will not respawn.");
                 //Destroy(gameObject);
-                this.gameObject.SetActive(false);   
+                this.gameObject.SetActive(false);
             }
         }
     }
@@ -62,21 +69,26 @@ public class CatDieAndRespawn : MonoBehaviour
     {
         if (other.CompareTag("Water") && !isInvisible)
         {
-            CatDead();
+            CatDead(false);
             Debug.Log("Cat died due to water.");
         }
     }
 
     private void OnParticleCollision(GameObject other)
     {
+        isHit = true;
         int random = Random.Range(4, 6);
+        if (isHit)
+        {
+            isHit = false;
+        }
         if (!isInvisible)
         {
             catSounds.PlayAudioSource(random);
         }
         if (!isInvisible)
         {
-            CatDead();
+            CatDead(true);
             Debug.Log("Cat died due to particle collision.");
         }
     }

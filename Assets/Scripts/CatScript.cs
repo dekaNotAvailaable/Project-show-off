@@ -85,6 +85,15 @@ public class CatScript : MonoBehaviour
             isNestFound = false;
         }
     }
+    private void DestroyNearestNest()
+    {
+        if (nearestNest != null)
+        {
+            Destroy(nearestNest);
+            nearestNest = null;
+            FindNearestNest();
+        }
+    }
 
     private void MoveTowardsNest()
     {
@@ -92,7 +101,10 @@ public class CatScript : MonoBehaviour
         float distanceToNest = Vector3.Distance(transform.position, nearestNest.transform.position);
         if (distanceToNest <= stopDistance)
         {
+            DestroyNearestNest();
+            catDie.CatDead(false);
             return;
+
         }
         Vector3 newPosition = transform.position + direction * catMoveSpeed * Time.deltaTime;
         transform.position = newPosition;

@@ -39,7 +39,7 @@ public class Respawn : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            //score.scoreInt--;
+            score.FallCount--;
 
             if (AudioManager.instance != null)
             {
