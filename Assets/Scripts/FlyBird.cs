@@ -32,16 +32,10 @@ public class FlyBird : MonoBehaviour
 
     private void MoveInDynamicPattern()
     {
-        // Calculate the new position using sine and cosine for circular movement
         float x = circleRadius * Mathf.Cos(angle);
         float z = circleRadius * Mathf.Sin(angle);
-        // Calculate the vertical oscillation
         float y = verticalAmplitude * Mathf.Sin(verticalFrequency * angle);
-
-        // Update the bird's position
         transform.position = startPosition + new Vector3(x, y, z);
-
-        // Update the angle based on the speed and time
         angle += speed * Time.deltaTime;
 
         // Ensure the bird is always facing forward along the circular path

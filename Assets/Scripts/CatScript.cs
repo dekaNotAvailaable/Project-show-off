@@ -77,7 +77,7 @@ public class CatScript : MonoBehaviour
         if (distanceToNest <= stopDistance)
         {
             DestroyNearestNest();
-            if (!catDie.isDead) // Ensure CatDead() is called only once
+            if (!catDie.isDead)
             {
                 catDie.CatDead(false);
             }
