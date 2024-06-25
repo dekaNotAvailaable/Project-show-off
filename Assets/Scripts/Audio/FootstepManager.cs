@@ -3,67 +3,73 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FootstepManager : MonoBehaviour {
-    public AudioSource glassSource; // Assign the AudioSource for glass footsteps here
-    public AudioSource normalSource; // Assign the AudioSource for normal footsteps here
-    public float footstepInterval = 0.3f; // Time interval between footsteps
-    private float nextFootstepTime = 0f;
-    private CharacterController characterController;
+    public AudioSource audioSource; // Assign the AudioSource for footsteps here
+    public AudioClip concrete; // Assign the AudioClip for concrete footsteps here
+    public AudioClip glass; // Assign the AudioClip for glass footsteps here
 
-    private Vector3 lastPosition;
+    RaycastHit hit;
+    public Transform rayStart;
+    public float range = 1.0f; // Set a default range if not set in the Editor
+    public LayerMask layerMask;
+    public float footstepInterval = 0.5f; // Interval between footsteps in seconds
 
-    [SerializeField]
-    private LayerMask footstepLayerMask; // LayerMask for specific layers to interact with
+    private void Start() {
+        if (audioSource == null) {
+            Debug.LogError("AudioSource is not assigned!");
+            return;
+        }
 
-    void Start() {
-        lastPosition = transform.position;
-        characterController = GetComponent<CharacterController>();
-        if (characterController == null) {
-            Debug.LogError("FootstepManager: No CharacterController found on the GameObject.");
+        if (concrete == null || glass == null) {
+            Debug.LogError("One or more AudioClips are not assigned!");
+            return;
+        }
+
+        if (rayStart == null) {
+            Debug.LogError("RayStart Transform is not assigned!");
+            return;
+        }
+
+        // Start the footstep coroutine
+        StartCoroutine(FootstepRoutine());
+    }
+
+    private IEnumerator FootstepRoutine() {
+        while (true) {
+            Footstep();
+            yield return new WaitForSeconds(footstepInterval);
         }
     }
 
-    void Update() {
+    public void Footstep() {
+        if (Physics.Raycast(rayStart.position, -rayStart.transform.up, out hit, range, layerMask)) {
+            Debug.Log("Raycast hit: " + hit.collider.tag);
 
-        float deltaDistance = (transform.position - lastPosition).magnitude;
-        lastPosition = transform.position;
-
-        
-        if (characterController != null && characterController.isGrounded && deltaDistance > 0.1f) {
-           
-
-            if (Time.time >= nextFootstepTime) {
-                // Determine which surface the player is on
-                RaycastHit hit;
-                Vector3 rayOrigin = transform.position + Vector3.up * 0.1f; // Start the ray slightly above the player's feet
-                if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 1f, footstepLayerMask)) {
-                    Debug.Log("Raycast hit: " + hit.collider.name);
-                   
-
-                    if (hit.collider.CompareTag("Glass")) {
-                        Debug.Log("Glass surface detected");
-                        PlayFootstepSound(glassSource);
-                    } else {
-                        Debug.Log("Normal surface detected");
-                        PlayFootstepSound(normalSource);
-                    }
-                } else {
-                    Debug.Log("Raycast did not hit any specific surface");
-                    PlayFootstepSound(normalSource); // Default to normal if no specific surface is detected
-                }
-                nextFootstepTime = Time.time + footstepInterval;
+            if (hit.collider.CompareTag("Concrete")) {
+                PlayFootstepSound(concrete);
+                Debug.Log("Concrete Played");
+            } else if (hit.collider.CompareTag("Glass")) {
+                PlayFootstepSound(glass);
+                Debug.Log("Glass Played");
+            } else {
+                Debug.Log("Hit an object that is not tagged as Concrete or Glass");
             }
         } else {
-        //    Debug.Log("Character is not grounded or not moving");
+            Debug.Log("Raycast did not hit anything");
         }
     }
 
-    void PlayFootstepSound(AudioSource source) {
-        if (source != null) {
-            Debug.Log("Playing sound: " + source.clip.name); // Add this line for debugging
-            source.pitch = Random.Range(0.8f, 1.2f); // Adjust pitch for variety
-            source.Play();
-        } else {
-            Debug.LogWarning("Footstep audio source is null.");
+    void PlayFootstepSound(AudioClip audio) {
+        audioSource.pitch = Random.Range(0.8f, 1.2f); // Adjust pitch for variety
+        audioSource.PlayOneShot(audio);
+        Debug.Log("Playing sound: " + audio.name);
+    }
+
+    private void Update() {
+        Debug.DrawRay(rayStart.position, -rayStart.transform.up * range, Color.red);
+
+        // Temporary test: call Footstep on key press (Remove or replace this in VR setup)
+        if (Input.GetKeyDown(KeyCode.F)) {
+            Footstep();
         }
     }
 }

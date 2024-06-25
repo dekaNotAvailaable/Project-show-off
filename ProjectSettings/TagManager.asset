@@ -11,8 +11,8 @@ TagManager:
   - CatRespawnPoint
   - Nest
   - MovingPlatform
-  - Normal
   - Glass
+  - Concrete
   layers:
   - Default
   - TransparentFX
