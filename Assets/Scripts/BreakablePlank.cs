@@ -18,8 +18,9 @@ public class BreakablePlank : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             breakSound.Play();
+            breakParticle.gameObject.transform.parent = null;
             breakParticle.Play();
-            Destroy(gameObject, breakSec);
+            //Destroy(gameObject, breakSec);
             //  AudioManager.instance.GlassBreakPlay();
 
             Debug.Log("Breaking Plank");
@@ -30,8 +31,11 @@ public class BreakablePlank : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Marble"))
         {
+            breakSound.Play();
+
             breakParticle.Play();
-            Destroy(gameObject, breakSec);
+            //breakParticle.gameObject.transform.parent = null;
+           // Destroy(gameObject, breakSec);
             Debug.Log("Breaking Plank");
         }
     }
