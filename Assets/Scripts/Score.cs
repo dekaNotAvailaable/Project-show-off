@@ -24,17 +24,17 @@ public class Score : MonoBehaviour
     {
         if (CatDieTxt != null)
         {
-            CatDieTxt.text = "cat killed:" + CatDieScore.ToString();
+            CatDieTxt.text = "Nests Saved:" + CatDieScore.ToString();
         }
        // else { CatDieTxt.gameObject.SetActive(false); }
         if (ScoreText != null)
         {
-            ScoreText.text = "fall count:" + FallCount.ToString();
+            ScoreText.text = "Fall count:" + FallCount.ToString();
         }
        // else { ScoreText.gameObject.SetActive(false); }
         if (Marble != null)
         {
-            Marble.text = "marble fall:" + MarbleScore.ToString();
+            Marble.text = "Objects used:" + MarbleScore.ToString();
         }
         //else { Marble.gameObject.SetActive(false); }
     }
@@ -42,20 +42,15 @@ public class Score : MonoBehaviour
     {
         if (CatDieTxt != null)
         {
-            CatDieTxt.text = "cat killed:" + CatDieScore.ToString();
+            CatDieTxt.text = "Nests Saved:" + CatDieScore.ToString();
         }
         if (ScoreText != null)
         {
-            ScoreText.text = "fall count:" + FallCount.ToString();
+            ScoreText.text = "Fall count:" + FallCount.ToString();
         }
         if (Marble != null)
         {
-            Marble.text = "marble fall:" + MarbleScore.ToString();
+            Marble.text = "Objects used:" + MarbleScore.ToString();
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
