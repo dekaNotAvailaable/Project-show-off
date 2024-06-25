@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8057282049668151616}
   - component: {fileID: 969631403131349347}
   - component: {fileID: -7405440471933201501}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WalkAblePlank
   m_TagString: Glass
   m_Icon: {fileID: 0}

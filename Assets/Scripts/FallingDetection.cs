@@ -26,7 +26,10 @@ public class FallingDetection : MonoBehaviour {
     private Vector3 previousPosition;
     private Vignette vignette;
     private ChromaticAberration chromaticAberration;
-
+    [SerializeField] private float fadeDuration = 1.0f;
+    private float currentFadeTime = 0.0f;
+    private float targetVolume = 0.0f;
+    private float initialVolume = 0.0f;
     void Start() {
         previousPosition = rb.position;
         if (postProcessVolume != null) {
@@ -50,6 +53,9 @@ public class FallingDetection : MonoBehaviour {
                 isFalling = true;
                 shakeStrength = 0.0f;
                 intensityValue = 0.0f;
+                initialVolume = fallingAudioSource.volume; // Store initial volume
+                targetVolume = 1.0f; // Target volume for fade-in
+                currentFadeTime = 0.0f; // Reset fade time
                 if (fallingAudioSource != null && !fallingAudioSource.isPlaying) {
                     fallingAudioSource.Play();  // Play falling sound
                 }
@@ -75,6 +81,9 @@ public class FallingDetection : MonoBehaviour {
         } else {
             if (isFalling) {
                 isFalling = false;
+                targetVolume = 0.0f; // Target volume for fade-out
+                initialVolume = fallingAudioSource.volume; // Store initial volume
+                currentFadeTime = 0.0f; // Reset fade time
                 if (fallingAudioSource != null && fallingAudioSource.isPlaying) {
                     fallingAudioSource.Stop();  // Stop falling sound
                 }
@@ -87,6 +96,14 @@ public class FallingDetection : MonoBehaviour {
                     chromaticAberration.intensity.value = 0.0f;
                 }
             }
+        }
+
+        if (currentFadeTime < fadeDuration) {
+            currentFadeTime += Time.deltaTime;
+            float t = currentFadeTime / fadeDuration;
+            fallingAudioSource.volume = Mathf.Lerp(initialVolume, targetVolume, t);
+        } else if (!isFalling && fallingAudioSource.volume > 0) {
+            fallingAudioSource.Stop(); // Ensure audio stops when volume reaches zero
         }
 
         previousPosition = currentPosition;

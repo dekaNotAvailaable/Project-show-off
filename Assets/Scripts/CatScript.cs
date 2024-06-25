@@ -9,7 +9,7 @@ public class CatScript : MonoBehaviour
     private GameObject nearestNest;
     private bool isNestFound;
     private CatDieAndRespawn catDie;
-
+    public AudioSource NestDestroy;
     void Start()
     {
         catDie = GetComponent<CatDieAndRespawn>();
@@ -66,6 +66,8 @@ public class CatScript : MonoBehaviour
             Destroy(nearestNest);
             nearestNest = null;
             FindNearestNest();
+            NestDestroy.Play();
+
         }
     }
 
