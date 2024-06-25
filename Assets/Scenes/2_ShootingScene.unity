@@ -18798,6 +18798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnpressedButton: {fileID: 2076945975}
   PressedButton: {fileID: 877685757}
+  cat: 0
 --- !u!65 &853327879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20737,7 +20738,7 @@ PrefabInstance:
     - target: {fileID: 3443352366751535134, guid: 2c98422c81bf07342a20614856702814,
         type: 3}
       propertyPath: stopDistance
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c98422c81bf07342a20614856702814, type: 3}
@@ -34170,7 +34171,7 @@ PrefabInstance:
     - target: {fileID: 3443352366751535134, guid: 2c98422c81bf07342a20614856702814,
         type: 3}
       propertyPath: stopDistance
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6629960022272093653, guid: 2c98422c81bf07342a20614856702814,
         type: 3}
