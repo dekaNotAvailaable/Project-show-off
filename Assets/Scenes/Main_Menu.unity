@@ -16545,8 +16545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  amplitude: 1
-  frequency: 1
+  sideLength: 10
 --- !u!1 &902093179
 GameObject:
   m_ObjectHideFlags: 0
@@ -16738,7 +16737,7 @@ PrefabInstance:
     - target: {fileID: 2901311872200163249, guid: 2c98422c81bf07342a20614856702814,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.976559
+      value: 28.975
       objectReference: {fileID: 0}
     - target: {fileID: 2901311872200163249, guid: 2c98422c81bf07342a20614856702814,
         type: 3}
@@ -28576,8 +28575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  amplitude: 2
-  frequency: 0.3
+  sideLength: 10
 --- !u!114 &1464978843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35141,8 +35139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  amplitude: 2
-  frequency: 0.3
+  sideLength: 10
 --- !u!114 &1804808424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40506,8 +40503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  amplitude: 2
-  frequency: 0.3
+  sideLength: 10
 --- !u!114 &2128206074
 MonoBehaviour:
   m_ObjectHideFlags: 0

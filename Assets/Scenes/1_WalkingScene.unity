@@ -6710,7 +6710,7 @@ PrefabInstance:
     - target: {fileID: 2448341050381834546, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
       propertyPath: m_Name
-      value: duck body (1)
+      value: Duck2
       objectReference: {fileID: 0}
     - target: {fileID: 3076400112150528904, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
@@ -38753,7 +38753,7 @@ PrefabInstance:
     - target: {fileID: 2448341050381834546, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
       propertyPath: m_Name
-      value: duck body (2)
+      value: Duck3
       objectReference: {fileID: 0}
     - target: {fileID: 3076400112150528904, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
@@ -52269,7 +52269,7 @@ PrefabInstance:
     - target: {fileID: 2448341050381834546, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
       propertyPath: m_Name
-      value: duck body
+      value: Duck1
       objectReference: {fileID: 0}
     - target: {fileID: 3076400112150528904, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
@@ -52582,7 +52582,7 @@ PrefabInstance:
     - target: {fileID: 2524363704987641099, guid: 2c98422c81bf07342a20614856702814,
         type: 3}
       propertyPath: m_Name
-      value: cat model
+      value: Cat
       objectReference: {fileID: 0}
     - target: {fileID: 2901311872200163249, guid: 2c98422c81bf07342a20614856702814,
         type: 3}
