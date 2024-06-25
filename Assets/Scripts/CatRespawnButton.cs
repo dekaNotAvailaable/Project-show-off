@@ -6,6 +6,7 @@ public class CatRespawnButton : MonoBehaviour
     private CatDieAndRespawn[] catDieAndRespawns;
     public GameObject UnpressedButton;
     public GameObject PressedButton;
+    public bool cat;
     void Start()
     {
         catDieAndRespawns = FindObjectsOfType<CatDieAndRespawn>();
@@ -49,6 +50,7 @@ public class CatRespawnButton : MonoBehaviour
     }
     private void SetCatActiveAndNot(bool isActive)
     {
+        //cat = isActive;
         foreach (CatDieAndRespawn catDieAndRespawn in catDieAndRespawns)
         {
             catDieAndRespawn.gameObject.SetActive(isActive);
