@@ -6,17 +6,14 @@ public class Respawn : MonoBehaviour {
     public GameObject SpawnPoint;
     public Image DieScreen;
     [SerializeField] private float RespawnSec;
-    public AudioClip deathSoundClip;
-    public AudioClip respawnSoundClip;
-
-    private AudioSource audioSource;
+    public AudioSource deathSoundSource;
     private Score score;
     private VRWalkIRL VRWalkIRl;
 
     void Start() {
         VRWalkIRl = GetComponent<VRWalkIRL>();
         score = FindObjectOfType<Score>(); // Changed to FindObjectOfType for simplicity
-        audioSource = GetComponent<AudioSource>();
+        deathSoundSource = GetComponent<AudioSource>();
 
         if (DieScreen != null)
             DieScreen.enabled = false;
@@ -35,10 +32,7 @@ public class Respawn : MonoBehaviour {
             //Debug.Log("Spawnpoint position");
             this.transform.position = SpawnPoint.transform.position;
 
-            if (audioSource != null && respawnSoundClip != null) {
-                audioSource.clip = respawnSoundClip;
-                audioSource.Play();
-            }
+
         }
     }
 
@@ -46,10 +40,9 @@ public class Respawn : MonoBehaviour {
         if (collision.gameObject.CompareTag("Ground")) {
             score.FallCount--;
 
-            if (audioSource != null && deathSoundClip != null) {
-                audioSource.clip = deathSoundClip;
-                audioSource.Play();
-            }
+
+            deathSoundSource.Play();
+            
 
             if (DieScreen != null) {
                 DieScreen.enabled = true;
