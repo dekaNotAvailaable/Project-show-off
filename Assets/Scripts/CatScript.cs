@@ -29,9 +29,12 @@ public class CatScript : MonoBehaviour
             FindNearestNest();
         }
 
-        if (catDie.isDead)
+        if (catDie != null)
         {
-            nearestNest = null;
+            if (catDie.isDead)
+            {
+                nearestNest = null;
+            }
         }
     }
 

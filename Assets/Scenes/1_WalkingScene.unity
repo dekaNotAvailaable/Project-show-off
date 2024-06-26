@@ -3968,6 +3968,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baseball ball
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e526ec82aa04f5d41865327f07e97401,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e526ec82aa04f5d41865327f07e97401, type: 3}
 --- !u!1 &126700837 stripped
@@ -4081,7 +4086,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -4798,6 +4803,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowling pin (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caea0c51c51c57e4481dcf867ef778dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caea0c51c51c57e4481dcf867ef778dc, type: 3}
 --- !u!4 &141399586 stripped
@@ -5045,7 +5055,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -10674,6 +10684,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowling pin (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caea0c51c51c57e4481dcf867ef778dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caea0c51c51c57e4481dcf867ef778dc, type: 3}
 --- !u!4 &359680320 stripped
@@ -10921,7 +10936,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -11633,6 +11648,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowling pin (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caea0c51c51c57e4481dcf867ef778dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caea0c51c51c57e4481dcf867ef778dc, type: 3}
 --- !u!4 &378020228 stripped
@@ -11880,7 +11900,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -13008,6 +13028,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowling ball
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e67bbf0362ffc1e429582a85fd8c2e16,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e67bbf0362ffc1e429582a85fd8c2e16, type: 3}
 --- !u!1 &446751474 stripped
@@ -13121,7 +13146,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -13173,7 +13198,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446751474}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -15301,6 +15326,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2ef3a0f28fba6e7499bbb6ebcb3a005b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ef3a0f28fba6e7499bbb6ebcb3a005b, type: 3}
 --- !u!1 &512783390 stripped
@@ -15414,7 +15444,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -15775,6 +15805,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rugby ball
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29838500544e2c84ea897b7842ef2628,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29838500544e2c84ea897b7842ef2628, type: 3}
 --- !u!1 &517428469 stripped
@@ -15888,7 +15923,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -16163,6 +16198,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowling pin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caea0c51c51c57e4481dcf867ef778dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caea0c51c51c57e4481dcf867ef778dc, type: 3}
 --- !u!4 &524492707 stripped
@@ -16410,7 +16450,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -23783,6 +23823,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water bottle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2ef3a0f28fba6e7499bbb6ebcb3a005b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ef3a0f28fba6e7499bbb6ebcb3a005b, type: 3}
 --- !u!1 &770595568 stripped
@@ -23896,7 +23941,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -25171,6 +25216,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowling pin
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caea0c51c51c57e4481dcf867ef778dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caea0c51c51c57e4481dcf867ef778dc, type: 3}
 --- !u!4 &825723186 stripped
@@ -25418,7 +25468,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -28675,6 +28725,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowling pin (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caea0c51c51c57e4481dcf867ef778dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caea0c51c51c57e4481dcf867ef778dc, type: 3}
 --- !u!4 &951971756 stripped
@@ -28922,7 +28977,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -35031,6 +35086,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Football ball
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e589bc3c384b21149b5c11a32a47e986,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e589bc3c384b21149b5c11a32a47e986, type: 3}
 --- !u!1 &1162273173 stripped
@@ -35144,7 +35204,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -36826,6 +36886,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowling pin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caea0c51c51c57e4481dcf867ef778dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caea0c51c51c57e4481dcf867ef778dc, type: 3}
 --- !u!4 &1213492055 stripped
@@ -37073,7 +37138,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -43652,6 +43717,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowling pin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caea0c51c51c57e4481dcf867ef778dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caea0c51c51c57e4481dcf867ef778dc, type: 3}
 --- !u!4 &1435488576 stripped
@@ -43899,7 +43969,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -44448,7 +44518,6 @@ MonoBehaviour:
   shakeIncreaseRate: 2
   intensityIncreaseRate: 0.5
   maxShakeIntensity: 100
-  shakeDuration: 10
   fallThreshold: -0.1
   negativevalue: 1
 --- !u!114 &1440411163
@@ -46054,6 +46123,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowling pin (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caea0c51c51c57e4481dcf867ef778dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caea0c51c51c57e4481dcf867ef778dc, type: 3}
 --- !u!4 &1513597537 stripped
@@ -46301,7 +46375,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -55735,6 +55809,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowling pin (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caea0c51c51c57e4481dcf867ef778dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Marble
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caea0c51c51c57e4481dcf867ef778dc, type: 3}
 --- !u!4 &1869501703 stripped
@@ -55982,7 +56061,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1

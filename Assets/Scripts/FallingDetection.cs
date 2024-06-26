@@ -18,8 +18,8 @@ public class FallingDetection : MonoBehaviour
     private float intensityIncreaseRate;
     [SerializeField]
     private float maxShakeIntensity = 5.0f;
-    [SerializeField]
-    private float shakeDuration = 0.1f;
+    //[SerializeField]
+    //private float shakeDuration = 0.1f;
     [SerializeField]
     private float fallThreshold = -0.1f;
     private float intensityValue = 0.0f;

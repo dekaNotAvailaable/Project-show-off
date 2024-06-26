@@ -8,7 +8,13 @@ public class AudioCollision : MonoBehaviour
     {
         if (collision.relativeVelocity.magnitude > magnitude)
         {
-            GetComponent<AudioSource>().Play();
+            //if(AudioSource != null)
+            //<AudioSource>().Play();
+            AudioSource source= GetComponent<AudioSource>();
+
+            if (source!=null)
+                source.Play();
+
         }
 
         //Debug.Log(collision.collider.name);

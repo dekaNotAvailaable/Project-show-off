@@ -927,7 +927,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   catMoveSpeed: 0.2
   stopDistance: 0.2
-  NestDestroy: {fileID: 0}
 --- !u!114 &3443352366751535135
 MonoBehaviour:
   m_ObjectHideFlags: 0

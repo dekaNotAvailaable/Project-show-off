@@ -626,18 +626,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hapticOnActivated:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticHoverEntered:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticHoverExited:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticSelectEntered:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticSelectExited:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
 --- !u!1 &2723890603050621714
