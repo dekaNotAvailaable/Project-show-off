@@ -7,14 +7,11 @@ public class Respawn : MonoBehaviour
     public GameObject SpawnPoint;
     public Image DieScreen;
     [SerializeField] private float RespawnSec;
-<<<<<<< Updated upstream
     public AudioSource deathSoundSource;
-=======
     public AudioClip deathSoundClip;
     public AudioClip respawnSoundClip;
     private Rigidbody rb;
     private AudioSource audioSource;
->>>>>>> Stashed changes
     private Score score;
     private VRWalkIRL VRWalkIRl;
 
@@ -22,17 +19,16 @@ public class Respawn : MonoBehaviour
     {
         VRWalkIRl = GetComponent<VRWalkIRL>();
         score = FindObjectOfType<Score>(); // Changed to FindObjectOfType for simplicity
-<<<<<<< Updated upstream
+
         deathSoundSource = GetComponent<AudioSource>();
 
-=======
         audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
->>>>>>> Stashed changes
+
         if (DieScreen != null)
             DieScreen.enabled = false;
         //if (SpawnPoint != null)
-            //Debug.Log("Spawnpoint detected");
+        //Debug.Log("Spawnpoint detected");
     }
 
     private IEnumerator RespawnAfterDelay()
@@ -44,24 +40,25 @@ public class Respawn : MonoBehaviour
             DieScreen.enabled = false;
         }
 
-<<<<<<< Updated upstream
-        if (SpawnPoint != null) {
+
+        if (SpawnPoint != null)
+        {
             //Debug.Log("Spawnpoint position");
             this.transform.position = SpawnPoint.transform.position;
 
 
-=======
-        if (SpawnPoint != null)
-        {
-            Debug.Log("Spawnpoint position");
-            this.transform.position = SpawnPoint.transform.position;
-
-            if (audioSource != null && respawnSoundClip != null)
+            if (SpawnPoint != null)
             {
-                audioSource.clip = respawnSoundClip;
-                audioSource.Play();
+                Debug.Log("Spawnpoint position");
+                this.transform.position = SpawnPoint.transform.position;
+
+                if (audioSource != null && respawnSoundClip != null)
+                {
+                    audioSource.clip = respawnSoundClip;
+                    audioSource.Play();
+                }
+
             }
->>>>>>> Stashed changes
         }
     }
     private void Update()
@@ -77,17 +74,13 @@ public class Respawn : MonoBehaviour
         {
             score.FallCount--;
 
-<<<<<<< Updated upstream
 
             deathSoundSource.Play();
-            
-=======
             if (audioSource != null && deathSoundClip != null)
             {
                 audioSource.clip = deathSoundClip;
                 audioSource.Play();
             }
->>>>>>> Stashed changes
 
             if (DieScreen != null)
             {
@@ -99,3 +92,4 @@ public class Respawn : MonoBehaviour
         }
     }
 }
+
