@@ -18,12 +18,12 @@ public class WaterGunWithParticles : MonoBehaviour {
         grabbable.deactivated.AddListener(StopShooting);
 
         if (waterParticles == null) {
-            Debug.LogError("No Particle System assigned to the Water Gun.");
+            //Debug.LogError("No Particle System assigned to the Water Gun.");
             return;
         }
 
         if (shootingSound == null) {
-            Debug.LogError("No AudioSource assigned to the Water Gun.");
+            //Debug.LogError("No AudioSource assigned to the Water Gun.");
             return;
         }
 

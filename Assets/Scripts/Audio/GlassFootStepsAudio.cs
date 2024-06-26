@@ -18,7 +18,7 @@ public class GlassFootStepsAudio : MonoBehaviour
     {
         if (glassFootSteps.Length == 0)
         {
-            Debug.LogWarning("No AudioSources found!");
+            //Debug.LogWarning("No AudioSources found!");
             return;
         }
         int randomIndex = Random.Range(0, glassFootSteps.Length);

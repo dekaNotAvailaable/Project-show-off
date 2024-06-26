@@ -46,7 +46,7 @@ public class CatDieAndRespawn : MonoBehaviour
         if (!isDead)
         {
             isDead = true;
-            Debug.Log("Cat died.");
+            //Debug.Log("Cat died.");
             smokeParticle.Play();
             if (diedFromParticles)
             {
@@ -68,7 +68,7 @@ public class CatDieAndRespawn : MonoBehaviour
         if (other.CompareTag("Water") && !isInvisible)
         {
             CatDead(false);
-            Debug.Log("Cat died due to water.");
+            //Debug.Log("Cat died due to water.");
         }
     }
 
@@ -87,7 +87,7 @@ public class CatDieAndRespawn : MonoBehaviour
         if (!isInvisible)
         {
             CatDead(true);
-            Debug.Log("Cat died due to particle collision.");
+            //Debug.Log("Cat died due to particle collision.");
         }
     }
 
@@ -100,7 +100,7 @@ public class CatDieAndRespawn : MonoBehaviour
             {
                 invisibilityTimer = 0;
                 isInvisible = false;
-                Debug.Log("Cat is no longer invisible.");
+                //Debug.Log("Cat is no longer invisible.");
             }
         }
     }
@@ -115,11 +115,11 @@ public class CatDieAndRespawn : MonoBehaviour
             respawnPoints[firstPoint] = true;
             isDead = false;
             SetInvincibility();
-            Debug.Log("Cat respawned at the first point: " + firstPoint.name);
+            //Debug.Log("Cat respawned at the first point: " + firstPoint.name);
         }
         else
         {
-            Debug.LogError("No spawn points available.");
+            //Debug.LogError("No spawn points available.");
         }
     }
 
@@ -136,12 +136,12 @@ public class CatDieAndRespawn : MonoBehaviour
                 respawnPoints[nearestNest[i]] = true;
                 isDead = false;
                 SetInvincibility();
-                Debug.Log("Cat respawned at point: " + nearestNest[i].name);
+                //Debug.Log("Cat respawned at point: " + nearestNest[i].name);
                 yield break;
             }
         }
         noAvailableRespawnPoints = true;
-        Debug.Log("No available respawn points. Cat will not respawn.");
+        //Debug.Log("No available respawn points. Cat will not respawn.");
         Destroy(gameObject);
     }
 
@@ -149,6 +149,6 @@ public class CatDieAndRespawn : MonoBehaviour
     {
         isInvisible = true;
         invisibilityTimer = invisibilityDuration;
-        Debug.Log("Cat is now invisible.");
+        //Debug.Log("Cat is now invisible.");
     }
 }

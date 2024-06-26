@@ -34,7 +34,7 @@ public class CanvasLoader : MonoBehaviour
                 audioSource.Play();
 
             } else {
-                Debug.Log("AudioSource component not found on EndMenu GameObject.");
+                //Debug.Log("AudioSource component not found on EndMenu GameObject.");
             }
             
             player.GetComponent<ContinuousMoveProviderBase>().enabled = false;
