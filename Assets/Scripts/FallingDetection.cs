@@ -44,12 +44,12 @@ public class FallingDetection : MonoBehaviour
         }
         else
         {
-            UnityEngine.Debug.Log("postprocessingvolume is null");
+            //UnityEngine.Debug.Log("postprocessingvolume is null");
         }
 
         if (fallingAudioSource == null)
         {
-            UnityEngine.Debug.LogWarning("fallingAudioSource is not assigned");
+            //UnityEngine.Debug.LogWarning("fallingAudioSource is not assigned");
         }
     }
 

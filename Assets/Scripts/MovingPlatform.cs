@@ -41,7 +41,7 @@ public class MovingPlatform : MonoBehaviour
         {
             // Stop the platform if a collision is detected
             shouldMove = false;
-            Debug.Log("Platform hit: ");
+            //Debug.Log("Platform hit: ");
         }
         else
         {

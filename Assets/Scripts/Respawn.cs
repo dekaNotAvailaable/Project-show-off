@@ -17,8 +17,8 @@ public class Respawn : MonoBehaviour {
 
         if (DieScreen != null)
             DieScreen.enabled = false;
-        if (SpawnPoint != null)
-            Debug.Log("Spawnpoint detected");
+        //if (SpawnPoint != null)
+            //Debug.Log("Spawnpoint detected");
     }
 
     private IEnumerator RespawnAfterDelay() {
@@ -29,7 +29,7 @@ public class Respawn : MonoBehaviour {
         }
 
         if (SpawnPoint != null) {
-            Debug.Log("Spawnpoint position");
+            //Debug.Log("Spawnpoint position");
             this.transform.position = SpawnPoint.transform.position;
 
 
@@ -49,7 +49,7 @@ public class Respawn : MonoBehaviour {
             }
 
             StartCoroutine(RespawnAfterDelay());
-            Debug.Log("Dead");
+            //Debug.Log("Dead");
         }
     }
 }
