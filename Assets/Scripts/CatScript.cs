@@ -63,7 +63,7 @@ public class CatScript : MonoBehaviour
     {
         if (nearestNest != null)
         {
-           
+
             Destroy(nearestNest);
             nearestNest = null;
             FindNearestNest();
