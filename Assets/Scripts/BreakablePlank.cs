@@ -24,7 +24,7 @@ public class BreakablePlank : MonoBehaviour
             Destroy(gameObject, breakSec);
             //  AudioManager.instance.GlassBreakPlay();
 
-            Debug.Log("Breaking Plank");
+            //Debug.Log("Breaking Plank");
         }
     }
 
@@ -37,7 +37,7 @@ public class BreakablePlank : MonoBehaviour
          //   breakParticle.Play();
             //breakParticle.gameObject.transform.parent = null;
             Destroy(gameObject, breakSec);
-            Debug.Log("Breaking Plank");
+            //Debug.Log("Breaking Plank");
         }
     }
 }

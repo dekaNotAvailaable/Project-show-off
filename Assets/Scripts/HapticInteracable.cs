@@ -6,6 +6,11 @@ using UnityEngine.XR.Interaction.Toolkit;
 [System.Serializable]
 public class Haptic
 {
+    [SerializeField]
+    public AudioSource InteractThings;
+
+
+
     [Range(0, 1)]
     public float intensity;
     public float duration;
@@ -15,6 +20,8 @@ public class Haptic
         if (eventArgs.interactorObject is XRBaseControllerInteractor controllerInteractor)
         {
             TriggerHaptic(controllerInteractor.xrController);
+            if (InteractThings != null)
+                InteractThings.Play();
         }
     }
 
@@ -23,6 +30,8 @@ public class Haptic
         if (intensity > 0)
         {
             controller.SendHapticImpulse(intensity, duration);
+            if(InteractThings!=null)
+                InteractThings.Play();
         }
     }
 }

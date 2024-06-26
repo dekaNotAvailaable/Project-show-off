@@ -11,7 +11,7 @@ public class CatSoundManage : MonoBehaviour
         audioSources = GetComponents<AudioSource>();
         if (audioSources.Length == 0)
         {
-            Debug.LogError("No AudioSource components found on this GameObject.");
+            //Debug.LogError("No AudioSource components found on this GameObject.");
             return;
         }
     }
@@ -38,22 +38,22 @@ public class CatSoundManage : MonoBehaviour
         if (index < 0 || index >= audioSources.Length)
         {
 
-            Debug.LogError("AudioSource index out of range.");
+            //Debug.LogError("AudioSource index out of range.");
             return;
         }
         if (!audioSources[index].isPlaying)
         {
             audioSources[index].Play();
         }
-        Debug.Log("Playing audio clip: " + audioSources[index].clip.name);
+        //Debug.Log("Playing audio clip: " + audioSources[index].clip.name);
     }
 
     private IEnumerator PlayCatCalling()
     {
-        Debug.Log("Cat calling coroutine started.");
+        //Debug.Log("Cat calling coroutine started.");
         while (true)
         {
-            Debug.Log("Cat calling starts");
+            //Debug.Log("Cat calling starts");
             float waitTime = Random.Range(2f, 10f);
             yield return new WaitForSeconds(waitTime);
 

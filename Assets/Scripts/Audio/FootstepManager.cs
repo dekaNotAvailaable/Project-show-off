@@ -18,17 +18,17 @@ public class FootstepManager : MonoBehaviour {
 
     private void Start() {
         if (audioSource == null) {
-            Debug.LogError("AudioSource is not assigned!");
+            //Debug.LogError("AudioSource is not assigned!");
             return;
         }
 
         if (concrete == null || glass == null) {
-            Debug.LogError("One or more AudioClips are not assigned!");
+            //Debug.LogError("One or more AudioClips are not assigned!");
             return;
         }
 
         if (rayStart == null) {
-            Debug.LogError("RayStart Transform is not assigned!");
+            //Debug.LogError("RayStart Transform is not assigned!");
             return;
         }
 
@@ -40,7 +40,7 @@ public class FootstepManager : MonoBehaviour {
 
     private IEnumerator FootstepRoutine() {
         while (true) {
-            Debug.Log("FootstepRoutine:" + deltaDistance);
+            //Debug.Log("FootstepRoutine:" + deltaDistance);
             // Check for movement
             if (deltaDistance > 0.01f) {
                 Footstep();
@@ -53,29 +53,29 @@ public class FootstepManager : MonoBehaviour {
 
     public void Footstep() {
         if (Physics.Raycast(rayStart.position, -rayStart.transform.up, out hit, range, layerMask)) {
-            Debug.Log("Raycast hit: " + hit.collider.tag);
+            //Debug.Log("Raycast hit: " + hit.collider.tag);
 
             if (hit.collider.CompareTag("Concrete")) {
                 PlayFootstepSound(concrete);
-                Debug.Log("Concrete Played");
+                //Debug.Log("Concrete Played");
             } else if (hit.collider.CompareTag("Glass")) {
                 PlayFootstepSound(glass);
-                Debug.Log("Glass Played");
+                //Debug.Log("Glass Played");
             } else {
-                Debug.Log("Hit an object that is not tagged as Concrete or Glass");
+                //Debug.Log("Hit an object that is not tagged as Concrete or Glass");
             }
         } else {
-            Debug.Log("Raycast did not hit anything");
+            //Debug.Log("Raycast did not hit anything");
         }
     }
 
     void PlayFootstepSound(AudioSource source) {
         if (source != null) {
-            Debug.Log("Playing sound: " + source.clip.name); // Add this line for debugging
+            //Debug.Log("Playing sound: " + source.clip.name); // Add this line for debugging
             source.pitch = Random.Range(0.8f, 1.2f); // Adjust pitch for variety
             source.Play();
         } else {
-            Debug.LogWarning("Footstep audio source is null.");
+            //Debug.LogWarning("Footstep audio source is null.");
         }
     }
 
