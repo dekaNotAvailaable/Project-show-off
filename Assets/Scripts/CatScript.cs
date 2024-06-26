@@ -53,7 +53,7 @@ public class CatScript : MonoBehaviour
         {
             if (isNestFound)
             {
-                Debug.LogError("No nests found in the scene.");
+                //Debug.LogError("No nests found in the scene.");
             }
             isNestFound = false;
         }

@@ -15,7 +15,7 @@ public class CatRespawnButton : MonoBehaviour
         UnpressedButton.gameObject.SetActive(true);
         if (movingPlatform != null)
         {
-            Debug.Log("Moving platform found");
+            //Debug.Log("Moving platform found");
         }
 
         SetCatActiveAndNot(false);
@@ -37,7 +37,7 @@ public class CatRespawnButton : MonoBehaviour
     {
         if (movingPlatform != null)
         {
-            Debug.Log("Moving platform is not null");
+            //Debug.Log("Moving platform is not null");
             movingPlatform._shouldMove = true;
         }
 
@@ -45,7 +45,7 @@ public class CatRespawnButton : MonoBehaviour
         {
             catDieAndRespawn.RespawnAtFirstPoint();
             catDieAndRespawn.gameObject.SetActive(true);
-            Debug.Log("Cat respawned and activated: " + catDieAndRespawn.gameObject.name);
+            //Debug.Log("Cat respawned and activated: " + catDieAndRespawn.gameObject.name);
         }
     }
     private void SetCatActiveAndNot(bool isActive)
