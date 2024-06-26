@@ -17,26 +17,31 @@ public class AudioCollision : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Check if the current GameObject has a specific tag (e.g., "GlassPlank")
-        if (gameObject.CompareTag("GlassPlank"))
+        //if (gameObject.CompareTag("GlassPlank"))
+        //{
+        //// Check if the other collider is tagged as "Player"
+        if (other.CompareTag("Player"))
         {
-            // Check if the other collider is tagged as "Player"
-            if (other.CompareTag("Player"))
+            // Play random footstep sound
+            int random = Random.Range(0, 3);
+            if (random == 0)
             {
-                // Play random footstep sound
-                int random = Random.Range(0, 3);
-                if (random == 0)
+                if (AudioManager.instance != null)
                 {
                     AudioManager.instance.GlassFoot1Play();
                 }
-                else if (random == 1)
-                {
+            }
+            else if (random == 1)
+            {
+                if (AudioManager.instance != null)
                     AudioManager.instance.GlassFoot2Play();
-                }
-                else
-                {
+            }
+            else
+            {
+                if (AudioManager.instance != null)
                     AudioManager.instance.GlassFoot3Play();
-                }
             }
         }
+
     }
 }
