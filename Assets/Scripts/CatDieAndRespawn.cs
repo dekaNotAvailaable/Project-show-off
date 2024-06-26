@@ -137,6 +137,7 @@ public class CatDieAndRespawn : MonoBehaviour
                 isDead = false;
                 SetInvincibility();
                 //Debug.Log("Cat respawned at point: " + nearestNest[i].name);
+                catSounds.PlayAudioSource(7);
                 yield break;
             }
         }
