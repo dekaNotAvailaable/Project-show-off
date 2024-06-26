@@ -6273,18 +6273,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hapticOnActivated:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticHoverEntered:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticHoverExited:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticSelectEntered:
+    InteractThings: {fileID: 0}
     intensity: 0.5
     duration: 0.1
   hapticSelectExited:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
 --- !u!114 &373432145
@@ -11453,7 +11458,7 @@ PrefabInstance:
     - target: {fileID: 3076400112150528904, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 44.05
+      value: 34.33
       objectReference: {fileID: 0}
     - target: {fileID: 3076400112150528904, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
@@ -19933,18 +19938,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hapticOnActivated:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticHoverEntered:
+    InteractThings: {fileID: 0}
     intensity: 1
     duration: 5
   hapticHoverExited:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticSelectEntered:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticSelectExited:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
 --- !u!114 &890851739
@@ -21448,6 +21458,102 @@ AudioSource:
     - serializedVersion: 3
       time: 0
       value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &953701480
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953701475}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -30629,18 +30735,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hapticOnActivated:
+    InteractThings: {fileID: 0}
     intensity: 1
     duration: 0.5
   hapticHoverEntered:
+    InteractThings: {fileID: 0}
     intensity: 0.3
     duration: 0.1
   hapticHoverExited:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticSelectEntered:
+    InteractThings: {fileID: 1151603757}
     intensity: 0.3
     duration: 0.2
   hapticSelectExited:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
 --- !u!136 &1151603752
@@ -30727,6 +30838,102 @@ AudioSource:
     - serializedVersion: 3
       time: 0
       value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1151603757
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151603741}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f0031d5988bb4694b970b1a9e590aad2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -33724,6 +33931,11 @@ PrefabInstance:
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 1376465382}
+    - target: {fileID: 8681176109490740475, guid: e85a777394a37e34eade8a5fc7c2c970,
+        type: 3}
+      propertyPath: deathSoundSource
+      value: 
+      objectReference: {fileID: 1306905679}
     - target: {fileID: 8681176109490740477, guid: e85a777394a37e34eade8a5fc7c2c970,
         type: 3}
       propertyPath: m_Enabled
@@ -34153,6 +34365,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303732982}
   m_Mesh: {fileID: 3623834706885369118, guid: 23b4c2eea550bda46b933bdb64507be5, type: 3}
+--- !u!82 &1306905679 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2847575064768380809, guid: e85a777394a37e34eade8a5fc7c2c970,
+    type: 3}
+  m_PrefabInstance: {fileID: 1290477641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1310542197
 GameObject:
   m_ObjectHideFlags: 0
@@ -37139,6 +37357,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2123227616}
     m_Modifications:
+    - target: {fileID: 1325590931573613230, guid: f4b1dfcf47c0a964b96370112c7f86c5,
+        type: 3}
+      propertyPath: ShapeModule.angle
+      value: 12.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325590931573613230, guid: f4b1dfcf47c0a964b96370112c7f86c5,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325590931573613230, guid: f4b1dfcf47c0a964b96370112c7f86c5,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325590931573613230, guid: f4b1dfcf47c0a964b96370112c7f86c5,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325590931573613230, guid: f4b1dfcf47c0a964b96370112c7f86c5,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2448341050381834546, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
       propertyPath: m_Name
@@ -37157,7 +37400,7 @@ PrefabInstance:
     - target: {fileID: 3076400112150528904, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 44.05
+      value: 34.33
       objectReference: {fileID: 0}
     - target: {fileID: 3076400112150528904, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
@@ -38487,6 +38730,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Duck1
       objectReference: {fileID: 0}
+    - target: {fileID: 2949272417931145418, guid: f4b1dfcf47c0a964b96370112c7f86c5,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3076400112150528904, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
       propertyPath: m_RootOrder
@@ -38500,7 +38748,7 @@ PrefabInstance:
     - target: {fileID: 3076400112150528904, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 41.719997
+      value: 36.79
       objectReference: {fileID: 0}
     - target: {fileID: 3076400112150528904, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
@@ -38545,7 +38793,7 @@ PrefabInstance:
     - target: {fileID: 3259243728947260164, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
       propertyPath: speed
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3259243728947260164, guid: f4b1dfcf47c0a964b96370112c7f86c5,
         type: 3}
@@ -38556,6 +38804,36 @@ PrefabInstance:
         type: 3}
       propertyPath: verticalAmplitude
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112588438009206390, guid: f4b1dfcf47c0a964b96370112c7f86c5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25570405
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112588438009206390, guid: f4b1dfcf47c0a964b96370112c7f86c5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25570405
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112588438009206390, guid: f4b1dfcf47c0a964b96370112c7f86c5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25570405
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112588438009206390, guid: f4b1dfcf47c0a964b96370112c7f86c5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112588438009206390, guid: f4b1dfcf47c0a964b96370112c7f86c5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112588438009206390, guid: f4b1dfcf47c0a964b96370112c7f86c5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.07
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4b1dfcf47c0a964b96370112c7f86c5, type: 3}
@@ -38722,18 +39000,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hapticOnActivated:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticHoverEntered:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticHoverExited:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticSelectEntered:
+    InteractThings: {fileID: 0}
     intensity: 0.5
     duration: 0.1
   hapticSelectExited:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
 --- !u!114 &1558682095
@@ -44198,18 +44481,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hapticOnActivated:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticHoverEntered:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticHoverExited:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
   hapticSelectEntered:
+    InteractThings: {fileID: 0}
     intensity: 0.5
     duration: 0.1
   hapticSelectExited:
+    InteractThings: {fileID: 0}
     intensity: 0
     duration: 0
 --- !u!114 &1910527000
@@ -48757,6 +49045,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2141660201}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1810142968699448654
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1208117852900728341, guid: 2009de975fd95e041b078e6e47027456,
+        type: 3}
+      propertyPath: m_Name
+      value: DuckParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976426113175198878, guid: 2009de975fd95e041b078e6e47027456,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976426113175198878, guid: 2009de975fd95e041b078e6e47027456,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.275936
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976426113175198878, guid: 2009de975fd95e041b078e6e47027456,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 31.974092
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976426113175198878, guid: 2009de975fd95e041b078e6e47027456,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.490425
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976426113175198878, guid: 2009de975fd95e041b078e6e47027456,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976426113175198878, guid: 2009de975fd95e041b078e6e47027456,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976426113175198878, guid: 2009de975fd95e041b078e6e47027456,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976426113175198878, guid: 2009de975fd95e041b078e6e47027456,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976426113175198878, guid: 2009de975fd95e041b078e6e47027456,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976426113175198878, guid: 2009de975fd95e041b078e6e47027456,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976426113175198878, guid: 2009de975fd95e041b078e6e47027456,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2009de975fd95e041b078e6e47027456, type: 3}
 --- !u!1 &3938394537148862768
 GameObject:
   m_ObjectHideFlags: 0

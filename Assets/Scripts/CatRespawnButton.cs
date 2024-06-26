@@ -46,6 +46,7 @@ public class CatRespawnButton : MonoBehaviour
             catDieAndRespawn.RespawnAtFirstPoint();
             catDieAndRespawn.gameObject.SetActive(true);
             //Debug.Log("Cat respawned and activated: " + catDieAndRespawn.gameObject.name);
+
         }
     }
     private void SetCatActiveAndNot(bool isActive)

@@ -5,7 +5,6 @@ public class CatSoundManage : MonoBehaviour
 {
     private AudioSource[] audioSources;
     private Coroutine catCallingCoroutine;
-
     private void Start()
     {
         audioSources = GetComponents<AudioSource>();
@@ -23,7 +22,7 @@ public class CatSoundManage : MonoBehaviour
             catCallingCoroutine = StartCoroutine(PlayCatCalling());
         }
     }
-
+    
     private void OnDisable()
     {
         if (catCallingCoroutine != null)

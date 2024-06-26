@@ -12,13 +12,14 @@ public class FlyBird : MonoBehaviour
     private AudioSource quackSound;
     private float angle = 0f; // Angle for the circular movement
     private Vector3 startPosition;
+    private ParticleSystem feathers;
 
     void Start()
     {
         quackSound = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX;
-
+        feathers = GetComponent<ParticleSystem>();
         startPosition = transform.position;
 
         // Start the coroutine to play the quack sound randomly
@@ -39,6 +40,14 @@ public class FlyBird : MonoBehaviour
         angle += speed * Time.deltaTime;
         Vector3 direction = new Vector3(-Mathf.Sin(angle), 0, Mathf.Cos(angle));
         transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
+    }
+
+    void OnParticleCollision(GameObject other)
+    {
+        if (feathers != null)
+        {
+            feathers.Play();
+        }
     }
 
     private IEnumerator PlayQuackSoundRandomly()
