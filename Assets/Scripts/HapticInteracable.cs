@@ -20,7 +20,8 @@ public class Haptic
         if (eventArgs.interactorObject is XRBaseControllerInteractor controllerInteractor)
         {
             TriggerHaptic(controllerInteractor.xrController);
-            InteractThings.Play();
+            if (InteractThings != null)
+                InteractThings.Play();
         }
     }
 
@@ -29,7 +30,8 @@ public class Haptic
         if (intensity > 0)
         {
             controller.SendHapticImpulse(intensity, duration);
-            InteractThings.Play();
+            if(InteractThings!=null)
+                InteractThings.Play();
         }
     }
 }
