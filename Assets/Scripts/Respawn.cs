@@ -90,6 +90,11 @@ public class Respawn : MonoBehaviour
             StartCoroutine(RespawnAfterDelay());
             //Debug.Log("Dead");
         }
+        if (collision.gameObject.CompareTag("CheckSpawn"))
+        {
+            GameObject checkSpawnObject = GameObject.FindGameObjectWithTag("CheckSpawn");
+            SpawnPoint.transform.position = checkSpawnObject.transform.position;
+        }
     }
 }
 
