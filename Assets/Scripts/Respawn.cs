@@ -61,13 +61,7 @@ public class Respawn : MonoBehaviour
             }
         }
     }
-    private void Update()
-    {
-        if (rb.transform.position.z >= -14)
-        {
-            SpawnPoint.transform.position = new Vector3(-1.25519562f, 29.3341007f, -14.5645199f);
-        }
-    }
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
@@ -89,6 +83,11 @@ public class Respawn : MonoBehaviour
 
             StartCoroutine(RespawnAfterDelay());
             //Debug.Log("Dead");
+        }
+        if (collision.gameObject.CompareTag("CheckSpawn"))
+        {
+            GameObject checkSpawnObject = GameObject.FindGameObjectWithTag("CheckSpawn");
+            SpawnPoint.transform.position = checkSpawnObject.transform.position;
         }
     }
 }
