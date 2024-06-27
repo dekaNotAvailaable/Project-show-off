@@ -3,30 +3,32 @@ using UnityEngine;
 
 public class FlyBird : MonoBehaviour
 {
-    public float speed = 1f;
-    public float circleRadius = 10f; // Radius of the circular movement
-    public float verticalAmplitude = 2f; // Amplitude of the vertical oscillation
-    public float verticalFrequency = 1f; // Frequency of the vertical oscillation
+    [SerializeField]
+    private float speed = 1f;
+    [SerializeField]
+    private float circleRadius = 10f;
+    [SerializeField]
+    private float verticalAmplitude = 2f;
+    [SerializeField]
+    private float verticalFrequency = 1f;
 
     private Rigidbody rb;
     private AudioSource quackSound;
-    private float angle = 0f; // Angle for the circular movement
+    private float angle = 0f;
     private Vector3 startPosition;
     private ParticleSystem feathers;
 
-    void Start()
+    private void Start()
     {
         quackSound = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX;
         feathers = GetComponent<ParticleSystem>();
         startPosition = transform.position;
-
-        // Start the coroutine to play the quack sound randomly
         StartCoroutine(PlayQuackSoundRandomly());
     }
 
-    void Update()
+    private void Update()
     {
         MoveInDynamicPattern();
     }
@@ -42,7 +44,7 @@ public class FlyBird : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
     }
 
-    void OnParticleCollision(GameObject other)
+    private void OnParticleCollision(GameObject other)
     {
         if (feathers != null)
         {
@@ -54,11 +56,8 @@ public class FlyBird : MonoBehaviour
     {
         while (true)
         {
-            // Wait for a random time between 2 and 10 seconds
             float waitTime = Random.Range(2f, 10f);
             yield return new WaitForSeconds(waitTime);
-
-            // Play the quack sound if it is not null
             if (quackSound != null)
             {
                 quackSound.Play();

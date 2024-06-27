@@ -6,8 +6,7 @@ public class ItemRespawn : MonoBehaviour
     private Rigidbody rb;
     private Quaternion initialRotation;
     public GameObject GunSpawnPoint;
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
         if (GunSpawnPoint == null)
@@ -19,12 +18,6 @@ public class ItemRespawn : MonoBehaviour
         {
             GunSpawnPoint.gameObject.transform.position = this.transform.position;
         }
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
     private void OnCollisionEnter(Collision collision)
