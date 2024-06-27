@@ -11,7 +11,9 @@ public class CatRespawnButton : MonoBehaviour
     {
         catDieAndRespawns = FindObjectsOfType<CatDieAndRespawn>();
         movingPlatform = FindAnyObjectByType<MovingPlatform>();
+        if(PressedButton != null )
         PressedButton.gameObject.SetActive(false);
+        if( UnpressedButton != null )
         UnpressedButton.gameObject.SetActive(true);
         if (movingPlatform != null)
         {
@@ -23,14 +25,18 @@ public class CatRespawnButton : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         SpawnCatButton();
-        StartCoroutine(ButtonPressedAndRelease());
+     //   StartCoroutine(ButtonPressedAndRelease());
     }
     private IEnumerator ButtonPressedAndRelease()
     {
+        if(PressedButton != null)
         PressedButton.gameObject.SetActive(true);
+        if( UnpressedButton != null )
         UnpressedButton.gameObject.SetActive(false);
         yield return new WaitForSeconds(2f);
+        if(UnpressedButton != null )
         UnpressedButton.gameObject.SetActive(true);
+        if(PressedButton != null)
         PressedButton.gameObject.SetActive(false);
     }
     public void SpawnCatButton()
